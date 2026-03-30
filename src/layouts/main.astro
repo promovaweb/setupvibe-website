@@ -32,7 +32,50 @@ const canonicalURL = canonical
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<link rel="icon" type="image/png" href="/logo.png" />
-    <link rel="alternate" type="text/plain" title="LLM-friendly content" href="/llms.txt" />
+    <link rel="alternate" type="text/plain" title="LLM Context Index" href="/llms.txt" />
+    <link rel="alternate" type="text/plain" title="LLM Summary" href="/llms-small.txt" />
+    <link rel="alternate" type="text/plain" title="Full Content Markdown" href="/llms-full.txt" />
+    
+    <!-- Advanced SEO & GEO Tags -->
+    <meta name="geo.region" content={`${siteConfig.company.address.country}-${siteConfig.company.address.region}`} />
+    <meta name="geo.placename" content={siteConfig.company.address.city} />
+    <meta name="geo.position" content="-23.5505;-46.6333" />
+    <meta name="ICBM" content="-23.5505, -46.6333" />
+    <meta name="author" content={siteConfig.company.name} />
+    <meta name="publisher" content={siteConfig.company.name} />
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+
+    <!-- Structured Data (JSON-LD) -->
+    <script type="application/ld+json" is:inline define:vars={{ title, description, url: Astro.url.href, company: siteConfig.company }}>
+      {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "SetupVibe",
+        "applicationCategory": "DeveloperApplication",
+        "operatingSystem": "MacOS, Linux, Windows",
+        "description": description,
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "USD"
+        },
+        "url": url,
+        "screenshot": "https://setupvibe.dev/logo.png",
+        "author": {
+          "@type": "Person",
+          "name": company.founder
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": company.name,
+          "url": company.url,
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://promovaweb.com/logo.png"
+          }
+        }
+      }
+    </script>
     
     <!-- Google Tag Manager -->
     <script is:inline define:vars={{ gtmId: siteConfig.gtmId }}>
@@ -43,6 +86,8 @@ const canonicalURL = canonical
       })(window,document,'script','dataLayer',gtmId);
     </script>
     <!-- End Google Tag Manager -->
+
+    <slot name="head" />
 
 		<SEO
       title={title}

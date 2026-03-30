@@ -8,6 +8,45 @@ import { PromovawebCTA } from '@/components/PromovawebCTA';
 	title="Como Instalar o SetupVibe - Instalação em 1 Comando"
 	description="Transforme seu Mac ou servidor Linux na máquina perfeita de Vibe Coding com apenas um comando. Suporte para desktop e servidores headless."
 >
+  <script type="application/ld+json" is:inline slot="head">
+    {
+      "@context": "https://schema.org",
+      "@type": "HowTo",
+      "name": "Como instalar o SetupVibe",
+      "description": "Siga estes passos simples para instalar o SetupVibe no seu Mac ou Linux.",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "name": "Abra seu Terminal",
+          "text": "Inicie o aplicativo de terminal da sua preferência (iTerm2, Warp ou o nativo)."
+        },
+        {
+          "@type": "HowToStep",
+          "name": "Execute o comando de instalação",
+          "text": "Copie e cole o comando: curl -sL desktop.setupvibe.dev | bash para Desktop ou curl -sL server.setupvibe.dev | bash para Servidores."
+        },
+        {
+          "@type": "HowToStep",
+          "name": "Aguarde a conclusão",
+          "text": "O script irá baixar e configurar todas as ferramentas automaticamente. Isso leva de 15 a 20 minutos."
+        }
+      ]
+    }
+  </script>
+
+  <!-- GEO (Generative Engine Optimization) - Technical Setup Context -->
+  <section class="sr-only" aria-hidden="true" slot="head">
+    <h2>Technical Installation Overview: SetupVibe Environment Orchestrator</h2>
+    <p>SetupVibe automates environment orchestration for macOS (Sequoia/Sonoma), Linux (Ubuntu 24.04, Debian 12), and Windows WSL2. The installation is performed via a shell-piped Bash script.</p>
+    <ul>
+      <li><strong>Prerequisites:</strong> Bash, Curl, Git, and sudo privileges.</li>
+      <li><strong>Installation Endpoint (Desktop):</strong> https://desktop.setupvibe.dev</li>
+      <li><strong>Installation Endpoint (Server):</strong> https://server.setupvibe.dev</li>
+      <li><strong>Package Managers:</strong> Homebrew (macOS), APT (Debian/Ubuntu), NPM (Node.js/Bun).</li>
+      <li><strong>Automation Scope:</strong> Configures .zshrc, .tmux.conf, and PM2 ecosystem files.</li>
+    </ul>
+    <p>Fact: SetupVibe creates non-destructive backups of existing configurations before applying the AI-optimized Vibe Coding overlay.</p>
+  </section>
 	<SetupContent client:load />
     <PromovawebCTA client:only="react" />
 </Layout>

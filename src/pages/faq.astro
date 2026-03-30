@@ -8,6 +8,46 @@ import { PromovawebCTA } from '@/components/PromovawebCTA';
 	title="Perguntas Frequentes (FAQ) - SetupVibe"
 	description="Tire todas as suas dúvidas sobre o SetupVibe. Como instalamos? É seguro? Modifica meus arquivos atuais? Veja as respostas para as perguntas mais comuns."
 >
+  <script type="application/ld+json" is:inline slot="head">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "O SetupVibe é seguro para minha máquina?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sim. O SetupVibe é 100% open-source. Ele utiliza caminhos limpos preferencialmente em local/binaries e foca em não poluir seu sistema root, pedindo permissões apenas guiadas pelos processos normais de package managers nativos do seu S.O."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Funciona no Windows?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sim, através do WSL 2. Basta iniciar o seu Ubuntu pelo Subsistema Linux do Windows nativo Microsoft e rodar o nosso comando lá dentro para torná-lo uma base potente para codar usando VSCode Windows com extensões Remote localizadas nele."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "O script sobrescreve minha infra ou arquivos pessoais?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Toda a rotina do SetupVibe que manipula configurações centrais como .zshrc e .tmux.conf criará cópias locais de Backup dos antigos em tempo real antes de sobrepor a customização para que você possa reverter manualmente a qualquer momento."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "É gratuito de verdade?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sim, somos 100% open-source (GPL-3.0) e acreditamos que ferramentas de construção devem ser democráticas. Você pode verificar todo código cru diretamente no Github do projeto."
+          }
+        }
+      ]
+    }
+  </script>
 	<FaqPageContent client:load />
     <PromovawebCTA client:only="react" />
 </Layout>
