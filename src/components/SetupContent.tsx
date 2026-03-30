@@ -220,8 +220,8 @@ export function SetupContent() {
 
           <div className="mt-16 text-center">
             <Button variant="outline" size="lg" className="rounded-full gap-2" asChild>
-              <a href={withBase("/how-it-works")}>
-                Ver detalhes técnicos
+              <a href={withBase("/ferramentas")}>
+                Ver detalhes da Stack
                 <ArrowRight className="w-4 h-4" />
               </a>
             </Button>

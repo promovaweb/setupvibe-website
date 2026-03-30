@@ -40,6 +40,7 @@ export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const navItems = [
+    { label: "Ferramentas", href: withBase("/ferramentas") },
     { label: "Como Funciona", href: withBase("/how-it-works") },
     { label: "Baterias Inclusas", href: withBase("/batteries-included") },
     { label: "Changelog", href: withBase("/changelog") },

@@ -1,0 +1,22 @@
+---
+import Layout from '../layouts/main.astro';
+import { PageHeader } from '@/components/PageHeader';
+import { ToolsContent } from '@/components/ToolsContent';
+import { PromovawebCTA } from '@/components/PromovawebCTA';
+---
+
+<Layout 
+	title="Ferramentas e Stack - SetupVibe"
+	description="Conheça em detalhes cada ferramenta, linguagem e utilitário que o SetupVibe instala e configura automaticamente no seu Mac ou Linux."
+>
+	<PageHeader 
+		client:load
+		title="Tudo o que você precisa" 
+		gradientTitle="Pronto para Criar"
+		subtitle="O SetupVibe não apenas instala ferramentas, ele configura um ecossistema completo de desenvolvimento otimizado para performance e Vibe Coding."
+		badge={{ icon: "🛠️", text: "Stack Completa 2024" }}
+	/>
+
+	<ToolsContent client:load />
+    <PromovawebCTA client:load />
+</Layout>
