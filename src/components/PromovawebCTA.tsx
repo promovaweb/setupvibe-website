@@ -1,5 +1,5 @@
 import React from 'react';
-import { Sparkles, Zap, Target, ArrowRight, PlayCircle, Users, Layout as LayoutIcon, Cpu } from "lucide-react";
+import { Sparkles, Zap, ArrowRight, PlayCircle, Users, Cpu } from "lucide-react";
 
 export function PromovawebCTA() {
   return (

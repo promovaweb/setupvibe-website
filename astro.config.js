@@ -15,7 +15,11 @@ export default defineConfig({
     react(),
     sitemap(),
     mdx(),
-    Compress(),
+    Compress({
+      Exclude: [
+        'og'
+      ]
+    }),
     robotsTxt(),
     webmanifest({
       name: 'SetupVibe',

@@ -4,9 +4,9 @@ import { motion } from "framer-motion";
 import { 
   Terminal, Server, Monitor, CheckCircle, 
   Cpu, Zap, ShieldCheck, Box, 
-  Globe, Layout, Smartphone, HelpCircle,
-  ArrowRight, Download, Copy, ExternalLink,
-  Bot, Code2, Coffee, Layers
+  HelpCircle,
+  ArrowRight, Download, Copy,
+  Bot, Code2, Layers
 } from "lucide-react";
 import { CodeBlock } from "@/components/CodeBlock";
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";

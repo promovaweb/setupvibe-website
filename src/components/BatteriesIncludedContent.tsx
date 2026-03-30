@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Terminal, Code, Box, Shield, Cpu, Monitor, Globe, FileCode, Search, Server, Layers, Bot } from "lucide-react";
+import { Terminal, Code, Box, Shield, Cpu, Search, Layers, Bot } from "lucide-react";
 import { MagicCard } from "@/components/MagicCard";
 import { GradientText } from "@/components/GradientText";
 import { withBase } from "@/lib/utils";
