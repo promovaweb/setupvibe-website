@@ -125,16 +125,11 @@ const canonicalURL = canonical
     <!-- End Google Tag Manager (noscript) -->
 
 		<Header client:only="react" />
-		<main id="swup" class="transition-fade">
+		<main>
 			<slot />
 		</main>
 		<Footer client:only="react" />
 		<CommandPalette client:only="react" />
 		<CookieConsent client:only="react" />
-
-    <script>
-      import Swup from 'swup';
-      const swup = new Swup();
-    </script>
 	</body>
 </html>

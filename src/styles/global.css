@@ -280,20 +280,3 @@ h3:has(.changelog-docs)::before { content: '📖'; font-size: 1.25rem; }
   width: 10px;
   height: 10px;
 }
-
-/* Swup transitions */
-html.is-animating .transition-fade {
-  opacity: 0;
-  transform: translateY(10px);
-}
-
-.transition-fade {
-  transition: 0.4s;
-  opacity: 1;
-  transform: translateY(0);
-}
-
-html.is-leaving .transition-fade {
-  opacity: 0;
-  transform: translateY(-10px);
-}
