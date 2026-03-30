@@ -53,35 +53,34 @@ const ogImage = new URL(`/og/${ogRoute}`, Astro.site || Astro.url).toString();
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
 
     <!-- Structured Data (JSON-LD) -->
-    <script type="application/ld+json" is:inline define:vars={{ title, description, url: Astro.url.href, company: siteConfig.company }}>
-      {
-        "@context": "https://schema.org",
-        "@type": "SoftwareApplication",
-        "name": "SetupVibe",
-        "applicationCategory": "DeveloperApplication",
-        "operatingSystem": "MacOS, Linux, Windows",
-        "description": description,
-        "offers": {
-          "@type": "Offer",
-          "price": "0",
-          "priceCurrency": "USD"
-        },
-        "url": url,
-        "screenshot": "https://setupvibe.dev/logo.png",
-        "author": {
-          "@type": "Person",
-          "name": company.founder
-        },
-        "publisher": {
-          "@type": "Organization",
-          "name": company.name,
-          "url": company.url,
-          "logo": {
-            "@type": "ImageObject",
-            "url": "https://promovaweb.com/logo.png"
-          }
+    <script type="application/ld+json" is:inline set:html={JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "SetupVibe",
+      "applicationCategory": "DeveloperApplication",
+      "operatingSystem": "MacOS, Linux, Windows",
+      "description": "Ambiente de desenvolvimento 1-click para Vibe Coding com IA.",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "url": "https://setupvibe.dev",
+      "screenshot": "https://setupvibe.dev/logo.png",
+      "author": {
+        "@type": "Person",
+        "name": siteConfig.company.founder
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": siteConfig.company.name,
+        "url": siteConfig.company.url,
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://promovaweb.com/logo.png"
         }
       }
+    })}>
     </script>
     
     <!-- Google Tag Manager -->
