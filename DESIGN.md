@@ -1,122 +1,110 @@
 # Design System & Documentation - SetupVibe
 
-Este documento detalha o sistema de design, componentes, padrões e decisões arquiteturais visuais do projeto SetupVibe. O projeto utiliza **Astro**, **React**, **Tailwind CSS** e segue a filosofia do **shadcn/ui**.
-
-## 1. Design Tokens
-
-### 1.1 Cores (Paleta Base)
-O sistema utiliza variáveis CSS para suportar temas claro e escuro (Dark Mode).
-
-| Variável | Descrição | Light Value (HSL) | Dark Value (HSL) |
-| :--- | :--- | :--- | :--- |
-| `--background` | Cor de fundo principal | `0 0% 100%` | `222.2 84% 4.9%` |
-| `--foreground` | Cor do texto principal | `222.2 84% 4.9%` | `210 40% 98%` |
-| `--primary` | Cor de destaque/ação | `222.2 47.4% 11.2%` | `210 40% 98%` |
-| `--secondary` | Cor secundária | `210 40% 96.1%` | `217.2 32.6% 17.5%` |
-| `--accent` | Cor de ênfase | `210 40% 96.1%` | `217.2 32.6% 17.5%` |
-| `--muted` | Texto/elementos discretos | `210 40% 96.1%` | `217.2 32.6% 17.5%` |
-| `--destructive` | Cores de erro/perigo | `0 84.2% 60.2%` | `0 62.8% 30.6%` |
-| `--border` | Cor de bordas | `214.3 31.8% 91.4%` | `217.2 32.6% 17.5%` |
-
-### 1.2 Tipografia
-- **Fonte Principal:** `Inter var` (Sans-serif)
-- **Escalabilidade:** Utiliza as utilidades padrão do Tailwind (`text-sm`, `text-base`, `text-lg`, `text-xl`, etc.) com pesos que variam de `font-normal` a `font-bold`.
-
-### 1.3 Bordas e Raios (Border Radius)
-- **Base:** `--radius: 0.625rem` (utilizado via `rounded-lg`)
-- **Medium:** `calc(var(--radius) - 2px)` (`rounded-md`)
-- **Small:** `calc(var(--radius) - 4px)` (`rounded-sm`)
-
-### 1.4 Layout & Container
-- **Max Width:** `1400px` (2xl screen)
-- **Padding:** `2rem` de padding lateral padrão no container centralizado.
+Este documento detalha o sistema de design, componentes, padrões e decisões arquiteturais visuais do projeto SetupVibe. O projeto utiliza **Astro 4.x**, **React 18**, **Tailwind CSS** e segue a filosofia do **shadcn/ui**.
 
 ---
 
-## 2. Animações e Efeitos Visuais
+## 1. Identidade Visual e Conceito
 
-O projeto inclui várias animações customizadas definidas no `tailwind.config.mjs` e `global.css`:
-
-- **Marquee:** Efeito de scroll infinito horizontal (usado em logotipos).
-- **Shimmer:** Efeito de carregamento/brilho metálico (usado em botões premium).
-- **Blob:** Elementos orgânicos flutuantes que mudam de forma e posição.
-- **Gradient:** Gradientes animados que mudam de posição suavemente.
-- **Accordion Down/Up:** Transições suaves para expansão de conteúdo.
-- **Marker Underline:** Sublinhado animado que preenche o fundo ao passar o mouse.
+O SetupVibe é projetado para evocar a cultura **"Vibe Coding"**: um ambiente onde a tecnologia é invisível e a produtividade com IA é fluida. Visualmente, isso se traduz em:
+- **Transparências e Vidros:** Uso extensivo de `backdrop-blur`.
+- **Gradients de Neon:** Toques de Turquesa e Roxo sobre fundos escuros.
+- **Organicidade:** Animações fluídas (Blobs) que quebram a rigidez do grid.
 
 ---
 
-## 3. Biblioteca de Componentes
+## 2. Design Tokens (Resumo)
 
-### 3.1 Componentes de UI (Atômicos/Moleculares)
-Localizados em `src/components/ui/`. Seguem o padrão de acessibilidade e estilização do shadcn/ui.
+### 2.1 Cores Principais
+- **Primary (`--primary`):** `#04CEBB` (Turquesa) - Cor de ação principal.
+- **Secondary (`--secondary`):** `#032F62` (Dark Slate) - Profundidade e contraste.
+- **Background:** `Whitesmoke` (Light) / `Deep Slate` (Dark).
 
-- **Accordion:** Painéis colapsáveis.
-- **Alert:** Notificações de status importantes.
-- **Avatar:** Representação visual de usuário.
-- **Badge:** Pequenas etiquetas de status ou categoria.
-- **Button:** Botões versáteis com variantes (primary, outline, ghost, link).
-- **Card:** Container básico para agrupamento de conteúdo.
-- **Input:** Campos de entrada de texto estilizados.
-- **Progress:** Barras de progresso lineares.
-- **Skeleton:** Placeholders de carregamento.
-- **Spinner:** Indicador de atividade.
-- **Switch:** Controle binário (Toggle).
-- **Tabs:** Navegação entre conteúdos relacionados.
-- **Tooltip:** Informações extras ao passar o mouse.
-
-### 3.2 Componentes de Domínio (Seções e Features)
-Localizados em `src/components/`.
-
-- **Hero:** Seção de destaque inicial com título impactante e CTA (Home).
-- **PageHeader:** Componente reutilizável para cabeçalhos de páginas internas, seguindo o padrão visual da Home (com background blobs e animações).
-- **Header & Footer:** Navegação e rodapé consistentes.
-- **BentoGrid:** Layout moderno em grade assimétrica para features.
-- **Features / AdvancedShowcase:** Exibição detalhada de funcionalidades.
-- **Pricing:** Tabelas de preços com switch anual/mensal e calculadora.
-- **Testimonials:** Prova social com cards animados.
-- **MarqueeLogos:** Carrossel infinito de logotipos de parceiros.
-- **FAQ:** Seção de perguntas frequentes com Accordion.
-- **CommandPalette:** Barra de busca/comando estilo Spotlight (CMD+K).
-- **ChatInterface:** Mock de interface de chat com IA.
-- **MetricsDashboard:** Visualização de dados e estatísticas.
-- **Timeline:** Exibição cronológica de eventos ou roadmap.
-- **CookieConsent:** Banner de LGPD/Privacidade.
+### 2.2 Tipografia
+- **Inter var:** Versatilidade para interface técnica e leitura fluida.
 
 ---
 
-## 4. Estrutura de Layout e Páginas
+## 3. Guia Detalhado de Componentes
 
-### 4.1 Layout Principal (`main.astro`)
-Envolve todas as páginas e injeta:
-- `Header` (Sticky)
-- `Main Content` (Slot central)
-- `Footer`
-- `CommandPalette` (Global)
-- `CookieConsent` (Global)
+Este guia serve como manual para desenvolvedores e designers que desejam manter a consistência do site.
 
-### 4.2 Páginas Principais
-- **Home (`index.astro`):** Vitrine principal do produto.
-- **Components (`componentes.astro` / `advanced-components.astro`):** Documentação e showcase dos componentes.
-- **Blog:** Sistema de conteúdo estático para artigos.
-- **Específicas:** FAQ, Sobre, Preços, Termos e Privacidade.
+### 3.1 Componentes de UI (Atômicos)
 
----
+#### **Button (`src/components/ui/button.tsx`)**
+- **Descrição:** O principal elemento de interação. Baseado no Radix UI.
+- **Casos de Uso:**
+  - `default`: Botão "Instalar Agora" (CTA Principal).
+  - `outline`: "Ver no GitHub" ou ações secundárias.
+  - `ghost`: Navegação no Header ou botões de fechar.
+- **Dicas:** Use a variante `lg` para CTAs que precisam de atenção total. Combine com ícones da `lucide-react` sempre à direita para indicar progressão.
+- **Sugestão:** Em páginas de vendas, use a classe `animate-shimmer` para dar um brilho metálico ao botão.
 
-## 5. Implementação Técnica
-
-- **Framework:** Astro 4.x (Islands Architecture).
-- **Interatividade:** React 18+ para componentes dinâmicos (client-side).
-- **Estilização:** Tailwind CSS com `tailwind-merge` e `clsx` (utilidade `cn`) para composição de classes.
-- **Iconografia:** Lucide React (preferencial).
-- **Acessibilidade:** Componentes baseados em Radix UI (via shadcn).
-- **Dark Mode:** Implementado via classe `.dark` no `<html>`.
+#### **GlassCard / MagicCard**
+- **Descrição:** Containers com efeito de vidro e bordas que brilham ao passar o mouse.
+- **Casos de Uso:** Exibição de módulos do instalador ou pequenos cards de depoimento.
+- **Dicas:** Não abuse do `backdrop-blur` em muitos elementos simultâneos para não impactar a performance de scroll em dispositivos móveis.
+- **Sugestão:** Use em grids de 3 ou 4 colunas no Desktop.
 
 ---
 
-## 6. Convenções de Código Visual
+### 3.2 Componentes de Layout & Domínio
 
-1. **Classes Condicionais:** Use sempre a função `cn()` para concatenar classes do Tailwind.
-2. **Variantes de Componentes:** Siga o padrão `cva` (class-variance-authority) quando aplicável.
-3. **Imagens e Assets:** Localizados na pasta `public/` ou injetados via imports no Astro.
-4. **Responsividade:** Mobile-first, utilizando os breakpoints padrão do Tailwind (`sm`, `md`, `lg`, `xl`, `2xl`).
+#### **Hero (`src/components/Hero.tsx`)**
+- **Descrição:** A primeira impressão do site. Título gigante, blobs animados e imagem 3D.
+- **Casos de Uso:** Landing page principal.
+- **Dicas:** Mantenha o título curto. O gradiente animado (`animate-gradient`) deve ser usado apenas na palavra-chave (ex: "pior pesadelo").
+- **Sugestão:** A imagem do terminal deve estar sempre em `.png` transparente para que o efeito de sombra e glow de fundo funcione corretamente.
+
+#### **CrossPlatformCTA (`src/components/CrossPlatformCTA.tsx`)**
+- **Descrição:** Bloco de confiança técnica que mostra compatibilidade MacOS, Linux e Windows.
+- **Casos de Uso:** Posicionado logo após a explicação de como funciona (Features).
+- **Dicas:** Use ícones claros. Cada card deve focar em um SO específico para facilitar o escaneamento visual do usuário.
+- **Sugestão:** Se adicionar suporte a novas distros (ex: Arch), adicione um novo card aqui com o ícone correspondente.
+
+#### **BentoGrid / ModulesGrid**
+- **Descrição:** Layout assimétrico moderno inspirado no design da Apple.
+- **Casos de Uso:** Mostrar as ferramentas que o SetupVibe instala (Zsh, Docker, LLMs).
+- **Dicas:** Varie o tamanho dos cards (`col-span-1`, `col-span-2`) para criar interesse visual.
+- **Sugestão:** Coloque os itens mais "impressionantes" nos cards maiores.
+
+#### **Features (`src/components/Features.tsx`)**
+- **Descrição:** O passo-a-passo da instalação (1, 2, 3).
+- **Casos de Uso:** Seção explicativa de "Como Funciona".
+- **Dicas:** As linhas pontilhadas (`border-dashed`) ajudam a guiar o olho do usuário entre os passos. No mobile, essas linhas devem ser verticais.
+- **Sugestão:** Adicione um pequeno "Badge" de tempo estimado (ex: "2 min") em cada passo.
+
+---
+
+### 3.3 Componentes Interativos & IA
+
+#### **CommandPalette (`src/components/CommandPalette.tsx`)**
+- **Descrição:** Interface de busca estilo Spotlight (Atalho: `CMD+K`).
+- **Casos de Uso:** Navegação rápida entre ferramentas e páginas.
+- **Dicas:** É um componente global injetado no `Layout`. Não precisa ser chamado manualmente nas páginas.
+- **Sugestão:** Adicione comandos de "Instalação Rápida" que copiam o código pro clipboard diretamente da busca.
+
+#### **ChatInterface / CodeBlock**
+- **Descrição:** Mockup de terminal e editor de código.
+- **Casos de Uso:** Demonstrar o resultado final do setup.
+- **Dicas:** Use cores de sintaxe que combinem com o tema do site (Turquesa/Roxo).
+- **Sugestão:** Use a biblioteca `shiki` para syntax highlighting real se for exibir muitos exemplos de código.
+
+---
+
+## 4. Dicas Gerais de UX & Design
+
+1. **A Regra do 1-Clique:** Tudo no site deve levar o usuário ao botão de instalação. Não crie fricção.
+2. **Hierarquia de Cor:** Use o Turquesa (`--primary`) exclusivamente para o que for clicável ou extremamente importante.
+3. **Escaneabilidade:** Desenvolvedores não leem, eles "escaneiam". Use ícones, badges e negritos generosamente.
+4. **Dark Mode First:** Como o público-alvo são devs, o tema escuro deve ser o mais polido. Teste sempre o contraste das bordas e sombras no Dark Mode.
+
+---
+
+## 5. Convenções de Expansão
+
+Ao criar um novo componente:
+1. **Pasta:** Se for genérico, `ui/`. Se for específico da página, `components/`.
+2. **Props:** Use TypeScript e estenda as props nativas do HTML quando possível.
+3. **Motion:** Adicione `initial` e `whileInView` do Framer Motion para que a página pareça viva ao scrollar.
+4. **Base URL:** Sempre use a função `withBase()` para caminhos de imagens e links, garantindo que o deploy em subdiretórios (GitHub Pages) funcione.
