@@ -17,11 +17,10 @@ export const GET: APIRoute = async ({ site }) => {
 
   const mainPages = [
     { title: "Home", url: "/" },
-    { title: "Setup", url: "/setup" },
-    { title: "Technical Architecture", url: "/how-it-works" },
-    { title: "Included Components", url: "/componentes" },
-    { title: "Pricing", url: "/pricing" },
-    { title: "FAQ", url: "/faq" },
+    { title: "Instalação", url: "/instalar" },
+    { title: "Como Funciona", url: "/como-funciona" },
+    { title: "Ferramentas", url: "/ferramentas" },
+    { title: "FAQ", url: "/perguntas-frequentes" },
   ];
 
   const pagesContent = mainPages

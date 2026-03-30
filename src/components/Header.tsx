@@ -40,9 +40,9 @@ export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const navItems = [
-    { label: "Como Funciona", href: withBase("/how-it-works") },
+    { label: "Como Funciona", href: withBase("/como-funciona") },
     { label: "Ferramentas", href: withBase("/ferramentas") },
-    { label: "Instalar", href: withBase("/setup") },
+    { label: "Instalar", href: withBase("/instalar") },
     { label: "Changelog", href: withBase("/changelog") },
   ];
 
@@ -98,7 +98,7 @@ export function Header() {
         {/* Actions */}
         <div className="flex items-center space-x-4">
           <ThemeToggle />
-          <a href={withBase("/setup")}>
+          <a href={withBase("/instalar")}>
             <Button className="hidden md:inline-flex">
               Instalar
             </Button>
@@ -151,7 +151,7 @@ export function Header() {
                   </a>
                 ))}
               </div>
-              <a href={withBase("/setup")} onClick={() => setIsMenuOpen(false)} className="block pt-2">
+              <a href={withBase("/instalar")} onClick={() => setIsMenuOpen(false)} className="block pt-2">
                 <Button className="w-full h-12 text-base font-bold">Instalar Agora</Button>
               </a>
             </div>

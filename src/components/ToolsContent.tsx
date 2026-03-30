@@ -398,7 +398,7 @@ export function ToolsContent() {
                   SetupVibe é a materialização de centenas de horas de automação para que você foque apenas no código.
                 </p>
                 <div className="pt-8 flex flex-col sm:flex-row items-center justify-center gap-6">
-                  <a href="/setup" className="w-full sm:w-auto inline-flex items-center justify-center h-16 px-12 rounded-full bg-primary text-primary-foreground font-black text-xl hover:scale-105 transition-all shadow-xl shadow-primary/30 active:scale-95">
+                  <a href="/instalar" className="w-full sm:w-auto inline-flex items-center justify-center h-16 px-12 rounded-full bg-primary text-primary-foreground font-black text-xl hover:scale-105 transition-all shadow-xl shadow-primary/30 active:scale-95">
                     Instalar Agora
                   </a>
                   <button onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} className="inline-flex items-center gap-2 text-sm font-bold opacity-50 hover:opacity-100 transition-opacity">

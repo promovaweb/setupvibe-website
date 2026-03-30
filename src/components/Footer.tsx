@@ -71,10 +71,10 @@ export function Footer() {
                 <a href={withBase("/#features")} className="text-muted-foreground hover:text-foreground transition-colors">Funcionalidades</a>
               </li>
               <li>
-                <a href={withBase("/setup")} className="text-muted-foreground hover:text-foreground transition-colors">Guia de Instalação</a>
+                <a href={withBase("/instalar")} className="text-muted-foreground hover:text-foreground transition-colors">Guia de Instalação</a>
               </li>
               <li>
-                <a href={withBase("/how-it-works")} className="text-muted-foreground hover:text-foreground transition-colors">Como Funciona</a>
+                <a href={withBase("/como-funciona")} className="text-muted-foreground hover:text-foreground transition-colors">Como Funciona</a>
               </li>
               <li>
                 <a href={withBase("/changelog")} className="text-muted-foreground hover:text-foreground transition-colors">Changelog</a>
@@ -102,10 +102,10 @@ export function Footer() {
                 </a>
               </li>
               <li>
-                <a href={withBase("/about")} className="text-muted-foreground hover:text-foreground transition-colors">Sobre o Projeto</a>
+                <a href={withBase("/sobre")} className="text-muted-foreground hover:text-foreground transition-colors">Sobre o Projeto</a>
               </li>
               <li>
-                <a href={withBase("/faq")} className="text-muted-foreground hover:text-foreground transition-colors">FAQ</a>
+                <a href={withBase("/perguntas-frequentes")} className="text-muted-foreground hover:text-foreground transition-colors">FAQ</a>
               </li>
             </ul>
           </div>
@@ -157,19 +157,19 @@ export function Footer() {
           </p>
           <div className="flex gap-6">
             <a
-              href={withBase("/privacy")}
+              href={withBase("/privacidade")}
               className="text-sm text-muted-foreground hover:text-foreground transition-colors"
             >
               Privacidade
             </a>
             <a
-              href={withBase("/terms")}
+              href={withBase("/termos")}
               className="text-sm text-muted-foreground hover:text-foreground transition-colors"
             >
               Termos
             </a>
             <a
-              href={withBase("/privacy#cookies")}
+              href={withBase("/privacidade#cookies")}
               className="text-sm text-muted-foreground hover:text-foreground transition-colors"
             >
               Cookies

@@ -16,9 +16,9 @@ export const GET: APIRoute = async ({ site }) => {
 - **Performance**: Leverages Rust-based modern Unix tools (eza, bat, ripgrep, uv).
 
 ## Quick Links
-- [Installation Guide](${new URL('/setup', site).href})
-- [Technical How-it-works](${new URL('/how-it-works', site).href})
-- [Full Markdown Documentation](${new URL('/llms-full.txt', site).href})
+- [Guia de Instalação](${new URL('/instalar', site).href})
+- [Como Funciona](${new URL('/como-funciona', site).href})
+- [Documentação Completa](${new URL('/llms-full.txt', site).href})
 
 ## Technical Specifications
 - **Operating Systems**: macOS (Sequoia/Sonoma), Linux (Ubuntu 22.04+, Debian 12+), Windows (WSL2).

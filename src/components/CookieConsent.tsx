@@ -71,7 +71,7 @@ export function CookieConsent() {
                   <p className="text-sm text-muted-foreground">
                     Utilizamos cookies para melhorar sua experiência de navegação, exibir conteúdo personalizado e analisar nosso tráfego. Ao clicar em "Aceitar Todos", você concorda com o uso de cookies. Leia nossa{" "}
                     <a
-                      href={withBase("/privacy#cookies")}
+                      href={withBase("/privacidade#cookies")}
                       className="text-primary hover:underline"
                     >
                       Política de Cookies

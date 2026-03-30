@@ -268,7 +268,7 @@ export function HowItWorksContent() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 items-center justify-center">
             <a
-              href={withBase("/setup")}
+              href={withBase("/instalar")}
               className="inline-flex items-center justify-center px-10 py-4 text-lg font-bold rounded-full bg-primary text-primary-foreground hover:bg-primary/90 hover:scale-105 transition-all duration-300 shadow-lg shadow-primary/25"
             >
               Instalar Agora

@@ -25,7 +25,7 @@ export function ModulesGrid() {
             className="md:col-span-2 lg:col-span-2"
             Icon={Terminal}
             description="Terminal turbinado com Oh My Zsh e prompt Starship preset Gruvbox Rainbow. Aliases e exportações de PATH configurados automaticamente."
-            href="/how-it-works#zsh-starship"
+            href="/como-funciona#zsh-starship"
             cta="Ver Configuração"
             background={
               <div className="absolute inset-0 bg-gradient-to-br from-purple-500/10 to-pink-500/10 dark:from-purple-500/5 dark:to-pink-500/5 transition-opacity opacity-50 group-hover:opacity-100" />
@@ -36,7 +36,7 @@ export function ModulesGrid() {
             className="md:col-span-1 lg:col-span-1"
             Icon={Bot}
             description="Integração global de pacotes NPM para desenvolvedores nativos de IAs: Claude Code, Gemini CLI, OpenAI Codex e GitHub Copilot CLI."
-            href="/how-it-works#ai-cli-tools"
+            href="/como-funciona#ai-cli-tools"
             cta="Conheça as Ferramentas"
             background={
               <div className="absolute inset-0 bg-gradient-to-bl from-blue-500/10 to-cyan-500/10 dark:from-blue-500/5 dark:to-cyan-500/5 transition-opacity opacity-50 group-hover:opacity-100" />
@@ -47,7 +47,7 @@ export function ModulesGrid() {
             className="md:col-span-1 lg:col-span-1"
             Icon={Box}
             description="Node, Python (uv), Go, Rust, PHP (Composer) e Ruby em suas versões mais recentes instalados perfeitamente."
-            href="/how-it-works#ecossistema-dev"
+            href="/como-funciona#ecossistema-dev"
             cta="Ver Stack"
           />
           <BentoCard
@@ -55,7 +55,7 @@ export function ModulesGrid() {
             className="md:col-span-2 lg:col-span-2"
             Icon={Layers}
             description="Um ambiente robusto com dezenas de plugins de navegação, mouse, copy/paste cross-OS, UI moderna com onedark e gerenciamento de sessões."
-            href="/how-it-works#tmux-master"
+            href="/como-funciona#tmux-master"
             cta="Ver Plugins"
             background={
               <div className="absolute inset-0 bg-gradient-to-tr from-green-500/10 to-emerald-500/10 dark:from-green-500/5 dark:to-emerald-500/5 transition-opacity opacity-50 group-hover:opacity-100" />
@@ -66,7 +66,7 @@ export function ModulesGrid() {
             className="md:col-span-2 lg:col-span-2"
             Icon={Cpu}
             description="Docker, Ansible e o incrível gerenciador de processos PM2 com auto-startup configurado como serviço global via systemd/launchd."
-            href="/how-it-works#pm2"
+            href="/como-funciona#pm2"
             cta="Saber mais sobre PM2"
           />
           <BentoCard
@@ -74,7 +74,7 @@ export function ModulesGrid() {
             className="md:col-span-1 lg:col-span-1"
             Icon={Settings}
             description="Ferramentas como bat, eza, fd, ripgrep, fzf e zoxide instaladas por padrão. Esqueça os velhos comandos."
-            href="/how-it-works#modern-unix"
+            href="/como-funciona#modern-unix"
             cta="Lista de Utilitários"
             background={
               <div className="absolute inset-0 bg-gradient-to-tl from-yellow-500/10 to-orange-500/10 dark:from-yellow-500/5 dark:to-orange-500/5 transition-opacity opacity-50 group-hover:opacity-100" />
