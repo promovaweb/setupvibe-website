@@ -101,6 +101,16 @@ const ogImage = new URL(`/og/${ogRoute}`, Astro.site || Astro.url).toString();
     </script>
     <!-- End Google Tag Manager -->
 
+    <!-- Google tag (gtag.js) -->
+    <script async is:inline src="https://www.googletagmanager.com/gtag/js?id=G-TGQZSWGYQE"></script>
+    <script is:inline>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-TGQZSWGYQE');
+    </script>
+
     <script is:inline>
       const theme = (() => {
         if (typeof localStorage !== 'undefined' && localStorage.getItem('theme')) {
