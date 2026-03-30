@@ -44,7 +44,7 @@ export function SetupContent() {
     },
     {
       q: "Quanto tempo demora?",
-      a: "Em uma conexão de 100MB, leva cerca de 15 a 20 minutos. A maior parte do tempo é baixando os binários e compilando o tema do Starship."
+      a: "Em uma conexão de 100MB, leva cerca de 5 a 10 minutos. A maior parte do tempo é baixando os binários e compilando o tema do Starship."
     }
   ];
 
@@ -82,7 +82,7 @@ export function SetupContent() {
                   <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
                     <div className="space-y-1">
                       <h2 className="text-2xl md:text-3xl font-bold">Mac & Linux (WSL)</h2>
-                      <p className="text-muted-foreground">Otimizado para produtividade local e interface gráfica.</p>
+                      <p className="text-muted-foreground">Otimizado para produtividade local e desenvolvimento.</p>
                     </div>
                     <div className="flex items-center gap-2 px-3 py-1 bg-primary/10 text-primary rounded-full text-xs font-bold uppercase tracking-wider">
                       <ShieldCheck className="w-3.5 h-3.5" />
@@ -99,7 +99,7 @@ export function SetupContent() {
                     <div className="space-y-3">
                       <div className="flex h-8 w-8 items-center justify-center rounded-full bg-primary/20 text-primary font-bold text-sm">2</div>
                       <p className="text-sm font-medium">Cole o Comando</p>
-                      <p className="text-xs text-muted-foreground">Copie o comando cirúrgico abaixo.</p>
+                      <p className="text-xs text-muted-foreground">Copie o comando abaixo.</p>
                     </div>
                     <div className="space-y-3">
                       <div className="flex h-8 w-8 items-center justify-center rounded-full bg-primary/20 text-primary font-bold text-sm">3</div>
@@ -116,7 +116,7 @@ export function SetupContent() {
                     <div className="relative group">
                       <div className="absolute -inset-1 bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl blur opacity-25 group-hover:opacity-40 transition duration-1000"></div>
                       <div className="relative">
-                        <CodeBlock code="curl -sL desktop.setupvibe.dev | bash" />
+                        <CodeBlock code="curl -sSL desktop.setupvibe.dev | bash" />
                       </div>
                     </div>
                   </div>
@@ -161,7 +161,7 @@ export function SetupContent() {
                     </div>
                     <div className="space-y-3">
                       <div className="flex h-8 w-8 items-center justify-center rounded-full bg-blue-500/20 text-blue-500 font-bold text-sm">3</div>
-                      <p className="text-sm font-medium">Execute</p>
+                      <p className="text-sm font-medium">Execute o comando abaixo</p>
                       <p className="text-xs text-muted-foreground">Comando otimizado sem UI tools.</p>
                     </div>
                   </div>
@@ -174,7 +174,7 @@ export function SetupContent() {
                     <div className="relative group">
                       <div className="absolute -inset-1 bg-gradient-to-r from-blue-600 to-cyan-500 rounded-2xl blur opacity-25 group-hover:opacity-40 transition duration-1000"></div>
                       <div className="relative">
-                        <CodeBlock code="curl -sL server.setupvibe.dev | bash" />
+                        <CodeBlock code="curl -sSL server.setupvibe.dev | bash" />
                       </div>
                     </div>
                   </div>
@@ -191,7 +191,7 @@ export function SetupContent() {
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">O que vem na caixa?</h2>
             <p className="text-muted-foreground max-w-2xl mx-auto">
-              Não instalamos lixo. Apenas as ferramentas que os melhores desenvolvedores do mundo usam para trabalhar com IA.
+              O simples bem feito. Apenas as ferramentas que os desenvolvedores do mundo todo usam para trabalhar com IA.
             </p>
           </div>
 
