@@ -1,6 +1,6 @@
 "use client";
 
-import { Sparkles, Github, Instagram, Linkedin, MessageCircle, MessageSquare } from "lucide-react";
+import { Sparkles, Github, Instagram, Linkedin, MessageCircle, MessageSquare, ExternalLink } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { withBase } from "@/lib/utils";
 
@@ -10,19 +10,20 @@ export function Footer() {
   return (
     <footer className="border-t bg-muted/30">
       <div className="container mx-auto px-4 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+        <div className="grid grid-cols-1 md:grid-cols-5 gap-8 mb-8">
           {/* Brand */}
-          <div className="space-y-4">
+          <div className="md:col-span-2 space-y-4">
             <div className="flex items-center space-x-2">
               <img src={withBase("/logo.png")} alt="SetupVibe Logo" className="w-8 h-8 rounded-lg object-contain" />
               <span className="font-bold text-xl bg-gradient-to-r from-purple-600 to-pink-600 dark:from-purple-400 dark:to-pink-400 bg-clip-text text-transparent">
                 SetupVibe
               </span>
             </div>
-            <p className="text-sm text-muted-foreground">
-              Simplificando o desenvolvimento para a era das Inteligências Artificiais.
+            <p className="text-sm text-muted-foreground max-w-xs">
+              Simplificando o desenvolvimento para a era das Inteligências Artificiais e Automação. 
+              Um projeto open-source mantido pela <a href="https://promovaweb.com" target="_blank" className="text-primary hover:underline">Promovaweb</a>.
             </p>
-            <div className="flex gap-3">
+            <div className="flex gap-4">
               <a
                 href="https://github.com/promovaweb/setupvibe"
                 target="_blank"
@@ -56,84 +57,56 @@ export function Footer() {
           {/* Product */}
           <div>
             <h3 className="font-semibold mb-4">Produto</h3>
-            <ul className="space-y-3">
+            <ul className="space-y-3 text-sm">
               <li>
-                <a
-                  href={withBase("/#features")}
-                  className="text-sm text-muted-foreground hover:text-foreground transition-colors"
-                >
-                  Funcionalidades
-                </a>
+                <a href={withBase("/#features")} className="text-muted-foreground hover:text-foreground transition-colors">Funcionalidades</a>
               </li>
               <li>
-                <a
-                  href={withBase("/componentes")}
-                  className="text-sm text-muted-foreground hover:text-foreground transition-colors"
-                >
-                  Componentes
-                </a>
+                <a href={withBase("/setup")} className="text-muted-foreground hover:text-foreground transition-colors">Guia de Instalação</a>
               </li>
               <li>
-                <a
-                  href={withBase("/advanced-components")}
-                  className="text-sm text-muted-foreground hover:text-foreground transition-colors"
-                >
-                  Avançado
-                </a>
+                <a href={withBase("/batteries-included")} className="text-muted-foreground hover:text-foreground transition-colors">Componentes</a>
               </li>
               <li>
-                <a
-                  href={withBase("/how-it-works")}
-                  className="text-sm text-muted-foreground hover:text-foreground transition-colors"
-                >
-                  Como Funciona
-                </a>
+                <a href={withBase("/how-it-works")} className="text-muted-foreground hover:text-foreground transition-colors">Como Funciona</a>
               </li>
               <li>
-                <a
-                  href={withBase("/faq")}
-                  className="text-sm text-muted-foreground hover:text-foreground transition-colors"
-                >
-                  FAQ
-                </a>
+                <a href={withBase("/changelog")} className="text-muted-foreground hover:text-foreground transition-colors">Changelog</a>
               </li>
             </ul>
           </div>
 
-          {/* Company */}
+          {/* Resources from Promovaweb */}
           <div>
-            <h3 className="font-semibold mb-4">Empresa</h3>
-            <ul className="space-y-3">
+            <h3 className="font-semibold mb-4">Recursos</h3>
+            <ul className="space-y-3 text-sm">
               <li>
-                <a
-                  href={withBase("/about")}
-                  className="text-sm text-muted-foreground hover:text-foreground transition-colors"
-                >
-                  Sobre
+                <a href="https://promovaweb.com/courses" target="_blank" className="text-muted-foreground hover:text-foreground transition-colors flex items-center gap-1.5">
+                  Cursos <ExternalLink className="h-3 w-3 opacity-50" />
                 </a>
               </li>
               <li>
-                <a
-                  href={withBase("/changelog")}
-                  className="text-sm text-muted-foreground hover:text-foreground transition-colors"
-                >
-                  Changelog
+                <a href="https://promovaweb.com/installer" target="_blank" className="text-muted-foreground hover:text-foreground transition-colors flex items-center gap-1.5">
+                  Instalador <ExternalLink className="h-3 w-3 opacity-50" />
                 </a>
               </li>
               <li>
-                <a
-                  href={withBase("/setup")}
-                  className="text-sm text-muted-foreground hover:text-foreground transition-colors"
-                >
-                  Guia de Instalação
+                <a href="https://promovaweb.com/ia-makers" target="_blank" className="text-muted-foreground hover:text-foreground transition-colors flex items-center gap-1.5">
+                  IA Makers <ExternalLink className="h-3 w-3 opacity-50" />
                 </a>
+              </li>
+              <li>
+                <a href={withBase("/about")} className="text-muted-foreground hover:text-foreground transition-colors">Sobre o Projeto</a>
+              </li>
+              <li>
+                <a href={withBase("/faq")} className="text-muted-foreground hover:text-foreground transition-colors">FAQ</a>
               </li>
             </ul>
           </div>
 
           {/* Community */}
           <div>
-            <h3 className="font-semibold mb-4 underline decoration-primary/30 underline-offset-4">Comunidade</h3>
+            <h3 className="font-semibold mb-4">Comunidade</h3>
             <ul className="space-y-4">
               <li>
                 <a
@@ -143,11 +116,11 @@ export function Footer() {
                   className="flex items-center gap-3 p-3 rounded-xl bg-green-500/5 hover:bg-green-500/10 border border-green-500/10 hover:border-green-500/20 transition-all group"
                 >
                   <div className="p-2 rounded-lg bg-green-500/10 text-green-500 group-hover:scale-110 transition-transform">
-                    <MessageSquare className="h-5 w-5" />
+                    <MessageSquare className="h-4 w-4" />
                   </div>
                   <div>
-                    <div className="text-sm font-bold text-foreground">WhatsApp</div>
-                    <div className="text-[10px] text-muted-foreground uppercase tracking-wider">Grupos Exclusivos</div>
+                    <div className="text-xs font-bold text-foreground">WhatsApp</div>
+                    <div className="text-[10px] text-muted-foreground uppercase tracking-wider font-bold">Grupos</div>
                   </div>
                 </a>
               </li>
@@ -159,11 +132,11 @@ export function Footer() {
                   className="flex items-center gap-3 p-3 rounded-xl bg-indigo-500/5 hover:bg-indigo-500/10 border border-indigo-500/10 hover:border-indigo-500/20 transition-all group"
                 >
                   <div className="p-2 rounded-lg bg-indigo-500/10 text-indigo-500 group-hover:scale-110 transition-transform">
-                    <MessageCircle className="h-5 w-5" />
+                    <MessageCircle className="h-4 w-4" />
                   </div>
                   <div>
-                    <div className="text-sm font-bold text-foreground">Discord</div>
-                    <div className="text-[10px] text-muted-foreground uppercase tracking-wider">Fórum & Suporte</div>
+                    <div className="text-xs font-bold text-foreground">Discord</div>
+                    <div className="text-[10px] text-muted-foreground uppercase tracking-wider font-bold">Fórum</div>
                   </div>
                 </a>
               </li>
@@ -174,26 +147,26 @@ export function Footer() {
         {/* Bottom */}
         <div className="pt-8 border-t flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-sm text-muted-foreground">
-            © {currentYear} SetupVibe. Alguns direitos reservados.
+            © {currentYear} SetupVibe. Um projeto <a href="https://promovaweb.com" target="_blank" className="hover:text-primary transition-colors underline decoration-primary/30">Promovaweb</a>.
           </p>
           <div className="flex gap-6">
             <a
               href={withBase("/privacy")}
               className="text-sm text-muted-foreground hover:text-foreground transition-colors"
             >
-              Política de Privacidade
+              Privacidade
             </a>
             <a
               href={withBase("/terms")}
               className="text-sm text-muted-foreground hover:text-foreground transition-colors"
             >
-              Termos de Uso
+              Termos
             </a>
             <a
               href={withBase("/privacy#cookies")}
               className="text-sm text-muted-foreground hover:text-foreground transition-colors"
             >
-              Política de Cookies
+              Cookies
             </a>
           </div>
         </div>

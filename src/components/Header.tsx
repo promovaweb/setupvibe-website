@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { ThemeToggle } from "@/components/ThemeToggle";
-import { Menu, X, Sparkles } from "lucide-react";
+import { Menu, X, Github, Linkedin, MessageCircle, MessageSquare } from "lucide-react";
 import { withBase } from "@/lib/utils";
 
 export function Header() {
@@ -13,6 +13,14 @@ export function Header() {
     { label: "Como Funciona", href: withBase("/how-it-works") },
     { label: "Componentes", href: withBase("/batteries-included") },
     { label: "Changelog", href: withBase("/changelog") },
+    { label: "Instalar", href: withBase("/setup") },
+  ];
+
+  const socialLinks = [
+    { icon: MessageSquare, href: "https://promovaweb.com/whatsapp", label: "WhatsApp", color: "hover:text-green-500" },
+    { icon: Github, href: "https://github.com/promovaweb/setupvibe", label: "GitHub", color: "hover:text-foreground" },
+    { icon: MessageCircle, href: "https://promovaweb.com/discord", label: "Discord", color: "hover:text-indigo-500" },
+    { icon: Linkedin, href: "https://linkedin.com/luizeof", label: "LinkedIn", color: "hover:text-blue-500" },
   ];
 
   return (
@@ -37,6 +45,23 @@ export function Header() {
               {item.label}
             </a>
           ))}
+          
+          <div className="h-4 w-[1px] bg-border mx-2" />
+          
+          <div className="flex items-center space-x-4">
+            {socialLinks.map((social) => (
+              <a
+                key={social.label}
+                href={social.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={`text-muted-foreground transition-colors ${social.color}`}
+                title={social.label}
+              >
+                <social.icon className="h-5 w-5" />
+              </a>
+            ))}
+          </div>
         </div>
 
         {/* Actions */}
@@ -66,20 +91,39 @@ export function Header() {
       {/* Mobile Menu */}
       {isMenuOpen && (
         <div className="md:hidden border-t">
-          <div className="container py-4 space-y-4">
-            {navItems.map((item) => (
-              <a
-                key={item.label}
-                href={item.href}
-                className="block text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
-                onClick={() => setIsMenuOpen(false)}
-              >
-                {item.label}
+          <div className="container py-6 space-y-6">
+            <div className="space-y-4">
+              {navItems.map((item) => (
+                <a
+                  key={item.label}
+                  href={item.href}
+                  className="block text-base font-medium text-muted-foreground hover:text-foreground transition-colors"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  {item.label}
+                </a>
+              ))}
+            </div>
+            
+            <div className="pt-4 border-t space-y-4">
+              <div className="flex items-center space-x-6">
+                {socialLinks.map((social) => (
+                  <a
+                    key={social.label}
+                    href={social.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={`text-muted-foreground transition-colors ${social.color}`}
+                    onClick={() => setIsMenuOpen(false)}
+                  >
+                    <social.icon className="h-6 w-6" />
+                  </a>
+                ))}
+              </div>
+              <a href={withBase("/setup")} onClick={() => setIsMenuOpen(false)} className="block pt-2">
+                <Button className="w-full h-12 text-base font-bold">Instalar Agora</Button>
               </a>
-            ))}
-            <a href={withBase("/setup")} onClick={() => setIsMenuOpen(false)}>
-              <Button className="w-full">Instalar</Button>
-            </a>
+            </div>
           </div>
         </div>
       )}
