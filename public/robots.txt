@@ -1,7 +1,0 @@
-# Help AI agents find structured content
-# llms.txt: https://setupvibe.dev/llms.txt
-
-User-agent: *
-Allow: /
-
-Sitemap: https://setupvibe.dev/sitemap-index.xml
