@@ -30,29 +30,11 @@ const pages = Object.fromEntries(
   Object.entries(pagesData).map(([key, value]) => [`${key}.png`, value])
 );
 
-const og = OGImageRoute({
+export const { getStaticPaths, GET } = await OGImageRoute({
   param: 'route',
   pages: pages,
   getImageOptions: (_path, page: any) => ({
     title: page.title,
     description: page.description,
-    bgGradient: [[17, 24, 39], [31, 41, 55]],
-    border: { color: [174, 96, 41], width: 20, side: 'bottom' },
-    logo: {
-      path: './public/logo.png',
-      size: [100, 100],
-    },
-    font: {
-      title: { color: [255, 255, 255], size: 70, families: ['sans-serif'], weight: 'Bold' },
-      description: { color: [209, 213, 219], size: 40, families: ['sans-serif'] },
-    },
   }),
 });
-
-export async function getStaticPaths() {
-  return [
-    ...Object.keys(pages).map((route) => ({ params: { route } })),
-  ];
-}
-
-export const GET = og.GET;

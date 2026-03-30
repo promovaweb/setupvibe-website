@@ -28,9 +28,9 @@ const canonicalURL = canonical
   : new URL(Astro.url.pathname, Astro.site || Astro.url);
 
 // Calculate OG Image URL
-const path = Astro.url.pathname.replace(/^\/|\/$/g, '');
-const ogRoute = path === '' ? 'index' : path;
-const ogImage = new URL(`/og/${ogRoute}.png`, Astro.site || Astro.url).toString();
+let path = Astro.url.pathname.replace(/^\/|\/$/g, '');
+const ogRoute = path === '' ? 'index.png' : `${path}.png`;
+const ogImage = new URL(`/og/${ogRoute}`, Astro.site || Astro.url).toString();
 ---
 
 <html lang="pt-BR">
