@@ -2,6 +2,7 @@
 import Layout from '../layouts/main.astro';
 import { Hero } from '@/components/Hero';
 import { Features } from '@/components/Features';
+import { CrossPlatformCTA } from '@/components/CrossPlatformCTA';
 import { ModulesGrid } from '@/components/ModulesGrid';
 import { Testimonials } from '@/components/Testimonials';
 import { PromovawebCTA } from '@/components/PromovawebCTA';
@@ -11,7 +12,7 @@ import { FAQ } from '@/components/FAQ';
 
 <Layout 
 	title="SetupVibe - O Seu Ambiente Vibe Coding em 1 Clique"
-	description="Não perca tempo configurando o terminal. O SetupVibe prepara sua máquina (Mac e Linux) com as melhores ferramentas para Vibe Coding instantaneamente."
+	description="Não perca tempo configurando o terminal. O SetupVibe prepara sua máquina (Mac, Linux - Debian/Ubuntu e Windows WSL2) com as melhores ferramentas para Vibe Coding instantaneamente."
 >
   <script type="application/ld+json" is:inline slot="head">
     {
@@ -19,18 +20,19 @@ import { FAQ } from '@/components/FAQ';
       "@type": "WebSite",
       "url": "https://setupvibe.dev",
       "name": "SetupVibe",
-      "description": "Ambiente de desenvolvimento 1-click para Vibe Coding com IA.",
+      "description": "Ambiente de desenvolvimento 1-click para Vibe Coding com IA em MacOS, Linux e Windows (WSL).",
       "potentialAction": {
         "@type": "SearchAction",
         "target": "https://setupvibe.dev/?s={search_term_string}",
         "query-input": "required name=search_term_string"
       },
-      "keywords": "vibe coding, ai development, terminal setup, zsh starship, claude-code, gemini-cli, automation, marketing automation"
+      "keywords": "vibe coding, ai development, terminal setup, zsh starship, claude-code, gemini-cli, automation, debian, ubuntu, wsl, wsl2, macos"
     }
   </script>
 
 	<Hero client:load />
 	<Features client:load />
+	<CrossPlatformCTA client:load />
 	<ModulesGrid client:load />
 	<Testimonials client:load />
 	<PromovawebCTA client:load />

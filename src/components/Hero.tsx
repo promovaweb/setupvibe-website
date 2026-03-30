@@ -49,7 +49,7 @@ export function Hero() {
             transition={{ duration: 0.5, delay: 0.2 }}
             className="text-lg md:text-xl text-muted-foreground max-w-2xl leading-relaxed"
           >
-            O SetupVibe prepara sua máquina com um clique para que o Claude, Copilot e Gemini façam a mágica acontecer.
+            O SetupVibe prepara sua máquina com um clique para que o Claude, Copilot e Gemini façam a mágica acontecer. Compatível com <span className="text-foreground font-semibold">MacOS</span>, <span className="text-foreground font-semibold">Linux (Debian/Ubuntu)</span> e <span className="text-foreground font-semibold">Windows (WSL)</span>.
           </motion.p>
 
           {/* CTA Buttons */}
@@ -65,8 +65,8 @@ export function Hero() {
                 <Download className="ml-2 h-5 w-5 transition-transform group-hover:scale-110" />
               </a>
             </Button>
-            <p className="text-sm text-muted-foreground italic">
-              100% gratuito. Instalação segura para Windows, Mac e Linux.
+            <p className="text-sm text-muted-foreground">
+              Script otimizado para <span className="font-medium italic">Debian, Ubuntu, WSL2 e MacOS</span>. 100% gratuito e seguro.
             </p>
           </motion.div>
 

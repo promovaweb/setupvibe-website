@@ -12,7 +12,7 @@ const steps = [
     icon: Terminal,
     title: "Passo 1: Copie o Comando",
     description:
-      "Visite nossa página de instalação e copie o script de curl que bate com o seu sistema (Mac, Linux ou WSL). O código é enxuto, open-source e não esconde segredos.",
+      "Visite nossa página de instalação e copie o script de curl que bate com o seu sistema (MacOS, Linux - Debian/Ubuntu ou Windows WSL2). O código é enxuto, open-source e não esconde segredos.",
     gradient: "from-blue-500 to-cyan-500",
   },
   {
