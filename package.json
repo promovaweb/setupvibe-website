@@ -33,8 +33,6 @@
     "astro-robots-txt": "^1.0.0",
     "astro-seo": "^1.1.0",
     "astro-webmanifest": "^1.0.0",
-    "astro-whatsapp": "^3.0.0",
-    "canvas": "^3.2.2",
     "canvas-confetti": "^1.9.4",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
@@ -48,10 +46,7 @@
   },
   "overrides": {
     "react": "$react",
-    "react-dom": "$react-dom",
-    "astro-whatsapp": {
-      "astro": "$astro"
-    }
+    "react-dom": "$react-dom"
   },
   "devDependencies": {
     "@playform/compress": "^0.2.2",
