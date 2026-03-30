@@ -36,6 +36,7 @@ export const { getStaticPaths, GET } = await OGImageRoute({
   getImageOptions: (_path, page: any) => ({
     title: page.title,
     description: page.description,
+    backgroundColor: [13, 16, 23], // Deep slate/black style terminal
     logo: {
       path: './public/logo.png',
       size: [80, 80],
