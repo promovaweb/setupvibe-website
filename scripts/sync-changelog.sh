@@ -38,15 +38,15 @@ while IFS= read -r line; do
     elif [ -n "$CURRENT_FILE" ]; then
         # Adicionar linha ao arquivo atual, removendo o marcador horizontal do Keep a Changelog se existir
         if [[ ! "$line" =~ ^"---" ]]; then
-            # Converter headers h3 para div com classes específicas para estilização
+            # Usar classes CSS em spans ou tags para não quebrar o parser do markdown
             if [[ "$line" =~ ^"### Added" ]]; then
-                echo '<h3 class="changelog-added">Added</h3>' >> "$CURRENT_FILE"
+                echo "### <span class=\"changelog-added\">Added</span>" >> "$CURRENT_FILE"
             elif [[ "$line" =~ ^"### Changed" ]]; then
-                echo '<h3 class="changelog-changed">Changed</h3>' >> "$CURRENT_FILE"
+                echo "### <span class=\"changelog-changed\">Changed</span>" >> "$CURRENT_FILE"
             elif [[ "$line" =~ ^"### Fixed" ]]; then
-                echo '<h3 class="changelog-fixed">Fixed</h3>' >> "$CURRENT_FILE"
+                echo "### <span class=\"changelog-fixed\">Fixed</span>" >> "$CURRENT_FILE"
             elif [[ "$line" =~ ^"### Docs" ]]; then
-                echo '<h3 class="changelog-docs">Docs</h3>' >> "$CURRENT_FILE"
+                echo "### <span class=\"changelog-docs\">Docs</span>" >> "$CURRENT_FILE"
             else
                 echo "$line" >> "$CURRENT_FILE"
             fi

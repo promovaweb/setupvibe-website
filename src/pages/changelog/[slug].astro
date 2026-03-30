@@ -46,7 +46,7 @@ const sourceUrl = "https://github.com/promovaweb/setupvibe/blob/main/CHANGELOG.m
 		<div class="container mx-auto px-4">
 			<div class="max-w-6xl mx-auto">
 				{/* Breadcrumbs / Back */}
-				<div class="mb-12">
+				<div class="mb-12 animate-in fade-in slide-in-from-left-4 duration-500">
           <a 
             href={withBase("/changelog")} 
             class="inline-flex items-center gap-2 text-sm font-medium text-muted-foreground hover:text-primary transition-colors group"
@@ -57,7 +57,7 @@ const sourceUrl = "https://github.com/promovaweb/setupvibe/blob/main/CHANGELOG.m
         </div>
 
         {/* Header Section */}
-				<header class="mb-16 space-y-4">
+				<header class="mb-16 space-y-4 animate-in fade-in slide-in-from-top-4 duration-700">
 					<div class="flex items-center gap-3">
             <span class="px-3 py-1 text-xs font-bold uppercase tracking-wider rounded-full bg-primary/10 text-primary border border-primary/20">
               Release Notes
@@ -80,8 +80,8 @@ const sourceUrl = "https://github.com/promovaweb/setupvibe/blob/main/CHANGELOG.m
 				<div class="grid grid-cols-1 md:grid-cols-12 gap-6">
           
           {/* Main Content Card (The List) */}
-          <div class="md:col-span-8 space-y-6">
-            <MagicCard className="h-full" gradientColor="rgba(139, 92, 246, 0.1)">
+          <div class="md:col-span-8 space-y-6 animate-in fade-in slide-in-from-bottom-4 duration-700 delay-200">
+            <MagicCard client:load className="h-full" gradientColor="rgba(139, 92, 246, 0.1)">
               <div class="p-8 md:p-10">
                 <div class="flex items-center gap-3 mb-8 border-b pb-6">
                   <div class="p-2.5 rounded-xl bg-primary/10 text-primary">
@@ -95,24 +95,23 @@ const sourceUrl = "https://github.com/promovaweb/setupvibe/blob/main/CHANGELOG.m
 
                 <div class="prose prose-lg dark:prose-invert max-w-none 
                   prose-h3:text-xl prose-h3:font-bold prose-h3:mb-6 prose-h3:mt-10 prose-h3:first:mt-0
-                  prose-ul:list-none prose-ul:ml-0 prose-ul:space-y-4
-                  prose-li:text-muted-foreground prose-li:relative prose-li:pl-8
-                  prose-li:before:content-[''] prose-li:before:absolute prose-li:before:left-0 prose-li:before:top-[0.6em] 
-                  prose-li:before:h-2 prose-li:before:w-2 prose-li:before:rounded-full prose-li:before:bg-primary/40
+                  
+                  prose-ul:list-disc prose-ul:ml-6 prose-ul:mb-8 prose-ul:space-y-2
+                  prose-li:marker:text-primary prose-li:text-muted-foreground
                   
                   [&_h3]:flex [&_h3]:items-center [&_h3]:gap-3 [&_h3]:p-4 [&_h3]:rounded-2xl [&_h3]:bg-muted/50 [&_h3]:border
                   
                   [&_.changelog-added]:text-green-600 [&_.changelog-added]:dark:text-green-400
-                  [&_.changelog-added]:before:content-['\2728'] [&_.changelog-added]:before:text-sm
+                  [&_h3:has(.changelog-added)]:before:content-['✨'] [&_h3:has(.changelog-added)]:before:text-sm
                   
                   [&_.changelog-fixed]:text-red-600 [&_.changelog-fixed]:dark:text-red-400
-                  [&_.changelog-fixed]:before:content-['\1F41B'] [&_.changelog-fixed]:before:text-sm
+                  [&_h3:has(.changelog-fixed)]:before:content-['🐛'] [&_h3:has(.changelog-fixed)]:before:text-sm
                   
                   [&_.changelog-changed]:text-blue-600 [&_.changelog-changed]:dark:text-blue-400
-                  [&_.changelog-changed]:before:content-['\26A1'] [&_.changelog-changed]:before:text-sm
+                  [&_h3:has(.changelog-changed)]:before:content-['⚡'] [&_h3:has(.changelog-changed)]:before:text-sm
                   
                   [&_.changelog-docs]:text-purple-600 [&_.changelog-docs]:dark:text-purple-400
-                  [&_.changelog-docs]:before:content-['\1F4D6'] [&_.changelog-docs]:before:text-sm
+                  [&_h3:has(.changelog-docs)]:before:content-['📖'] [&_h3:has(.changelog-docs)]:before:text-sm
                 ">
                   <Content />
                 </div>
@@ -121,10 +120,10 @@ const sourceUrl = "https://github.com/promovaweb/setupvibe/blob/main/CHANGELOG.m
           </div>
 
           {/* Sidebar Cards */}
-          <div class="md:col-span-4 flex flex-col gap-6">
+          <div class="md:col-span-4 flex flex-col gap-6 animate-in fade-in slide-in-from-right-4 duration-700 delay-300">
             
             {/* Version Badge Card */}
-            <MagicCard className="p-8" gradientColor="rgba(59, 130, 246, 0.1)">
+            <MagicCard client:load className="p-8" gradientColor="rgba(59, 130, 246, 0.1)">
               <div class="space-y-6">
                 <div class="flex items-center justify-between">
                   <h3 class="font-bold text-lg">Status do Release</h3>
@@ -155,7 +154,7 @@ const sourceUrl = "https://github.com/promovaweb/setupvibe/blob/main/CHANGELOG.m
             </MagicCard>
 
             {/* CTA Install Card */}
-            <MagicCard className="p-8 bg-primary/5 border-primary/20" gradientColor="rgba(139, 92, 246, 0.2)">
+            <MagicCard client:load className="p-8 bg-primary/5 border-primary/20" gradientColor="rgba(139, 92, 246, 0.2)">
               <div class="space-y-6 text-center">
                 <div class="w-16 h-16 bg-primary rounded-2xl flex items-center justify-center mx-auto shadow-lg shadow-primary/20">
                   <Download class="h-8 w-8 text-primary-foreground" />
@@ -176,7 +175,7 @@ const sourceUrl = "https://github.com/promovaweb/setupvibe/blob/main/CHANGELOG.m
             </MagicCard>
 
             {/* Social / GitHub Card */}
-            <MagicCard className="p-8 group" gradientColor="rgba(255, 255, 255, 0.05)">
+            <MagicCard client:load className="p-8 group" gradientColor="rgba(255, 255, 255, 0.05)">
               <div class="space-y-6">
                 <h3 class="font-bold text-lg">Links Úteis</h3>
                 <div class="space-y-3">
@@ -212,19 +211,3 @@ const sourceUrl = "https://github.com/promovaweb/setupvibe/blob/main/CHANGELOG.m
 		</div>
 	</section>
 </Layout>
-
-<script>
-  import { motion } from "framer-motion";
-</script>       </div>
-            </MagicCard>
-
-          </div>
-				</div>
-			</div>
-		</div>
-	</section>
-</Layout>
-
-<script>
-  import { motion } from "framer-motion";
-</script>
