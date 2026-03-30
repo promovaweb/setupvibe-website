@@ -48,7 +48,10 @@
   },
   "overrides": {
     "react": "$react",
-    "react-dom": "$react-dom"
+    "react-dom": "$react-dom",
+    "astro-whatsapp": {
+      "astro": "$astro"
+    }
   },
   "devDependencies": {
     "@playform/compress": "^0.2.2",
