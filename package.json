@@ -11,6 +11,7 @@
     "sync-changelog": "bash scripts/sync-changelog.sh"
   },
   "dependencies": {
+    "@astrojs/cloudflare": "^13.1.4",
     "@astrojs/mdx": "^5.0.2",
     "@astrojs/react": "^5.0.1",
     "@astrojs/sitemap": "^3.7.1",
