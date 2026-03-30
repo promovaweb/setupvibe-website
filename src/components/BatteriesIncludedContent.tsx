@@ -1,8 +1,9 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Terminal, Code, Box, Shield, Cpu, Search, Layers, Bot } from "lucide-react";
+import { Terminal, Code, Box, Shield, Cpu, Search, Layers, Bot, ArrowRight, Settings } from "lucide-react";
 import { MagicCard } from "@/components/MagicCard";
+import { Button } from "@/components/ui/button";
 import { GradientText } from "@/components/GradientText";
 import { withBase } from "@/lib/utils";
 
@@ -78,6 +79,34 @@ export function BatteriesIncludedContent() {
       {/* Grid de Ferramentas (Usando MagicCard para efeito belíssimo) */}
       <section className="py-24 bg-background scroll-mt-20">
         <div className="container mx-auto px-4">
+          
+          {/* CTA Section - Now at the Top */}
+          <motion.div 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="mb-24 max-w-4xl mx-auto text-center border rounded-[2.5rem] p-10 md:p-16 bg-muted/30 relative overflow-hidden group shadow-sm"
+          >
+            <div className="absolute top-0 right-0 p-8 opacity-[0.03] group-hover:opacity-[0.06] transition-opacity">
+              <Settings className="w-64 h-64 rotate-12" />
+            </div>
+            
+            <div className="relative z-10 space-y-6">
+              <h3 className="text-3xl font-bold tracking-tight">Quer ver a stack em detalhes?</h3>
+              <p className="text-muted-foreground text-lg max-w-2xl mx-auto leading-relaxed">
+                Preparamos uma documentação técnica completa que explica cada etapa da instalação, o motivo de cada ferramenta e como elas se integram.
+              </p>
+              <div className="pt-4 flex justify-center">
+                <Button size="lg" className="rounded-full h-14 px-8 text-lg font-bold gap-2 group/btn" asChild>
+                  <a href={withBase("/ferramentas")}>
+                    Explorar Documentação Técnica
+                    <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                  </a>
+                </Button>
+              </div>
+            </div>
+          </motion.div>
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
             {categories.map((category, index) => {
               const Icon = category.icon;
