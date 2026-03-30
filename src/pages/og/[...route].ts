@@ -4,24 +4,24 @@ import { getCollection } from 'astro:content';
 const changelogEntries = await getCollection('changelog');
 
 const pagesData: Record<string, { title: string; description: string }> = {
-  'index': { title: 'SetupVibe - O Seu Ambiente Vibe Coding em 1 Clique', description: 'Ambiente dev completo, rápido e sem complicações.' },
-  'about': { title: 'Sobre o SetupVibe', description: 'Simplificando o desenvolvimento para a era das IAs.' },
-  'how-it-works': { title: 'Como o SetupVibe Funciona', description: 'Os bastidores do seu novo terminal.' },
-  'batteries-included': { title: 'Baterias Inclusas', description: 'Tudo o que instalamos pra você.' },
-  'setup': { title: 'Instalar SetupVibe', description: 'Sua máquina pronta em minutos.' },
-  'faq': { title: 'Perguntas Frequentes', description: 'Tire suas dúvidas sobre o SetupVibe.' },
-  'changelog': { title: 'Changelog', description: 'Novidades e atualizações do SetupVibe.' },
-  'blog': { title: 'Blog SetupVibe', description: 'Dicas de Vibe Coding e IA.' },
-  'blog/getting-started-with-ai': { title: "Getting Started with AI: A Beginner's Guide", description: 'Learn the fundamentals of artificial intelligence and how to start building AI-powered applications today.' },
-  'componentes': { title: 'Componentes', description: 'Nossa biblioteca de UI.' },
-  'advanced-components': { title: 'Advanced Components', description: 'Componentes prontos para produção.' },
-  'privacy': { title: 'Privacidade', description: 'Nossa política de privacidade.' },
-  'terms': { title: 'Termos de Uso', description: 'Nossos termos de serviço.' },
+  'index': { title: 'setupvibe --init', description: 'O Seu Ambiente Vibe Coding em 1 Clique. Ambiente dev completo, rápido e sem complicações.' },
+  'about': { title: 'setupvibe --about', description: 'Simplificando o desenvolvimento para a era das IAs.' },
+  'how-it-works': { title: 'setupvibe --how-it-works', description: 'Os bastidores do seu novo terminal e ecossistema dev.' },
+  'batteries-included': { title: 'setupvibe --tools', description: 'Conheça todas as ferramentas que instalamos pra você automaticamente.' },
+  'setup': { title: 'setupvibe --install', description: 'Sua máquina pronta para Vibe Coding em apenas um comando.' },
+  'faq': { title: 'setupvibe --faq', description: 'Tire suas dúvidas sobre segurança, ferramentas e instalação.' },
+  'changelog': { title: 'setupvibe --changelog', description: 'Acompanhe a evolução do seu ambiente de desenvolvimento.' },
+  'blog': { title: 'setupvibe --blog', description: 'Dicas de Vibe Coding, IA e produtividade no terminal.' },
+  'blog/getting-started-with-ai': { title: "setupvibe --blog-post", description: "Getting Started with AI: A Beginner's Guide to Vibe Coding." },
+  'componentes': { title: 'setupvibe --ui', description: 'Nossa biblioteca de componentes modernos para interfaces de IA.' },
+  'advanced-components': { title: 'setupvibe --advanced', description: 'Componentes complexos e otimizados para produção.' },
+  'privacy': { title: 'setupvibe --privacy', description: 'Transparência e segurança dos seus dados.' },
+  'terms': { title: 'setupvibe --terms', description: 'Diretrizes de uso e licenciamento da ferramenta.' },
 };
 
 changelogEntries.forEach((entry) => {
   pagesData[`changelog/${entry.id}`] = {
-    title: `Changelog v${entry.data.version}`,
+    title: `setupvibe --release v${entry.data.version}`,
     description: entry.data.title,
   };
 });
@@ -36,5 +36,9 @@ export const { getStaticPaths, GET } = await OGImageRoute({
   getImageOptions: (_path, page: any) => ({
     title: page.title,
     description: page.description,
+    logo: {
+      path: './public/logo.png',
+      size: [80, 80],
+    },
   }),
 });
