@@ -1,6 +1,6 @@
 "use client";
 
-import { Sparkles, Github, Twitter, Linkedin, Mail } from "lucide-react";
+import { Sparkles, Github, Instagram, Linkedin, Mail } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { withBase } from "@/lib/utils";
 
@@ -24,7 +24,7 @@ export function Footer() {
             </p>
             <div className="flex gap-3">
               <a
-                href="https://github.com"
+                href="https://github.com/promovaweb/setupvibe"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-muted-foreground hover:text-foreground transition-colors"
@@ -32,15 +32,15 @@ export function Footer() {
                 <Github className="h-5 w-5" />
               </a>
               <a
-                href="https://twitter.com"
+                href="https://instagram.com/luizeof"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-muted-foreground hover:text-foreground transition-colors"
               >
-                <Twitter className="h-5 w-5" />
+                <Instagram className="h-5 w-5" />
               </a>
               <a
-                href="https://linkedin.com"
+                href="https://linkedin.com/luizeof"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-muted-foreground hover:text-foreground transition-colors"
@@ -62,21 +62,36 @@ export function Footer() {
                   Features
                 </a>
               </li>
-
+              <li>
+                <a
+                  href={withBase("/componentes")}
+                  className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+                >
+                  Components
+                </a>
+              </li>
+              <li>
+                <a
+                  href={withBase("/advanced-components")}
+                  className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+                >
+                  Advanced
+                </a>
+              </li>
+              <li>
+                <a
+                  href={withBase("/how-it-works")}
+                  className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+                >
+                  How it Works
+                </a>
+              </li>
               <li>
                 <a
                   href={withBase("/faq")}
                   className="text-sm text-muted-foreground hover:text-foreground transition-colors"
                 >
                   FAQ
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#"
-                  className="text-sm text-muted-foreground hover:text-foreground transition-colors"
-                >
-                  API Reference
                 </a>
               </li>
             </ul>
@@ -96,21 +111,20 @@ export function Footer() {
               </li>
               <li>
                 <a
-                  href={withBase("/blog")}
+                  href={withBase("/changelog")}
                   className="text-sm text-muted-foreground hover:text-foreground transition-colors"
                 >
-                  Blog
+                  Changelog
                 </a>
               </li>
               <li>
                 <a
-                  href="#"
+                  href={withBase("/setup")}
                   className="text-sm text-muted-foreground hover:text-foreground transition-colors"
                 >
-                  Careers
+                  Setup Guide
                 </a>
               </li>
-
             </ul>
           </div>
 
