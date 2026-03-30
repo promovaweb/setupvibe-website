@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Download, ShieldCheck, Users, Star } from "lucide-react";
+import { withBase } from "@/lib/utils";
 
 export function Hero() {
   return (
@@ -59,7 +60,7 @@ export function Hero() {
             className="flex flex-col items-center gap-4"
           >
             <Button size="lg" className="group text-lg px-8 h-14" asChild>
-              <a href="/setup">
+              <a href={withBase("/setup")}>
                 Instalar Agora
                 <Download className="ml-2 h-5 w-5 transition-transform group-hover:scale-110" />
               </a>
