@@ -1,41 +1,68 @@
 ---
 import Layout from '../layouts/main.astro';
-import { Users, Target, Zap, Heart } from 'lucide-react';
+import { Users, Target, Zap, Heart, Globe, Github, Linkedin, Instagram } from 'lucide-react';
 ---
 
 <Layout 
-	title="Sobre o SetupVibe - A Ferramenta de Vibe Coding"
-	description="Conheça a história e a missão do SetupVibe: transformar qualquer máquina crua no ambiente de desenvolvimento mais poderoso e focado em IA do mundo."
+	title="Sobre o SetupVibe - A Revolução do Vibe Coding"
+	description="Conheça a história e a missão do SetupVibe: transformar qualquer máquina no ambiente de desenvolvimento mais poderoso e focado em IA do mundo, liderado por Luiz Eduardo Oliveira Fonseca (luizeof)."
 >
 	<section class="py-20 md:py-32">
 		<div class="container mx-auto px-4">
 			<div class="max-w-4xl mx-auto">
 				<div class="text-center space-y-4 mb-16">
 					<h1 class="text-4xl md:text-6xl font-bold">
-						About{" "}
+						Sobre o{" "}
 						<span class="bg-gradient-to-r from-purple-600 to-pink-600 dark:from-purple-400 dark:to-pink-400 bg-clip-text text-transparent">
-							GenAI
+							SetupVibe
 						</span>
 					</h1>
 					<p class="text-xl text-muted-foreground max-w-2xl mx-auto">
-						We're on a mission to democratize AI and make it accessible to everyone
+						Simplificando o desenvolvimento para a era das Inteligências Artificiais e Automações.
 					</p>
 				</div>
 
 				<!-- Story Section -->
 				<div class="prose prose-lg dark:prose-invert mx-auto mb-16">
-					<h2>Our Story</h2>
+					<h2>Nossa História</h2>
 					<p>
-						Founded in 2024, GenAI emerged from a simple observation: while artificial intelligence
-						was advancing rapidly, it remained inaccessible to most developers and businesses. We set
-						out to change that.
+						O SetupVibe nasceu da necessidade de criar ambientes de desenvolvimento consistentes, rápidos e otimizados para o que chamamos de "Vibe Coding" — uma forma de programar onde a barreira entre a ideia e a execução é minimizada pelo uso estratégico de IAs e automações.
 					</p>
 					<p>
-						Our team of AI researchers, engineers, and product designers came together with a shared
-						vision: to build a platform that makes cutting-edge AI technology as easy to use as
-						sending an email. Today, we're proud to serve thousands of developers and businesses
-						worldwide.
+						Idealizado por <strong>Luiz Eduardo Oliveira Fonseca (luizeof)</strong>, fundador da <strong>Promovaweb</strong> e embaixador oficial do n8n no Brasil, o projeto consolida décadas de experiência em infraestrutura, desenvolvimento web e automação de processos.
 					</p>
+					<p>
+						A Promovaweb sempre foi focada em democratizar o acesso a ferramentas poderosas através de automação. Com o SetupVibe, levamos essa mesma filosofia para o ambiente local do desenvolvedor, permitindo que qualquer pessoa configure um workflow profissional em minutos.
+					</p>
+				</div>
+
+				<!-- Founder Section -->
+				<div class="bg-muted/30 rounded-3xl p-8 md:p-12 mb-16 border">
+					<div class="flex flex-col md:flex-row gap-8 items-center">
+						<div class="w-32 h-32 md:w-48 md:h-48 rounded-full overflow-hidden border-4 border-purple-500/20 shrink-0">
+							<img src="https://github.com/luizeof.png" alt="Luiz Eduardo Oliveira Fonseca" class="w-full h-full object-cover" />
+						</div>
+						<div class="space-y-4">
+							<h3 class="text-2xl font-bold">Luiz Eduardo Oliveira Fonseca</h3>
+							<p class="text-muted-foreground">
+								Especialista em automação, infraestrutura e IA. Atua no desenvolvimento desde 2005 e é uma das principais referências em n8n e ferramentas open-source no Brasil. Através da Promovaweb, já impactou milhares de alunos e empresas com soluções de automação e escala.
+							</p>
+							<div class="flex gap-4">
+								<a href="https://github.com/luizeof" target="_blank" class="text-muted-foreground hover:text-foreground transition-colors">
+									<Github class="h-6 w-6" />
+								</a>
+								<a href="https://linkedin.com/luizeof" target="_blank" class="text-muted-foreground hover:text-foreground transition-colors">
+									<Linkedin class="h-6 w-6" />
+								</a>
+								<a href="https://instagram.com/luizeof" target="_blank" class="text-muted-foreground hover:text-foreground transition-colors">
+									<Instagram class="h-6 w-6" />
+								</a>
+								<a href="https://promovaweb.com" target="_blank" class="text-muted-foreground hover:text-foreground transition-colors">
+									<Globe class="h-6 w-6" />
+								</a>
+							</div>
+						</div>
+					</div>
 				</div>
 
 				<!-- Values Grid -->
@@ -44,10 +71,9 @@ import { Users, Target, Zap, Heart } from 'lucide-react';
 						<div class="inline-flex p-3 rounded-xl bg-gradient-to-br from-purple-500 to-pink-500 mb-4">
 							<Target class="h-6 w-6 text-white" />
 						</div>
-						<h3 class="text-xl font-semibold mb-2">Our Mission</h3>
+						<h3 class="text-xl font-semibold mb-2">Nossa Missão</h3>
 						<p class="text-muted-foreground">
-							To empower developers and businesses with accessible, powerful AI tools that
-							drive innovation and create value.
+							Remover a fricção técnica do setup de ambiente, permitindo que desenvolvedores foquem no que realmente importa: criar valor com IA.
 						</p>
 					</div>
 
@@ -55,10 +81,9 @@ import { Users, Target, Zap, Heart } from 'lucide-react';
 						<div class="inline-flex p-3 rounded-xl bg-gradient-to-br from-blue-500 to-cyan-500 mb-4">
 							<Zap class="h-6 w-6 text-white" />
 						</div>
-						<h3 class="text-xl font-semibold mb-2">Our Vision</h3>
+						<h3 class="text-xl font-semibold mb-2">Visão</h3>
 						<p class="text-muted-foreground">
-							A world where AI is a force for good, accessible to all, and used to solve
-							humanity's greatest challenges.
+							Ser o padrão global para configuração de ambientes de "Vibe Coding", unindo o poder do open-source com a agilidade da IA.
 						</p>
 					</div>
 
@@ -66,10 +91,9 @@ import { Users, Target, Zap, Heart } from 'lucide-react';
 						<div class="inline-flex p-3 rounded-xl bg-gradient-to-br from-green-500 to-emerald-500 mb-4">
 							<Users class="h-6 w-6 text-white" />
 						</div>
-						<h3 class="text-xl font-semibold mb-2">Our Team</h3>
+						<h3 class="text-xl font-semibold mb-2">Comunidade</h3>
 						<p class="text-muted-foreground">
-							A diverse group of AI experts, engineers, and innovators from leading tech
-							companies and research institutions.
+							Acreditamos na força do coletivo e do open-source. O SetupVibe é feito por e para a comunidade.
 						</p>
 					</div>
 
@@ -77,42 +101,25 @@ import { Users, Target, Zap, Heart } from 'lucide-react';
 						<div class="inline-flex p-3 rounded-xl bg-gradient-to-br from-pink-500 to-rose-500 mb-4">
 							<Heart class="h-6 w-6 text-white" />
 						</div>
-						<h3 class="text-xl font-semibold mb-2">Our Values</h3>
+						<h3 class="text-xl font-semibold mb-2">Nossos Valores</h3>
 						<p class="text-muted-foreground">
-							Transparency, ethics, innovation, and customer success guide everything
-							we do at GenAI.
+							Simplicidade, transparência, ética no uso de IA e o compromisso com a soberania tecnológica através do open-source.
 						</p>
-					</div>
-				</div>
-
-				<!-- Stats -->
-				<div class="grid grid-cols-3 gap-8 py-12 border-y">
-					<div class="text-center">
-						<div class="text-3xl md:text-4xl font-bold mb-2">50K+</div>
-						<p class="text-sm text-muted-foreground">Active Users</p>
-					</div>
-					<div class="text-center">
-						<div class="text-3xl md:text-4xl font-bold mb-2">10M+</div>
-						<p class="text-sm text-muted-foreground">API Requests/Day</p>
-					</div>
-					<div class="text-center">
-						<div class="text-3xl md:text-4xl font-bold mb-2">99.9%</div>
-						<p class="text-sm text-muted-foreground">Uptime SLA</p>
 					</div>
 				</div>
 
 				<!-- CTA -->
 				<div class="text-center mt-16">
-					<h2 class="text-2xl md:text-3xl font-bold mb-4">Join Our Journey</h2>
+					<h2 class="text-2xl md:text-3xl font-bold mb-4">Comece agora sua jornada</h2>
 					<p class="text-muted-foreground mb-6">
-						We're always looking for talented people to join our team
+						Transforme seu setup em minutos e entre na era do Vibe Coding.
 					</p>
 					<div class="flex flex-col sm:flex-row gap-4 justify-center">
-						<a href="#" class="inline-flex items-center justify-center h-10 px-6 rounded-md bg-primary text-primary-foreground font-medium hover:bg-primary/90 transition-colors">
-							View Open Positions
+						<a href="/setup" class="inline-flex items-center justify-center h-12 px-8 rounded-xl bg-primary text-primary-foreground font-bold hover:bg-primary/90 transition-all hover:scale-105">
+							Configurar meu Ambiente
 						</a>
-						<a href="/contact" class="inline-flex items-center justify-center h-10 px-6 rounded-md border bg-background hover:bg-accent hover:text-accent-foreground transition-colors">
-							Get in Touch
+						<a href="https://github.com/promovaweb/setupvibe" target="_blank" class="inline-flex items-center justify-center h-12 px-8 rounded-xl border bg-background hover:bg-accent hover:text-accent-foreground transition-all">
+							Ver no GitHub
 						</a>
 					</div>
 				</div>
