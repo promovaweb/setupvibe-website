@@ -1,6 +1,7 @@
 ---
 import Layout from '../layouts/main.astro';
 import { HowItWorksContent } from '@/components/HowItWorksContent';
+import { PromovawebCTA } from '@/components/PromovawebCTA';
 ---
 
 <Layout 
@@ -8,4 +9,5 @@ import { HowItWorksContent } from '@/components/HowItWorksContent';
 	description="Entenda o que acontece por trás dos panos. Instalamos ZSH, Tmux, PM2 e IAs nativas de forma otimizada para garantir que o seu ambiente de desenvolvimento voe."
 >
 	<HowItWorksContent client:load />
+    <PromovawebCTA client:only="react" />
 </Layout>

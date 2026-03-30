@@ -1,8 +1,9 @@
 ---
 import Layout from '@/layouts/main.astro';
 import { getCollection, render } from 'astro:content';
-import { Sparkles, Zap, ChevronLeft, ChevronRight, ExternalLink, Plus, Wrench, Bug, Tag, Calendar } from 'lucide-react';
+import { Sparkles, Zap, ChevronLeft, ChevronRight, ExternalLink, Tag, Calendar } from 'lucide-react';
 import { withBase } from '@/lib/utils';
+import { PromovawebCTA } from '@/components/PromovawebCTA';
 
 export async function getStaticPaths({ paginate }) {
   const changelogEntries = await getCollection('changelog');
@@ -170,4 +171,5 @@ const formatDate = (date) => {
 			</div>
 		</div>
 	</section>
+  <PromovawebCTA client:only="react" />
 </Layout>

@@ -3,12 +3,14 @@ import Layout from '@/layouts/main.astro';
 import { getCollection, render } from 'astro:content';
 import { 
   ArrowLeft, Calendar, Tag, Clock, Rocket, 
-  Github, Download, Sparkles, Zap, Shield,
-  Plus, Wrench, Bug, Book, ExternalLink,
-  ChevronRight, MessageCircle
+  Github, Download, 
+  Shield,
+  ExternalLink,
+  MessageCircle
 } from 'lucide-react';
 import { withBase } from '@/lib/utils';
 import { MagicCard } from '@/components/MagicCard';
+import { PromovawebCTA } from '@/components/PromovawebCTA';
 
 export async function getStaticPaths() {
   const changelogEntries = await getCollection('changelog');
@@ -210,4 +212,5 @@ const sourceUrl = "https://github.com/promovaweb/setupvibe/blob/main/CHANGELOG.m
 			</div>
 		</div>
 	</section>
+  <PromovawebCTA client:only="react" />
 </Layout>
