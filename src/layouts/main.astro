@@ -4,16 +4,61 @@ import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
 import { CommandPalette } from '@/components/CommandPalette';
 import { CookieConsent } from '@/components/CookieConsent';
-const { title = "GenAI - Build the Future with AI" } = Astro.props;
+import { SEO } from 'astro-seo';
+
+interface Props {
+  title?: string;
+  description?: string;
+  image?: string;
+  canonical?: string;
+}
+
+const { 
+  title = "SetupVibe - Vibe Coding Environment in 1-Click",
+  description = "SetupVibe prepara sua máquina com um clique para que o Claude, Copilot e Gemini façam a mágica acontecer. Ambiente dev completo, rápido e sem complicações.",
+  image = new URL("/logo.png", Astro.site || Astro.url).toString(),
+  canonical
+} = Astro.props;
+
+// Determine canonical URL if not provided
+const canonicalURL = canonical 
+  ? new URL(canonical, Astro.site || Astro.url) 
+  : new URL(Astro.url.pathname, Astro.site || Astro.url);
 ---
 
-<html lang="en">
+<html lang="pt-BR">
 	<head>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<meta name="description" content="A modern, free Astro theme template for GenAI startups with dark/light mode toggle" />
 		<link rel="icon" type="image/png" href="/logo.png" />
-		<title>{title}</title>
+		<SEO
+      title={title}
+      description={description}
+      canonical={canonicalURL.toString()}
+      openGraph={{
+        basic: {
+          title: title,
+          type: "website",
+          image: image,
+          url: canonicalURL.toString(),
+        },
+        image: {
+          alt: "SetupVibe Logo",
+        }
+      }}
+      twitter={{
+        creator: "@setupvibe",
+        card: "summary_large_image",
+        title: title,
+        description: description,
+        image: image,
+      }}
+      extend={{
+        meta: [
+          { name: "theme-color", content: "#ffffff" },
+        ]
+      }}
+    />
 	</head>
 	<body>
 		<Header client:only="react" />
