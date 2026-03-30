@@ -7,7 +7,8 @@
     "dev": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "sync-changelog": "bash scripts/sync-changelog.sh"
   },
   "dependencies": {
     "@astrojs/mdx": "^5.0.2",

@@ -1,0 +1,90 @@
+---
+import Layout from '@/layouts/main.astro';
+import { getCollection, render } from 'astro:content';
+import { ArrowLeft, Calendar, Tag, Clock } from 'lucide-react';
+import { withBase } from '@/lib/utils';
+
+export async function getStaticPaths() {
+  const changelogEntries = await getCollection('changelog');
+  return changelogEntries.map(entry => ({
+    params: { slug: entry.id }, props: { entry },
+  }));
+}
+
+const { entry } = Astro.props;
+const { Content } = await render(entry);
+
+// Helper para formatar data
+const formatDate = (date) => {
+  return new Intl.DateTimeFormat('pt-BR', {
+    day: 'numeric',
+    month: 'long',
+    year: 'numeric'
+  }).format(date);
+};
+---
+
+<Layout 
+	title={`SetupVibe Changelog - Versão ${entry.data.version}`}
+	description={`Detalhes das mudanças da versão ${entry.data.version} do SetupVibe lançada em ${formatDate(entry.data.date)}.`}
+>
+	<section class="py-20 md:py-32">
+		<div class="container mx-auto px-4">
+			<div class="max-w-3xl mx-auto">
+				{/* Back button */}
+				<a 
+					href={withBase("/changelog")} 
+					class="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-primary transition-colors mb-8 group"
+				>
+					<ArrowLeft class="h-4 w-4 transition-transform group-hover:-translate-x-1" />
+					Voltar para o Changelog
+				</a>
+
+				{/* Header */}
+				<header class="space-y-6 mb-12 pb-12 border-b">
+					<div class="flex items-center gap-3">
+						<span class="px-3 py-1 text-sm font-semibold rounded-full bg-primary/10 text-primary border border-primary/20">
+							v{entry.data.version}
+						</span>
+						<div class="h-1 w-1 rounded-full bg-muted-foreground/30"></div>
+						<span class="text-sm text-muted-foreground flex items-center gap-1.5">
+							<Calendar class="h-4 w-4" />
+							{formatDate(entry.data.date)}
+						</span>
+					</div>
+					
+					<h1 class="text-4xl md:text-5xl font-bold tracking-tight">
+						{entry.data.title}
+					</h1>
+				</header>
+
+				{/* Content */}
+				<div class="prose prose-lg dark:prose-invert max-w-none 
+          prose-h3:text-xl prose-h3:font-bold prose-h3:mb-4 prose-h3:mt-8
+          prose-ul:list-disc prose-ul:ml-6 prose-li:text-muted-foreground prose-li:mb-2
+          [&_h3]:flex [&_h3]:items-center [&_h3]:gap-2
+          [&_.changelog-added]:text-green-600 [&_.changelog-added]:dark:text-green-400
+          [&_.changelog-fixed]:text-red-600 [&_.changelog-fixed]:dark:text-red-400
+          [&_.changelog-changed]:text-blue-600 [&_.changelog-changed]:dark:text-blue-400
+          [&_.changelog-docs]:text-purple-600 [&_.changelog-docs]:dark:text-purple-400
+        ">
+					<Content />
+				</div>
+
+				{/* Footer CTA */}
+				<div class="mt-20 p-8 rounded-2xl bg-muted/30 border border-dashed text-center">
+					<h3 class="text-lg font-semibold mb-2">Quer testar estas novidades?</h3>
+					<p class="text-muted-foreground mb-6">
+						Atualize seu setup agora mesmo com apenas um comando no seu terminal.
+					</p>
+					<a 
+						href={withBase("/setup")} 
+						class="inline-flex items-center justify-center h-11 px-8 rounded-full bg-primary text-primary-foreground font-medium hover:bg-primary/90 transition-colors"
+					>
+						Ir para Instalação
+					</a>
+				</div>
+			</div>
+		</div>
+	</section>
+</Layout>
