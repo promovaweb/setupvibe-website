@@ -25,6 +25,11 @@ const {
 const canonicalURL = canonical 
   ? new URL(canonical, Astro.site || Astro.url) 
   : new URL(Astro.url.pathname, Astro.site || Astro.url);
+
+// Calculate OG Image URL
+const path = Astro.url.pathname.replace(/^\/|\/$/g, '');
+const ogRoute = path === '' ? 'index' : path;
+const ogImage = new URL(`/og/${ogRoute}.png`, Astro.site || Astro.url).toString();
 ---
 
 <html lang="pt-BR">
@@ -115,11 +120,11 @@ const canonicalURL = canonical
         basic: {
           title: title,
           type: "website",
-          image: image,
+          image: ogImage,
           url: canonicalURL.toString(),
         },
         image: {
-          alt: "SetupVibe Logo",
+          alt: title,
         }
       }}
       twitter={{
@@ -127,7 +132,7 @@ const canonicalURL = canonical
         card: "summary_large_image",
         title: title,
         description: description,
-        image: image,
+        image: ogImage,
       }}
       extend={{
         meta: [
