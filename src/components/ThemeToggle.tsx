@@ -6,18 +6,16 @@ import { Button } from "@/components/ui/button";
 
 export function ThemeToggle() {
   const [theme, setTheme] = useState<"light" | "dark">("light");
+  const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
+    setMounted(true);
     // Check localStorage and system preference on mount
     const stored = localStorage.getItem("theme");
     const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
 
     const initialTheme = stored === "dark" || (!stored && prefersDark) ? "dark" : "light";
     setTheme(initialTheme);
-
-    if (initialTheme === "dark") {
-      document.documentElement.classList.add("dark");
-    }
   }, []);
 
   const toggleTheme = () => {
@@ -41,7 +39,9 @@ export function ThemeToggle() {
       className="rounded-full"
       aria-label="Toggle theme"
     >
-      {theme === "light" ? (
+      {!mounted ? (
+        <div className="h-5 w-5" />
+      ) : theme === "light" ? (
         <Moon className="h-5 w-5" />
       ) : (
         <Sun className="h-5 w-5" />
