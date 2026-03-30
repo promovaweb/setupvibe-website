@@ -40,11 +40,10 @@ export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const navItems = [
-    { label: "Ferramentas", href: withBase("/ferramentas") },
     { label: "Como Funciona", href: withBase("/how-it-works") },
-    { label: "Baterias Inclusas", href: withBase("/batteries-included") },
-    { label: "Changelog", href: withBase("/changelog") },
+    { label: "Ferramentas", href: withBase("/ferramentas") },
     { label: "Instalar", href: withBase("/setup") },
+    { label: "Changelog", href: withBase("/changelog") },
   ];
 
   const socialLinks = [

@@ -74,9 +74,6 @@ export function Footer() {
                 <a href={withBase("/setup")} className="text-muted-foreground hover:text-foreground transition-colors">Guia de Instalação</a>
               </li>
               <li>
-                <a href={withBase("/batteries-included")} className="text-muted-foreground hover:text-foreground transition-colors">Componentes</a>
-              </li>
-              <li>
                 <a href={withBase("/how-it-works")} className="text-muted-foreground hover:text-foreground transition-colors">Como Funciona</a>
               </li>
               <li>

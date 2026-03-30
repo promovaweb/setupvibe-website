@@ -1,8 +1,13 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Terminal, Bot, Settings, Layers, Box, Cpu, CheckCircle2, ArrowRight } from "lucide-react";
+import { 
+  Terminal, Bot, Settings, Layers, Box, Cpu, 
+  CheckCircle2, ArrowRight, Code, Shield, 
+  Search, Wrench 
+} from "lucide-react";
 import { withBase } from "@/lib/utils";
+import { MagicCard } from "@/components/MagicCard";
 
 export function HowItWorksContent() {
   const sections = [
@@ -86,6 +91,72 @@ export function HowItWorksContent() {
     }
   ];
 
+  const categories = [
+    {
+      title: "Linguagens Modernas",
+      icon: Code,
+      color: "text-blue-500",
+      description: "Compiladores base e ambientes puros instalados na raiz.",
+      items: ["Go (Golang)", "Rust", "Python", "Ruby", "PHP 8.4"],
+    },
+    {
+      title: "Ecossistema JavaScript",
+      icon: Box,
+      color: "text-yellow-500",
+      description: "Runtimes ultrarrápidos e gerenciadores para a web moderna.",
+      items: ["Node.js", "Bun", "PNPM"],
+    },
+    {
+      title: "Processos & DevOps",
+      icon: Cpu,
+      color: "text-orange-500",
+      description: "Infraestrutura local imbatível de daemonização.",
+      items: ["PM2 (Global + Startup)", "Docker", "Docker Compose", "Ansible"],
+    },
+    {
+      title: "Modern Unix",
+      icon: Search,
+      color: "text-rose-500",
+      description: "Ferramentas incríveis re-escritas em Rust para produtividade CLI.",
+      items: ["eza (ls)", "bat (cat)", "ripgrep (rg)", "fd (find)", "zoxide (z)", "delta (git diff)"],
+    },
+    {
+      title: "Ferramentas Base",
+      icon: Wrench,
+      color: "text-gray-500",
+      description: "Gerenciadores de pacotes integrados nativamente ao sistema.",
+      items: ["Homebrew", "uv (Python)", "Composer (PHP)", "Bundler & rbenv (Ruby)", "Git", "cURL", "build-essential"],
+    },
+    {
+      title: "AI CLI Tools",
+      icon: Bot,
+      color: "text-cyan-500",
+      description: "Comandos nativos para Vibe Coding.",
+      items: ["claude-code", "gemini-cli", "codex", "copilot-cli"],
+    },
+    {
+      title: "O Terminal",
+      icon: Terminal,
+      color: "text-purple-500",
+      description: "Uma interface gráfica limpa construída dentro do terminal shell.",
+      items: ["Zsh", "Oh My Zsh", "Starship Prompt (Gruvbox)"],
+    },
+    {
+      title: "Multiplexador Tmux",
+      icon: Layers,
+      color: "text-green-500",
+      description: "Todas as abas do universo operando na mesma janela.",
+      items: ["Tmux Core", "TPM (Manager)", "tmux-resurrect", "tmux-yank", "vim-tmux-navigator", "sainnhe/tmux-fzf", "onedark theme"],
+    },
+    {
+      title: "Rede & Segurança",
+      icon: Shield,
+      color: "text-indigo-500",
+      description: "Ponte e proteção pra testes de servidores locais.",
+      items: ["Tailscale", "OpenSSH Server (Linux)", "nmap", "htop"],
+    }
+  ];
+
   return (
     <div className="w-full">
       {/* Main Content Sections */}
@@ -150,8 +221,46 @@ export function HowItWorksContent() {
         })}
       </div>
 
+      {/* Technical Stack Grid (from Batteries Included) */}
+      <section className="py-24 bg-muted/30 border-y scroll-mt-20">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16 space-y-4">
+            <h2 className="text-3xl md:text-5xl font-bold">O que está incluído por padrão</h2>
+            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+              Nenhuma ferramenta oculta ou container fechado. Tudo instalado nativamente para máxima performance.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
+            {categories.map((category, index) => {
+              const Icon = category.icon;
+              return (
+                <MagicCard key={index} className="p-8 group h-full flex flex-col" gradientSize={300}>
+                  <div className="flex flex-col h-full">
+                    <div className={`inline-flex p-4 rounded-xl bg-muted/50 ${category.color} mb-6 self-start shadow-sm group-hover:scale-110 transition-transform`}>
+                      <Icon className="w-8 h-8" />
+                    </div>
+                    <h3 className="text-2xl font-bold mb-3">{category.title}</h3>
+                    <p className="text-muted-foreground mb-6 leading-relaxed">
+                      {category.description}
+                    </p>
+                    <div className="flex flex-wrap gap-2 mt-auto pt-4">
+                      {category.items.map((item, itemIdx) => (
+                        <span key={itemIdx} className="inline-flex items-center px-3 py-1 rounded-md text-sm font-medium bg-muted text-foreground border border-border/50 shadow-sm transition-colors hover:bg-primary hover:text-primary-foreground cursor-default">
+                          {item}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+                </MagicCard>
+              );
+            })}
+          </div>
+        </div>
+      </section>
+
       {/* CTA Footer Section */}
-      <section className="py-24 text-center bg-muted/30 border-t">
+      <section className="py-24 text-center">
         <div className="container mx-auto px-4">
           <h2 className="text-4xl font-bold mb-6">Pronto para transformar sua máquina?</h2>
           <p className="text-xl text-muted-foreground mb-10 max-w-2xl mx-auto">
@@ -160,17 +269,17 @@ export function HowItWorksContent() {
           <div className="flex flex-col sm:flex-row gap-4 items-center justify-center">
             <a
               href={withBase("/setup")}
-              className="inline-flex items-center justify-center px-8 py-4 text-lg font-semibold rounded-full bg-primary text-primary-foreground hover:bg-primary/90 hover:scale-105 transition-all duration-300"
+              className="inline-flex items-center justify-center px-10 py-4 text-lg font-bold rounded-full bg-primary text-primary-foreground hover:bg-primary/90 hover:scale-105 transition-all duration-300 shadow-lg shadow-primary/25"
             >
               Instalar Agora
               <ArrowRight className="ml-3 w-5 h-5" />
             </a>
             <a
-              href={withBase("/batteries-included")}
-              className="inline-flex items-center justify-center px-8 py-4 text-lg font-semibold rounded-full bg-secondary text-secondary-foreground hover:bg-secondary/90 hover:scale-105 transition-all duration-300 border border-border shadow-sm"
+              href={withBase("/ferramentas")}
+              className="inline-flex items-center justify-center px-10 py-4 text-lg font-bold rounded-full bg-secondary text-secondary-foreground hover:bg-secondary/90 hover:scale-105 transition-all duration-300 border border-border shadow-sm"
             >
-              Veja Todos os Componentes
-              <Box className="ml-3 w-5 h-5" />
+              Ver Detalhes Técnicos
+              <Settings className="ml-3 w-5 h-5" />
             </a>
           </div>
         </div>

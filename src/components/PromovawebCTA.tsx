@@ -50,7 +50,7 @@ export function PromovawebCTA() {
                   
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                     {[
-                      { icon: PlayCircle, text: "Lives diárias às 10h", sub: "Mentoria ao vivo", color: "text-blue-400", bg: "bg-blue-500/5" },
+                      { icon: PlayCircle, text: "Lives diárias", sub: "Mentoria ao vivo", color: "text-blue-400", bg: "bg-blue-500/5" },
                       { icon: Sparkles, text: "IA Makers", sub: "Formação em IA", color: "text-purple-400", bg: "bg-purple-500/5" },
                       { icon: Zap, text: "Instalador Exclusivo", sub: "Deploy em 1 clique", color: "text-amber-400", bg: "bg-amber-500/5" },
                       { icon: Users, text: "Networking", sub: "+2k Empreendedores", color: "text-emerald-400", bg: "bg-emerald-500/5" }

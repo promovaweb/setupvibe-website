@@ -3,6 +3,9 @@ import Layout from '../layouts/main.astro';
 import { PageHeader } from '@/components/PageHeader';
 import { HowItWorksContent } from '@/components/HowItWorksContent';
 import { PromovawebCTA } from '@/components/PromovawebCTA';
+import { Button } from '@/components/ui/button';
+import { Settings, ArrowRight } from 'lucide-react';
+import { withBase } from '@/lib/utils';
 ---
 
 <Layout 
@@ -46,7 +49,22 @@ import { PromovawebCTA } from '@/components/PromovawebCTA';
 		gradientTitle="SetupVibe funciona"
 		subtitle="Não somos apenas uma 'imagem travada de container'. É um script inteligente que roda nativamente montando um ecossistema Open Source super otimizado nas raízes do seu computador."
 		badge={{ icon: "✨", text: "Por baixo dos panos" }}
-	/>
+	>
+    <div class="flex flex-wrap justify-center gap-4">
+      <a href={withBase("/setup")}>
+        <Button size="lg" className="rounded-full h-14 px-8 text-lg font-bold gap-2 shadow-lg shadow-primary/20 hover:scale-105 transition-all">
+          Instalar Agora
+          <ArrowRight className="w-5 h-5" />
+        </Button>
+      </a>
+      <a href={withBase("/ferramentas")}>
+        <Button size="lg" variant="outline" className="rounded-full h-14 px-8 text-lg font-bold gap-2 hover:bg-muted/50 transition-all">
+          Ver Detalhes Técnicos
+          <Settings className="w-5 h-5" />
+        </Button>
+      </a>
+    </div>
+  </PageHeader>
 
 	<HowItWorksContent client:load />
     <PromovawebCTA client:load />
