@@ -105,6 +105,33 @@ export function Hero() {
               </p>
             </div>
           </motion.div>
+
+          {/* Terminal Image Offset */}
+          <motion.div
+            initial={{ opacity: 0, y: 100 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.5 }}
+            className="relative mt-20 w-full max-w-5xl mx-auto -mb-48 md:-mb-64"
+          >
+            <div className="relative group">
+              {/* Glow effect */}
+              <div className="absolute -inset-1 bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl blur opacity-25 group-hover:opacity-50 transition duration-1000 group-hover:duration-200"></div>
+              
+              <div 
+                className="relative rounded-2xl border bg-background/50 backdrop-blur-sm overflow-hidden shadow-2xl transition-transform duration-500 hover:scale-[1.02]"
+                style={{ transform: 'perspective(1000px) rotateX(5deg)' }}
+              >
+                <img 
+                  src={withBase("/images/terminal.png")} 
+                  alt="Terminal SetupVibe Showcase" 
+                  className="w-full h-auto object-cover"
+                />
+              </div>
+
+              {/* Gradient overlay for blending - reduced to let more image show through */}
+              <div className="absolute -bottom-10 left-0 w-full h-32 bg-gradient-to-t from-background/20 via-transparent to-transparent pointer-events-none z-10" />
+            </div>
+          </motion.div>
         </div>
       </div>
     </section>
