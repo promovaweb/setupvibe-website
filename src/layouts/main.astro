@@ -67,10 +67,13 @@ const ogImage = new URL(`/og/${ogRoute}`, Astro.site || Astro.url).toString();
       },
       "aggregateRating": {
         "@type": "AggregateRating",
-        "ratingValue": "5",
-        "ratingCount": "128"
+        "ratingValue": 5,
+        "ratingCount": 128,
+        "bestRating": 5,
+        "worstRating": 1
       },
       "url": "https://setupvibe.dev",
+      "image": "https://setupvibe.dev/logo.png",
       "screenshot": "https://setupvibe.dev/logo.png",
       "author": {
         "@type": "Person",
