@@ -11,6 +11,7 @@ export function Header() {
 
   const navItems = [
     { label: "Como Funciona", href: withBase("/how-it-works") },
+    { label: "Componentes", href: withBase("/batteries-included") },
     { label: "Changelog", href: withBase("/changelog") },
   ];
 
