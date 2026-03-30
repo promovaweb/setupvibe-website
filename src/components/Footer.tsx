@@ -1,6 +1,6 @@
 "use client";
 
-import { Sparkles, Github, Instagram, Linkedin, MessageCircle, MessageSquare, ExternalLink } from "lucide-react";
+import { Sparkles, Github, Instagram, Linkedin, MessageCircle, MessageSquare, ExternalLink, Globe } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { withBase } from "@/lib/utils";
 
@@ -24,6 +24,15 @@ export function Footer() {
               Um projeto open-source mantido pela <a href="https://promovaweb.com" target="_blank" className="text-primary hover:underline">Promovaweb</a>.
             </p>
             <div className="flex gap-4">
+              <a
+                href="https://promovaweb.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-muted-foreground hover:text-blue-500 transition-colors"
+              >
+                <span className="sr-only">Promovaweb</span>
+                <Globe className="h-5 w-5" />
+              </a>
               <a
                 href="https://github.com/promovaweb/setupvibe"
                 target="_blank"

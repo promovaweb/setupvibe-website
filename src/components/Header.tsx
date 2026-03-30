@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { ThemeToggle } from "@/components/ThemeToggle";
-import { Menu, X, Github, Linkedin, MessageCircle, MessageSquare } from "lucide-react";
+import { Menu, X, Github, Linkedin, MessageCircle, MessageSquare, Globe } from "lucide-react";
 import { withBase } from "@/lib/utils";
 
 export function Header() {
@@ -17,10 +17,11 @@ export function Header() {
   ];
 
   const socialLinks = [
-    { icon: MessageSquare, href: "https://promovaweb.com/whatsapp", label: "WhatsApp", color: "hover:text-green-500" },
-    { icon: Github, href: "https://github.com/promovaweb/setupvibe", label: "GitHub", color: "hover:text-foreground" },
-    { icon: MessageCircle, href: "https://promovaweb.com/discord", label: "Discord", color: "hover:text-indigo-500" },
-    { icon: Linkedin, href: "https://linkedin.com/in/luizeof", label: "LinkedIn", color: "hover:text-blue-500" },
+    { icon: Globe, href: "https://promovaweb.com", label: "Promovaweb", color: "text-blue-500 hover:text-blue-600" },
+    { icon: MessageSquare, href: "https://promovaweb.com/whatsapp", label: "WhatsApp", color: "text-[#25D366] hover:text-[#128C7E]" },
+    { icon: MessageCircle, href: "https://promovaweb.com/discord", label: "Discord", color: "text-[#5865F2] hover:text-[#4752C4]" },
+    { icon: Github, href: "https://github.com/promovaweb/setupvibe", label: "GitHub", color: "text-foreground hover:opacity-80" },
+    { icon: Linkedin, href: "https://linkedin.com/in/luizeof", label: "LinkedIn", color: "text-[#0077B5] hover:text-[#005E82]" },
   ];
 
   return (
