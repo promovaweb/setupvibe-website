@@ -4,7 +4,7 @@ import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
 import { CommandPalette } from '@/components/CommandPalette';
 import { CookieConsent } from '@/components/CookieConsent';
-import WhatsAppFloating from '@/components/WhatsAppFloating.astro';
+import SocialFloating from '@/components/SocialFloating.astro';
 import { SEO } from 'astro-seo';
 import { siteConfig } from '@/site.config';
 
@@ -155,6 +155,6 @@ const ogImage = new URL(`/og/${ogRoute}.png`, Astro.site || Astro.url).toString(
 		<Footer client:load />
 		<CommandPalette client:load />
 		<CookieConsent client:load />
-		<WhatsAppFloating />
+		<SocialFloating />
 	</body>
 </html>

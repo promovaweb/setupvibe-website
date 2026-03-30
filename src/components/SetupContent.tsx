@@ -256,8 +256,10 @@ export function SetupContent() {
             <p className="text-purple-100 mb-8 max-w-md mx-auto">
               Nossa comunidade no Discord está pronta para ajudar você com qualquer problema na instalação.
             </p>
-            <Button size="lg" variant="secondary" className="rounded-full bg-white text-purple-600 hover:bg-white/90">
-              Entrar no Discord
+            <Button size="lg" variant="secondary" className="rounded-full bg-white text-purple-600 hover:bg-white/90" asChild>
+              <a href="https://promovaweb.com/discord" target="_blank" rel="noopener noreferrer">
+                Entrar no Discord
+              </a>
             </Button>
           </div>
         </div>
