@@ -16,20 +16,7 @@ export function SetupContent() {
         "Cole o comando abaixo e pressione Enter.",
         "Aguarde o processo finalizar (pode levar de 15 a 45 minutos dependendo da sua internet e processador)."
       ],
-      code: "curl -sL https://raw.githubusercontent.com/promovaweb/setupvibe/refs/heads/main/desktop.sh | bash"
-    },
-    {
-      id: "windows",
-      title: "Windows (WSL 2)",
-      icon: Terminal,
-      description: "Instalação nativa via Subsistema Linux para Windows.",
-      steps: [
-        "Abra o PowerShell como Administrador e instale o WSL rodando: `wsl --install`",
-        "Reinicie o computador caso solicitado.",
-        "Abra o aplicativo 'Ubuntu' recém-instalado (este será o seu novo terminal).",
-        "Cole o comando abaixo dentro do Ubuntu e pressione Enter."
-      ],
-      code: "curl -sL https://raw.githubusercontent.com/promovaweb/setupvibe/refs/heads/main/desktop.sh | bash"
+      code: "curl -sL desktop.setupvibe.dev | bash"
     },
     {
       id: "server",
@@ -41,7 +28,7 @@ export function SetupContent() {
         "Certifique-se que você é um usuário sudo (ou root).",
         "Cole o comando abaixo e pressione Enter."
       ],
-      code: "curl -sL https://raw.githubusercontent.com/promovaweb/setupvibe/refs/heads/main/server.sh | bash"
+      code: "curl -sL server.setupvibe.dev | bash"
     }
   ];
 
