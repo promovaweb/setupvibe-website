@@ -1,6 +1,6 @@
 "use client";
 
-import { Sparkles, Github, Instagram, Linkedin, Mail } from "lucide-react";
+import { Sparkles, Github, Instagram, Linkedin, MessageCircle, MessageSquare } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { withBase } from "@/lib/utils";
 
@@ -29,6 +29,7 @@ export function Footer() {
                 rel="noopener noreferrer"
                 className="text-muted-foreground hover:text-foreground transition-colors"
               >
+                <span className="sr-only">GitHub</span>
                 <Github className="h-5 w-5" />
               </a>
               <a
@@ -37,6 +38,7 @@ export function Footer() {
                 rel="noopener noreferrer"
                 className="text-muted-foreground hover:text-foreground transition-colors"
               >
+                <span className="sr-only">Instagram</span>
                 <Instagram className="h-5 w-5" />
               </a>
               <a
@@ -45,6 +47,7 @@ export function Footer() {
                 rel="noopener noreferrer"
                 className="text-muted-foreground hover:text-foreground transition-colors"
               >
+                <span className="sr-only">LinkedIn</span>
                 <Linkedin className="h-5 w-5" />
               </a>
             </div>
@@ -52,14 +55,14 @@ export function Footer() {
 
           {/* Product */}
           <div>
-            <h3 className="font-semibold mb-4">Product</h3>
+            <h3 className="font-semibold mb-4">Produto</h3>
             <ul className="space-y-3">
               <li>
                 <a
                   href={withBase("/#features")}
                   className="text-sm text-muted-foreground hover:text-foreground transition-colors"
                 >
-                  Features
+                  Funcionalidades
                 </a>
               </li>
               <li>
@@ -67,7 +70,7 @@ export function Footer() {
                   href={withBase("/componentes")}
                   className="text-sm text-muted-foreground hover:text-foreground transition-colors"
                 >
-                  Components
+                  Componentes
                 </a>
               </li>
               <li>
@@ -75,7 +78,7 @@ export function Footer() {
                   href={withBase("/advanced-components")}
                   className="text-sm text-muted-foreground hover:text-foreground transition-colors"
                 >
-                  Advanced
+                  Avançado
                 </a>
               </li>
               <li>
@@ -83,7 +86,7 @@ export function Footer() {
                   href={withBase("/how-it-works")}
                   className="text-sm text-muted-foreground hover:text-foreground transition-colors"
                 >
-                  How it Works
+                  Como Funciona
                 </a>
               </li>
               <li>
@@ -99,14 +102,14 @@ export function Footer() {
 
           {/* Company */}
           <div>
-            <h3 className="font-semibold mb-4">Company</h3>
+            <h3 className="font-semibold mb-4">Empresa</h3>
             <ul className="space-y-3">
               <li>
                 <a
                   href={withBase("/about")}
                   className="text-sm text-muted-foreground hover:text-foreground transition-colors"
                 >
-                  About
+                  Sobre
                 </a>
               </li>
               <li>
@@ -122,28 +125,49 @@ export function Footer() {
                   href={withBase("/setup")}
                   className="text-sm text-muted-foreground hover:text-foreground transition-colors"
                 >
-                  Setup Guide
+                  Guia de Instalação
                 </a>
               </li>
             </ul>
           </div>
 
-          {/* Newsletter */}
+          {/* Community */}
           <div>
-            <h3 className="font-semibold mb-4">Stay Updated</h3>
-            <p className="text-sm text-muted-foreground mb-4">
-              Subscribe to our newsletter for the latest updates.
-            </p>
-            <div className="flex gap-2">
-              <input
-                type="email"
-                placeholder="Enter your email"
-                className="flex h-9 w-full rounded-md border bg-background px-3 py-1 text-sm transition-colors placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring"
-              />
-              <Button size="sm">
-                <Mail className="h-4 w-4" />
-              </Button>
-            </div>
+            <h3 className="font-semibold mb-4 underline decoration-primary/30 underline-offset-4">Comunidade</h3>
+            <ul className="space-y-4">
+              <li>
+                <a
+                  href="https://promovaweb.com/whatsapp"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-3 p-3 rounded-xl bg-green-500/5 hover:bg-green-500/10 border border-green-500/10 hover:border-green-500/20 transition-all group"
+                >
+                  <div className="p-2 rounded-lg bg-green-500/10 text-green-500 group-hover:scale-110 transition-transform">
+                    <MessageSquare className="h-5 w-5" />
+                  </div>
+                  <div>
+                    <div className="text-sm font-bold text-foreground">WhatsApp</div>
+                    <div className="text-[10px] text-muted-foreground uppercase tracking-wider">Grupos Exclusivos</div>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://promovaweb.com/discord"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-3 p-3 rounded-xl bg-indigo-500/5 hover:bg-indigo-500/10 border border-indigo-500/10 hover:border-indigo-500/20 transition-all group"
+                >
+                  <div className="p-2 rounded-lg bg-indigo-500/10 text-indigo-500 group-hover:scale-110 transition-transform">
+                    <MessageCircle className="h-5 w-5" />
+                  </div>
+                  <div>
+                    <div className="text-sm font-bold text-foreground">Discord</div>
+                    <div className="text-[10px] text-muted-foreground uppercase tracking-wider">Fórum & Suporte</div>
+                  </div>
+                </a>
+              </li>
+            </ul>
           </div>
         </div>
 
@@ -157,19 +181,19 @@ export function Footer() {
               href={withBase("/privacy")}
               className="text-sm text-muted-foreground hover:text-foreground transition-colors"
             >
-              Privacy Policy
+              Política de Privacidade
             </a>
             <a
               href={withBase("/terms")}
               className="text-sm text-muted-foreground hover:text-foreground transition-colors"
             >
-              Terms of Service
+              Termos de Uso
             </a>
             <a
               href={withBase("/privacy#cookies")}
               className="text-sm text-muted-foreground hover:text-foreground transition-colors"
             >
-              Cookie Policy
+              Política de Cookies
             </a>
           </div>
         </div>

@@ -11,154 +11,71 @@ import { PromovawebCTA } from '@/components/PromovawebCTA';
 		<div class="container mx-auto px-4">
 			<div class="max-w-4xl mx-auto">
 				<h1 class="text-4xl md:text-5xl font-bold mb-4">Política de Privacidade</h1>
-				<p class="text-muted-foreground mb-8">Última atualização: 26 de Março de 2026</p>
+				<p class="text-muted-foreground mb-8">Última atualização: 29 de Março de 2026</p>
 
 				<div class="prose prose-lg dark:prose-invert max-w-none">
-					<p class="lead">
-						Na SetupVibe, levamos sua privacidade a sério. Esta Política de Privacidade explica como coletamos,
-						usamos, divulgamos e protegemos suas informações quando você utiliza nossos serviços.
+					<p class="lead text-xl">
+						Na SetupVibe, a transparência é o nosso valor fundamental. Como um projeto Open Source liderado pela Promovaweb, acreditamos que você deve ter controle total sobre o que acontece na sua máquina e nos seus dados.
 					</p>
 
-					<h2>Informações que Coletamos</h2>
-					<h3>Informações Pessoais</h3>
+					<h2 id="cookies">1. Coleta de Dados</h2>
 					<p>
-						Coletamos informações que você nos fornece diretamente, incluindo:
+						Diferente de plataformas SaaS tradicionais, o SetupVibe é um script que roda localmente no seu ambiente. 
 					</p>
 					<ul>
-						<li>Nome e informações de contato (endereço de e-mail, número de telefone)</li>
-						<li>Credenciais da conta (nome de usuário, senha)</li>
-						<li>Informações de pagamento (processadas de forma segura através de nossos provedores de pagamento)</li>
-						<li>Informações de perfil e preferências</li>
-						<li>Comunicações com nossa equipe de suporte</li>
+						<li><strong>Script de Instalação:</strong> Não coletamos, não enviamos e não armazenamos nenhuma informação do seu servidor ou máquina local durante a execução do script.</li>
+						<li><strong>Site SetupVibe:</strong> Coletamos apenas informações básicas de navegação (como país de origem e páginas visitadas) de forma anônima para melhorar a experiência do usuário.</li>
+						<li><strong>Comunidade e Suporte:</strong> Se você se inscrever em nossa newsletter ou entrar em nossos grupos, coletaremos seu e-mail ou número de telefone exclusivamente para essa finalidade, com seu consentimento explícito.</li>
 					</ul>
 
-					<h3>Informações Coletadas Automaticamente</h3>
+					<h2>2. Uso de Cookies</h2>
 					<p>
-						Quando você utiliza nossos serviços, coletamos automaticamente:
+						Utilizamos cookies mínimos e essenciais para o funcionamento deste site:
 					</p>
 					<ul>
-						<li>Dados de uso (chamadas de API, recursos utilizados, padrões de interação)</li>
-						<li>Informações do dispositivo (endereço IP, tipo de navegador, sistema operacional)</li>
-						<li>Dados de log (horários de acesso, páginas visualizadas, erros encontrados)</li>
-						<li>Cookies e tecnologias de rastreamento semelhantes</li>
+						<li><strong>Preferências de Tema:</strong> Para lembrar se você prefere o modo claro ou escuro.</li>
+						<li><strong>Segurança:</strong> Para proteção contra ataques maliciosos no site.</li>
+						<li><strong>Analytics:</strong> Utilizamos ferramentas de análise anônimas que não rastreiam sua identidade pessoal.</li>
 					</ul>
-
-					<h3>Dados de Treinamento de IA</h3>
 					<p>
-						<strong>Importante:</strong> Por padrão, não utilizamos suas solicitações de API ou dados para treinar
-						nossos modelos de IA. Você mantém a propriedade total de seus dados. Se você optar por participar do nosso programa
-						de melhoria de dados, poderemos usar dados anonimizados e agregados para melhorar nossos serviços.
+						Você pode gerenciar ou bloquear cookies diretamente nas configurações do seu navegador a qualquer momento.
 					</p>
 
-					<h2>Como Usamos Suas Informações</h2>
+					<h2>3. Soberania Tecnológica e IA</h2>
 					<p>
-						Usamos as informações que coletamos para:
+						O SetupVibe prepara seu ambiente para usar IAs (como Claude, Copilot, etc.). 
+						<strong>Nós não temos acesso aos seus prompts, códigos ou interações com essas IAs.</strong> Sua relação com os provedores de IA é direta e protegida pelas chaves de API que você configura localmente no seu terminal.
+					</p>
+
+					<h2>4. Compartilhamento de Dados</h2>
+					<p>
+						Não vendemos, não alugamos e não compartilhamos seus dados pessoais com terceiros para fins de marketing. Os únicos dados compartilhados são os estritamente necessários para processar inscrições em cursos (via plataformas como Hotmart ou similares) ou comunicações oficiais da Promovaweb.
+					</p>
+
+					<h2>5. Seus Direitos (LGPD)</h2>
+					<p>
+						Em conformidade com a Lei Geral de Proteção de Dados (LGPD) no Brasil, você tem direito a:
 					</p>
 					<ul>
-						<li>Fornecer, manter e melhorar nossos serviços</li>
-						<li>Processar transações e enviar informações relacionadas</li>
-						<li>Enviar avisos técnicos, atualizações e alertas de segurança</li>
-						<li>Responder aos seus comentários e perguntas</li>
-						<li>Monitorar e analisar tendências, uso e atividades</li>
-						<li>Detectar, prevenir e resolver problemas técnicos e fraudes</li>
-						<li>Cumprir obrigações legais</li>
+						<li>Confirmar a existência de tratamento de seus dados.</li>
+						<li>Acessar seus dados.</li>
+						<li>Corrigir dados incompletos ou inexatos.</li>
+						<li>Solicitar a exclusão de seus dados de nossas listas de marketing.</li>
 					</ul>
 
-					<h2>Compartilhamento e Divulgação de Informações</h2>
+					<h2>6. Segurança</h2>
 					<p>
-						Não vendemos suas informações pessoais. Podemos compartilhar suas informações apenas nas
-						seguintes circunstâncias:
+						O script do SetupVibe é público e auditável no GitHub. Recomendamos que você sempre revise o código antes de executá-lo com privilégios de superusuário (sudo). Não nos responsabilizamos por versões do script baixadas de fontes não oficiais.
+					</p>
+
+					<h2>7. Contato</h2>
+					<p>
+						Para questões sobre privacidade ou para exercer seus direitos, entre em contato:
 					</p>
 					<ul>
-						<li><strong>Com seu consentimento:</strong> Quando você nos autoriza explicitamente a compartilhar informações</li>
-						<li><strong>Provedores de serviços:</strong> Com fornecedores que realizam serviços em nosso nome (processamento de pagamentos, hospedagem)</li>
-						<li><strong>Requisitos legais:</strong> Quando exigido por lei ou para proteger nossos direitos</li>
-						<li><strong>Transferências de negócios:</strong> Em conexão com uma fusão, aquisição ou venda de ativos</li>
+						<li>E-mail: contato@promovaweb.com</li>
+						<li>Site Oficial: <a href="https://promovaweb.com" target="_blank">promovaweb.com</a></li>
 					</ul>
-
-					<h2>Segurança de Dados</h2>
-					<p>
-						Implementamos medidas técnicas e organizacionais apropriadas para proteger suas informações:
-					</p>
-					<ul>
-						<li>Criptografia em trânsito (TLS 1.3) e em repouso (AES-256)</li>
-						<li>Auditorias de segurança regulares e testes de intrusão</li>
-						<li>Controles de acesso e requisitos de autenticação</li>
-						<li>Conformidade com SOC 2 Tipo II</li>
-						<li>Conformidade com GDPR e LGPD</li>
-					</ul>
-
-					<h2>Retenção de Dados</h2>
-					<p>
-						Retemos suas informações pelo tempo que sua conta estiver ativa ou conforme necessário para fornecer
-						serviços. Você pode solicitar a exclusão de seus dados a qualquer momento, e cumpriremos em até
-						30 dias, exceto onde formos obrigados a retê-los para fins legais.
-					</p>
-
-					<h2>Seus Direitos e Escolhas</h2>
-					<p>
-						Dependendo da sua localização, você pode ter os seguintes direitos:
-					</p>
-					<ul>
-						<li><strong>Acesso:</strong> Solicitar uma cópia de suas informações pessoais</li>
-						<li><strong>Correção:</strong> Atualizar ou corrigir suas informações</li>
-						<li><strong>Exclusão:</strong> Solicitar a exclusão de suas informações</li>
-						<li><strong>Portabilidade:</strong> Receber seus dados em um formato portátil</li>
-						<li><strong>Opt-out:</strong> Recusar certos usos de suas informações</li>
-						<li><strong>Objeção:</strong> Opor-se ao processamento de suas informações</li>
-					</ul>
-					<p>
-						Para exercer esses direitos, entre em contato conosco em privacy@setupvibe.com
-					</p>
-
-					<h2>Cookies e Rastreamento</h2>
-					<p>
-						Usamos cookies e tecnologias semelhantes para:
-					</p>
-					<ul>
-						<li>Lembrar suas preferências e configurações</li>
-						<li>Entender como você utiliza nossos serviços</li>
-						<li>Melhorar sua experiência</li>
-					</ul>
-					<p>
-						Você pode controlar os cookies através das configurações do seu navegador. Note que a desativação de cookies pode
-						afetar a funcionalidade de nossos serviços.
-					</p>
-
-					<h2>Transferências Internacionais de Dados</h2>
-					<p>
-						Suas informações podem ser transferidas para e processadas em países diferentes do seu.
-						Garantimos que as salvaguardas apropriadas estejam em vigor, incluindo Cláusulas Contratuais Padrão.
-					</p>
-
-					<h2>Privacidade de Crianças</h2>
-					<p>
-						Nossos serviços não são direcionados a crianças menores de 13 anos (ou menores de 16 no EEE). Não
-						coletamos intencionalmente informações pessoais de crianças. Se você acredita que coletamos
-						informações de uma criança, entre em contato conosco imediatamente.
-					</p>
-
-					<h2>Alterações nesta Política</h2>
-					<p>
-						Podemos atualizar esta Política de Privacidade de tempos em tempos. Notificaremos você sobre alterações
-						significativas por e-mail ou através de nossos serviços. Seu uso continuado de nossos serviços após
-						as alterações constitui a aceitação da política atualizada.
-					</p>
-
-					<h2>Contato</h2>
-					<p>
-						Se você tiver dúvidas ou preocupações sobre esta Política de Privacidade, entre em contato conosco:
-					</p>
-					<ul>
-						<li>E-mail: privacy@setupvibe.com</li>
-						<li>Endereço: 123 AI Street, San Francisco, CA 94102</li>
-						<li>Telefone: +1 (555) 123-4567</li>
-					</ul>
-
-					<h2>Encarregado de Proteção de Dados (DPO)</h2>
-					<p>
-						Para usuários brasileiros e europeus, nosso DPO pode ser contatado em dpo@setupvibe.com
-					</p>
 				</div>
 			</div>
 		</div>
