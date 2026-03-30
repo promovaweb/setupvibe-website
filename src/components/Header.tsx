@@ -10,7 +10,7 @@ export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const navItems = [
-    { label: "Como Funciona", href: withBase("/#features") },
+    { label: "Como Funciona", href: withBase("/how-it-works") },
     { label: "Changelog", href: withBase("/changelog") },
   ];
 
