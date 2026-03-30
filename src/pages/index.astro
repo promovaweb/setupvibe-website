@@ -1,0 +1,18 @@
+---
+import Layout from '../layouts/main.astro';
+import { Hero } from '@/components/Hero';
+import { Features } from '@/components/Features';
+import { ModulesGrid } from '@/components/ModulesGrid';
+import { Testimonials } from '@/components/Testimonials';
+import { Pricing } from '@/components/Pricing';
+import { FAQ } from '@/components/FAQ';
+---
+
+<Layout title="SetupVibe - Pacote de Expansão para IA">
+	<Hero client:only="react" />
+	<Features client:only="react" />
+	<ModulesGrid client:only="react" />
+	<Testimonials client:only="react" />
+	<Pricing client:only="react" />
+	<FAQ client:only="react" />
+</Layout>

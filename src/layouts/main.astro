@@ -1,0 +1,27 @@
+---
+import '../styles/global.css';
+import { Header } from '@/components/Header';
+import { Footer } from '@/components/Footer';
+import { CommandPalette } from '@/components/CommandPalette';
+import { CookieConsent } from '@/components/CookieConsent';
+const { title = "GenAI - Build the Future with AI" } = Astro.props;
+---
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta name="description" content="A modern, free Astro theme template for GenAI startups with dark/light mode toggle" />
+		<link rel="icon" type="image/png" href="/logo.png" />
+		<title>{title}</title>
+	</head>
+	<body>
+		<Header client:only="react" />
+		<main>
+			<slot />
+		</main>
+		<Footer client:only="react" />
+		<CommandPalette client:only="react" />
+		<CookieConsent client:only="react" />
+	</body>
+</html>
