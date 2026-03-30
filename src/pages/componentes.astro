@@ -1,6 +1,7 @@
 ---
 import Layout from '../layouts/main.astro';
 import { ComponentTabs } from '@/components/ComponentTabs';
+import { PromovawebCTA } from '@/components/PromovawebCTA';
 ---
 
 <Layout title="Componentes - SetupVibe">
@@ -23,4 +24,5 @@ import { ComponentTabs } from '@/components/ComponentTabs';
 			</div>
 		</div>
 	</section>
+    <PromovawebCTA client:only="react" />
 </Layout>

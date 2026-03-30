@@ -1,6 +1,7 @@
 ---
 import Layout from '../layouts/main.astro';
 import { Users, Target, Zap, Heart, Globe, Github, Linkedin, Instagram } from 'lucide-react';
+import { PromovawebCTA } from '@/components/PromovawebCTA';
 ---
 
 <Layout 
@@ -108,11 +109,13 @@ import { Users, Target, Zap, Heart, Globe, Github, Linkedin, Instagram } from 'l
 					</div>
 				</div>
 
+				<PromovawebCTA client:only="react" />
+
 				<!-- CTA -->
 				<div class="text-center mt-16">
-					<h2 class="text-2xl md:text-3xl font-bold mb-4">Comece agora sua jornada</h2>
+					<h2 class="text-2xl md:text-3xl font-bold mb-4">Comece agora sua jornada gratuita</h2>
 					<p class="text-muted-foreground mb-6">
-						Transforme seu setup em minutos e entre na era do Vibe Coding.
+						Transforme seu setup em minutos e entre na era do Vibe Coding com nossa ferramenta open-source.
 					</p>
 					<div class="flex flex-col sm:flex-row gap-4 justify-center">
 						<a href="/setup" class="inline-flex items-center justify-center h-12 px-8 rounded-xl bg-primary text-primary-foreground font-bold hover:bg-primary/90 transition-all hover:scale-105">

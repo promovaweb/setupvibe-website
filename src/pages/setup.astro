@@ -1,6 +1,7 @@
 ---
 import Layout from '../layouts/main.astro';
 import { SetupContent } from '@/components/SetupContent';
+import { PromovawebCTA } from '@/components/PromovawebCTA';
 ---
 
 <Layout 
@@ -8,4 +9,5 @@ import { SetupContent } from '@/components/SetupContent';
 	description="Transforme seu Mac ou servidor Linux na máquina perfeita de Vibe Coding com apenas um comando. Suporte para desktop e servidores headless."
 >
 	<SetupContent client:load />
+    <PromovawebCTA client:only="react" />
 </Layout>
