@@ -2,6 +2,7 @@
 import '../styles/global.css';
 import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
+import { PageProgressBar } from '@/components/PageProgressBar';
 import { CommandPalette } from '@/components/CommandPalette';
 import { CookieConsent } from '@/components/CookieConsent';
 import SocialFloating from '@/components/SocialFloating.astro';
@@ -148,6 +149,7 @@ const ogImage = new URL(`/og/${ogRoute}`, Astro.site || Astro.url).toString();
     height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
 
+    <PageProgressBar client:load />
 		<Header client:load />
 		<main>
 			<slot />
