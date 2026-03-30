@@ -1,8 +1,14 @@
 ---
 import Layout from '@/layouts/main.astro';
 import { getCollection, render } from 'astro:content';
-import { ArrowLeft, Calendar, Tag, Clock } from 'lucide-react';
+import { 
+  ArrowLeft, Calendar, Tag, Clock, Rocket, 
+  Github, Download, Sparkles, Zap, Shield,
+  Plus, Wrench, Bug, Book, ExternalLink,
+  ChevronRight, MessageCircle
+} from 'lucide-react';
 import { withBase } from '@/lib/utils';
+import { MagicCard } from '@/components/MagicCard';
 
 export async function getStaticPaths() {
   const changelogEntries = await getCollection('changelog');
@@ -22,69 +28,195 @@ const formatDate = (date) => {
     year: 'numeric'
   }).format(date);
 };
+
+const sourceUrl = "https://github.com/promovaweb/setupvibe/blob/main/CHANGELOG.md";
 ---
 
 <Layout 
 	title={`SetupVibe Changelog - Versão ${entry.data.version}`}
 	description={`Detalhes das mudanças da versão ${entry.data.version} do SetupVibe lançada em ${formatDate(entry.data.date)}.`}
 >
-	<section class="py-20 md:py-32">
-		<div class="container mx-auto px-4">
-			<div class="max-w-3xl mx-auto">
-				{/* Back button */}
-				<a 
-					href={withBase("/changelog")} 
-					class="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-primary transition-colors mb-8 group"
-				>
-					<ArrowLeft class="h-4 w-4 transition-transform group-hover:-translate-x-1" />
-					Voltar para o Changelog
-				</a>
+	<section class="py-20 md:py-32 bg-background relative overflow-hidden">
+    {/* Background elements */}
+    <div class="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full -z-10 opacity-30 pointer-events-none">
+      <div class="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] bg-purple-500/20 blur-[120px] rounded-full"></div>
+      <div class="absolute bottom-[10%] right-[-10%] w-[40%] h-[40%] bg-blue-500/20 blur-[120px] rounded-full"></div>
+    </div>
 
-				{/* Header */}
-				<header class="space-y-6 mb-12 pb-12 border-b">
+		<div class="container mx-auto px-4">
+			<div class="max-w-6xl mx-auto">
+				{/* Breadcrumbs / Back */}
+				<motion.div 
+          initial={{ opacity: 0, x: -20 }}
+          animate={{ opacity: 1, x: 0 }}
+          className="mb-12"
+        >
+          <a 
+            href={withBase("/changelog")} 
+            class="inline-flex items-center gap-2 text-sm font-medium text-muted-foreground hover:text-primary transition-colors group"
+          >
+            <ArrowLeft class="h-4 w-4 transition-transform group-hover:-translate-x-1" />
+            Voltar para o histórico de versões
+          </a>
+        </motion.div>
+
+        {/* Header Section */}
+				<header class="mb-16 space-y-4">
 					<div class="flex items-center gap-3">
-						<span class="px-3 py-1 text-sm font-semibold rounded-full bg-primary/10 text-primary border border-primary/20">
-							v{entry.data.version}
-						</span>
-						<div class="h-1 w-1 rounded-full bg-muted-foreground/30"></div>
-						<span class="text-sm text-muted-foreground flex items-center gap-1.5">
+            <span class="px-3 py-1 text-xs font-bold uppercase tracking-wider rounded-full bg-primary/10 text-primary border border-primary/20">
+              Release Notes
+            </span>
+            <span class="text-muted-foreground/40">•</span>
+            <span class="text-sm text-muted-foreground flex items-center gap-1.5">
 							<Calendar class="h-4 w-4" />
 							{formatDate(entry.data.date)}
 						</span>
-					</div>
-					
-					<h1 class="text-4xl md:text-5xl font-bold tracking-tight">
-						{entry.data.title}
+          </div>
+					<h1 class="text-4xl md:text-6xl font-bold tracking-tight lg:leading-[1.1]">
+						Atualização <span class="bg-gradient-to-r from-purple-600 to-blue-600 dark:from-purple-400 dark:to-blue-400 bg-clip-text text-transparent">v{entry.data.version}</span>
 					</h1>
+          <p class="text-xl text-muted-foreground max-w-2xl">
+            Explore as melhorias, novas ferramentas e correções que chegaram nesta versão do SetupVibe.
+          </p>
 				</header>
 
-				{/* Content */}
-				<div class="prose prose-lg dark:prose-invert max-w-none 
-          prose-h3:text-xl prose-h3:font-bold prose-h3:mb-4 prose-h3:mt-8
-          prose-ul:list-disc prose-ul:ml-6 prose-li:text-muted-foreground prose-li:mb-2
-          [&_h3]:flex [&_h3]:items-center [&_h3]:gap-2
-          [&_.changelog-added]:text-green-600 [&_.changelog-added]:dark:text-green-400
-          [&_.changelog-fixed]:text-red-600 [&_.changelog-fixed]:dark:text-red-400
-          [&_.changelog-changed]:text-blue-600 [&_.changelog-changed]:dark:text-blue-400
-          [&_.changelog-docs]:text-purple-600 [&_.changelog-docs]:dark:text-purple-400
-        ">
-					<Content />
-				</div>
+				{/* Bento Grid Layout */}
+				<div class="grid grid-cols-1 md:grid-cols-12 gap-6">
+          
+          {/* Main Content Card (The List) */}
+          <div class="md:col-span-8 space-y-6">
+            <MagicCard className="h-full" gradientColor="rgba(139, 92, 246, 0.1)">
+              <div class="p-8 md:p-10">
+                <div class="flex items-center gap-3 mb-8 border-b pb-6">
+                  <div class="p-2.5 rounded-xl bg-primary/10 text-primary">
+                    <Rocket class="h-6 w-6" />
+                  </div>
+                  <div>
+                    <h2 class="text-2xl font-bold">O que mudou?</h2>
+                    <p class="text-sm text-muted-foreground">Lista detalhada de alterações nesta versão</p>
+                  </div>
+                </div>
 
-				{/* Footer CTA */}
-				<div class="mt-20 p-8 rounded-2xl bg-muted/30 border border-dashed text-center">
-					<h3 class="text-lg font-semibold mb-2">Quer testar estas novidades?</h3>
-					<p class="text-muted-foreground mb-6">
-						Atualize seu setup agora mesmo com apenas um comando no seu terminal.
-					</p>
-					<a 
-						href={withBase("/setup")} 
-						class="inline-flex items-center justify-center h-11 px-8 rounded-full bg-primary text-primary-foreground font-medium hover:bg-primary/90 transition-colors"
-					>
-						Ir para Instalação
-					</a>
+                <div class="prose prose-lg dark:prose-invert max-w-none 
+                  prose-h3:text-xl prose-h3:font-bold prose-h3:mb-6 prose-h3:mt-10 prose-h3:first:mt-0
+                  prose-ul:list-none prose-ul:ml-0 prose-ul:space-y-4
+                  prose-li:text-muted-foreground prose-li:relative prose-li:pl-8
+                  prose-li:before:content-[''] prose-li:before:absolute prose-li:before:left-0 prose-li:before:top-[0.6em] 
+                  prose-li:before:h-2 prose-li:before:w-2 prose-li:before:rounded-full prose-li:before:bg-primary/40
+                  
+                  [&_h3]:flex [&_h3]:items-center [&_h3]:gap-3 [&_h3]:p-4 [&_h3]:rounded-2xl [&_h3]:bg-muted/50 [&_h3]:border
+                  
+                  [&_.changelog-added]:text-green-600 [&_.changelog-added]:dark:text-green-400
+                  [&_.changelog-added]:before:content-['\2728'] [&_.changelog-added]:before:text-sm
+                  
+                  [&_.changelog-fixed]:text-red-600 [&_.changelog-fixed]:dark:text-red-400
+                  [&_.changelog-fixed]:before:content-['\1F41B'] [&_.changelog-fixed]:before:text-sm
+                  
+                  [&_.changelog-changed]:text-blue-600 [&_.changelog-changed]:dark:text-blue-400
+                  [&_.changelog-changed]:before:content-['\26A1'] [&_.changelog-changed]:before:text-sm
+                  
+                  [&_.changelog-docs]:text-purple-600 [&_.changelog-docs]:dark:text-purple-400
+                  [&_.changelog-docs]:before:content-['\1F4D6'] [&_.changelog-docs]:before:text-sm
+                ">
+                  <Content />
+                </div>
+              </div>
+            </MagicCard>
+          </div>
+
+          {/* Sidebar Cards */}
+          <div class="md:col-span-4 flex flex-col gap-6">
+            
+            {/* Version Badge Card */}
+            <MagicCard className="p-8" gradientColor="rgba(59, 130, 246, 0.1)">
+              <div class="space-y-6">
+                <div class="flex items-center justify-between">
+                  <h3 class="font-bold text-lg">Status do Release</h3>
+                  <div class="flex h-2 w-2 rounded-full bg-green-500 animate-pulse"></div>
+                </div>
+                
+                <div class="space-y-4">
+                  <div class="flex items-center justify-between py-3 border-b border-dashed">
+                    <span class="text-sm text-muted-foreground flex items-center gap-2">
+                      <Tag class="h-4 w-4" /> Versão
+                    </span>
+                    <span class="font-mono font-bold">{entry.data.version}</span>
+                  </div>
+                  <div class="flex items-center justify-between py-3 border-b border-dashed">
+                    <span class="text-sm text-muted-foreground flex items-center gap-2">
+                      <Clock class="h-4 w-4" /> Data
+                    </span>
+                    <span class="font-medium">{entry.data.date.toLocaleDateString('pt-BR')}</span>
+                  </div>
+                  <div class="flex items-center justify-between py-3">
+                    <span class="text-sm text-muted-foreground flex items-center gap-2">
+                      <Shield class="h-4 w-4" /> Estabilidade
+                    </span>
+                    <span class="text-green-500 font-medium text-sm">Produção</span>
+                  </div>
+                </div>
+              </div>
+            </MagicCard>
+
+            {/* CTA Install Card */}
+            <MagicCard className="p-8 bg-primary/5 border-primary/20" gradientColor="rgba(139, 92, 246, 0.2)">
+              <div class="space-y-6 text-center">
+                <div class="w-16 h-16 bg-primary rounded-2xl flex items-center justify-center mx-auto shadow-lg shadow-primary/20">
+                  <Download class="h-8 w-8 text-primary-foreground" />
+                </div>
+                <div>
+                  <h3 class="font-bold text-xl mb-2">Instale agora</h3>
+                  <p class="text-sm text-muted-foreground">
+                    Comece a usar estas funcionalidades hoje mesmo com apenas um comando.
+                  </p>
+                </div>
+                <a 
+                  href={withBase("/setup")} 
+                  class="flex items-center justify-center w-full h-12 rounded-xl bg-primary text-primary-foreground font-bold hover:bg-primary/90 transition-all hover:scale-[1.02]"
+                >
+                  Ir para instalação
+                </a>
+              </div>
+            </MagicCard>
+
+            {/* Social / GitHub Card */}
+            <MagicCard className="p-8 group" gradientColor="rgba(255, 255, 255, 0.05)">
+              <div class="space-y-6">
+                <h3 class="font-bold text-lg">Links Úteis</h3>
+                <div class="space-y-3">
+                  <a 
+                    href={sourceUrl} 
+                    target="_blank" 
+                    class="flex items-center justify-between p-4 rounded-xl bg-muted/50 border border-transparent hover:border-primary/20 hover:bg-muted transition-all group/link"
+                  >
+                    <div class="flex items-center gap-3">
+                      <Github class="h-5 w-5" />
+                      <span class="text-sm font-medium">Repositório</span>
+                    </div>
+                    <ExternalLink class="h-4 w-4 text-muted-foreground group-hover/link:text-primary transition-colors" />
+                  </a>
+                  <a 
+                    href="https://discord.gg" 
+                    target="_blank" 
+                    class="flex items-center justify-between p-4 rounded-xl bg-muted/50 border border-transparent hover:border-primary/20 hover:bg-muted transition-all group/link"
+                  >
+                    <div class="flex items-center gap-3">
+                      <MessageCircle class="h-5 w-5" />
+                      <span class="text-sm font-medium">Comunidade</span>
+                    </div>
+                    <ExternalLink class="h-4 w-4 text-muted-foreground group-hover/link:text-primary transition-colors" />
+                  </a>
+                </div>
+              </div>
+            </MagicCard>
+
+          </div>
 				</div>
 			</div>
 		</div>
 	</section>
 </Layout>
+
+<script>
+  import { motion } from "framer-motion";
+</script>
