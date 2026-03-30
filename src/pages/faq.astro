@@ -1,5 +1,6 @@
 ---
 import Layout from '../layouts/main.astro';
+import { PageHeader } from '@/components/PageHeader';
 import { FaqPageContent } from '@/components/FaqPageContent';
 import { PromovawebCTA } from '@/components/PromovawebCTA';
 ---
@@ -48,6 +49,15 @@ import { PromovawebCTA } from '@/components/PromovawebCTA';
       ]
     }
   </script>
+
+	<PageHeader 
+		client:load
+		title="Perguntas Frequentes &" 
+		gradientTitle="Guias"
+		subtitle="Consulte respostas sobre todas as entranhas dos utilitários como PM2, Tmux e o sistema isolado."
+		badge={{ icon: "💡", text: "Tire suas dúvidas" }}
+	/>
+
 	<FaqPageContent client:load />
     <PromovawebCTA client:only="react" />
 </Layout>

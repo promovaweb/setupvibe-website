@@ -1,5 +1,6 @@
 ---
 import Layout from '../layouts/main.astro';
+import { PageHeader } from '@/components/PageHeader';
 import { HowItWorksContent } from '@/components/HowItWorksContent';
 import { PromovawebCTA } from '@/components/PromovawebCTA';
 ---
@@ -51,6 +52,15 @@ import { PromovawebCTA } from '@/components/PromovawebCTA';
     </ul>
     <p>Architecture Goal: Minimize context-switching for the human-AI collaborative loop by centralizing all relevant development data within a single, persistent shell environment.</p>
   </section>
+
+	<PageHeader 
+		client:load
+		title="Entenda como o" 
+		gradientTitle="SetupVibe funciona"
+		subtitle="Não somos apenas uma 'imagem travada de container'. É um script inteligente que roda nativamente montando um ecossistema Open Source super otimizado nas raízes do seu computador."
+		badge={{ icon: "✨", text: "Por baixo dos panos" }}
+	/>
+
 	<HowItWorksContent client:load />
     <PromovawebCTA client:only="react" />
 </Layout>

@@ -1,5 +1,6 @@
 ---
 import Layout from '../layouts/main.astro';
+import { PageHeader } from '@/components/PageHeader';
 import { ChatInterface } from '@/components/ChatInterface';
 import { ToastDemo } from '@/components/ToastDemo';
 import { PricingCalculator } from '@/components/PricingCalculator';
@@ -9,23 +10,18 @@ import { CodeBlock } from '@/components/CodeBlock';
 import { PromovawebCTA } from '@/components/PromovawebCTA';
 ---
 
-<Layout title="Advanced Components - GenAI">
-	<section class="py-20 md:py-32">
+<Layout title="Advanced Components - SetupVibe">
+	<PageHeader 
+		client:load
+		title="Advanced" 
+		gradientTitle="Components"
+		subtitle="Componentes prontos para produção para aplicações modernas de IA"
+		badge={{ icon: "🚀", text: "Enterprise Ready" }}
+	/>
+
+	<section class="pb-20 md:pb-32">
 		<div class="container mx-auto px-4">
 			<div class="max-w-7xl mx-auto">
-				{/* Header */}
-				<div class="text-center space-y-4 mb-16">
-					<h1 class="text-4xl md:text-6xl font-bold">
-						Advanced{" "}
-						<span class="bg-gradient-to-r from-purple-600 to-pink-600 dark:from-purple-400 dark:to-pink-400 bg-clip-text text-transparent">
-							Components
-						</span>
-					</h1>
-					<p class="text-xl text-muted-foreground max-w-2xl mx-auto">
-						Production-ready components for modern AI applications
-					</p>
-				</div>
-
 				{/* Components Grid */}
 				<div class="space-y-16">
 					{/* Command Palette */}

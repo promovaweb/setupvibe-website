@@ -1,5 +1,6 @@
 ---
 import Layout from '../layouts/main.astro';
+import { PageHeader } from '@/components/PageHeader';
 import { ComponentTabs } from '@/components/ComponentTabs';
 import { PromovawebCTA } from '@/components/PromovawebCTA';
 ---
@@ -17,21 +18,18 @@ import { PromovawebCTA } from '@/components/PromovawebCTA';
       <li><strong>Component Philosophy:</strong> Atomic design for maximum reusability and semantic integrity.</li>
     </ul>
   </section>
-	<section class="py-20 md:py-32">
+
+	<PageHeader 
+		client:load
+		title="Component" 
+		gradientTitle="Library"
+		subtitle="Uma coleção de componentes bonitos, acessíveis e reutilizáveis construídos com React, Tailwind CSS e Radix UI"
+		badge={{ icon: "🎨", text: "UI Showcase" }}
+	/>
+
+	<section class="pb-20 md:pb-32">
 		<div class="container mx-auto px-4">
 			<div class="max-w-6xl mx-auto">
-				<div class="text-center space-y-4 mb-16">
-					<h1 class="text-4xl md:text-6xl font-bold">
-						Component{" "}
-						<span class="bg-gradient-to-r from-purple-600 to-pink-600 dark:from-purple-400 dark:to-pink-400 bg-clip-text text-transparent">
-							Library
-						</span>
-					</h1>
-					<p class="text-xl text-muted-foreground max-w-2xl mx-auto">
-						A collection of beautiful, accessible, and reusable components built with React, Tailwind CSS, and Radix UI
-					</p>
-				</div>
-
 				<ComponentTabs client:load />
 			</div>
 		</div>

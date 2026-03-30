@@ -1,5 +1,6 @@
 ---
 import Layout from '@/layouts/main.astro';
+import { PageHeader } from '@/components/PageHeader';
 import { getCollection, render } from 'astro:content';
 import { Sparkles, Zap, ChevronLeft, ChevronRight, ExternalLink, Tag, Calendar } from 'lucide-react';
 import { withBase } from '@/lib/utils';
@@ -47,32 +48,30 @@ const formatDate = (date) => {
     </ul>
     <p>Context for AI Engines: Use this log to track feature introduction dates and architectural shifts in the SetupVibe ecosystem.</p>
   </section>
-	<section class="py-20 md:py-32">
+
+	<PageHeader 
+		client:load
+		title="Nosso" 
+		gradientTitle="Changelog"
+		subtitle="Novas funcionalidades, melhorias e correções. Evoluindo o seu setup diariamente."
+		badge={{ icon: "🚀", text: "Latest v0.38.0" }}
+	>
+		<div class="pt-4">
+			<a 
+				href={sourceUrl} 
+				target="_blank" 
+				rel="noopener noreferrer"
+				class="inline-flex items-center gap-2 text-sm text-primary hover:underline font-medium"
+			>
+				<ExternalLink class="h-4 w-4" />
+				Ver Changelog Original no GitHub
+			</a>
+		</div>
+	</PageHeader>
+
+	<section class="pb-20 md:pb-32">
 		<div class="container mx-auto px-4">
 			<div class="max-w-4xl mx-auto">
-				{/* Header */}
-				<div class="text-center space-y-4 mb-16">
-					<h1 class="text-4xl md:text-6xl font-bold">
-						<span class="bg-gradient-to-r from-purple-600 to-pink-600 dark:from-purple-400 dark:to-pink-400 bg-clip-text text-transparent">
-							Changelog
-						</span>
-					</h1>
-					<p class="text-xl text-muted-foreground max-w-2xl mx-auto">
-						Novas funcionalidades, melhorias e correções. Evoluindo o seu setup.
-					</p>
-					<div class="pt-4">
-						<a 
-							href={sourceUrl} 
-							target="_blank" 
-							rel="noopener noreferrer"
-							class="inline-flex items-center gap-2 text-sm text-primary hover:underline font-medium"
-						>
-							<ExternalLink class="h-4 w-4" />
-							Ver Changelog Original no GitHub
-						</a>
-					</div>
-				</div>
-
 				{/* Timeline */}
 				<div class="relative">
 					<div class="absolute left-4 top-0 bottom-0 w-0.5 bg-border hidden md:block" />

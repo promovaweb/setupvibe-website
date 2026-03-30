@@ -68,7 +68,8 @@ Localizados em `src/components/ui/`. Seguem o padrão de acessibilidade e estili
 ### 3.2 Componentes de Domínio (Seções e Features)
 Localizados em `src/components/`.
 
-- **Hero:** Seção de destaque inicial com título impactante e CTA.
+- **Hero:** Seção de destaque inicial com título impactante e CTA (Home).
+- **PageHeader:** Componente reutilizável para cabeçalhos de páginas internas, seguindo o padrão visual da Home (com background blobs e animações).
 - **Header & Footer:** Navegação e rodapé consistentes.
 - **BentoGrid:** Layout moderno em grade assimétrica para features.
 - **Features / AdvancedShowcase:** Exibição detalhada de funcionalidades.

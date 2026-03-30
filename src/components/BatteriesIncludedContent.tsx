@@ -75,31 +75,6 @@ export function BatteriesIncludedContent() {
 
   return (
     <div className="w-full">
-      {/* Header */}
-      <section className="relative pt-24 pb-16 md:pt-32 md:pb-24 border-b overflow-hidden">
-        <div className="absolute inset-0 -z-10 bg-muted/20">
-          <div className="absolute top-0 right-1/4 w-96 h-96 bg-purple-500/10 rounded-full mix-blend-multiply filter blur-3xl opacity-50 animate-blob" />
-          <div className="absolute bottom-0 left-1/4 w-96 h-96 bg-blue-500/10 rounded-full mix-blend-multiply filter blur-3xl opacity-50 animate-blob animation-delay-2000" />
-        </div>
-        
-        <div className="container mx-auto px-4 text-center">
-          <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }}>
-            <div className="inline-flex items-center gap-2 rounded-full border bg-background/80 backdrop-blur-sm px-4 py-1.5 text-sm mb-6 shadow-sm">
-              <span className="text-xl">🔋</span>
-              <span className="text-muted-foreground font-semibold">Baterias Inclusas</span>
-            </div>
-          </motion.div>
-          
-          <motion.h1 initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: 0.1 }} className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight mb-6 max-w-4xl mx-auto">
-            O que <GradientText animate>instalamos</GradientText> pra você
-          </motion.h1>
-          
-          <motion.p initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: 0.2 }} className="text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-            Uma lista de todos os componentes, linguagens e ferramentas configuradas pelo SetupVibe. Nenhum detalhe oculto. Nenhuma ferramenta em contêiner fechado.
-          </motion.p>
-        </div>
-      </section>
-
       {/* Grid de Ferramentas (Usando MagicCard para efeito belíssimo) */}
       <section className="py-24 bg-background scroll-mt-20">
         <div className="container mx-auto px-4">

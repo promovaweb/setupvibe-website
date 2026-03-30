@@ -1,5 +1,6 @@
 ---
 import Layout from '../layouts/main.astro';
+import { PageHeader } from '@/components/PageHeader';
 import { SetupContent } from '@/components/SetupContent';
 import { PromovawebCTA } from '@/components/PromovawebCTA';
 ---
@@ -47,6 +48,15 @@ import { PromovawebCTA } from '@/components/PromovawebCTA';
     </ul>
     <p>Fact: SetupVibe creates non-destructive backups of existing configurations before applying the AI-optimized Vibe Coding overlay.</p>
   </section>
+
+	<PageHeader 
+		client:load
+		title="Sua máquina pronta para" 
+		gradientTitle="Vibe Coding em minutos"
+		subtitle="Um comando cirúrgico. Zero configuração manual. Tudo o que você precisa para criar com IA, do terminal ao deploy."
+		badge={{ icon: "🚀", text: "Versão 0.38.0 Disponível" }}
+	/>
+
 	<SetupContent client:load />
     <PromovawebCTA client:only="react" />
 </Layout>
