@@ -20,7 +20,7 @@ export function Header() {
     { icon: MessageSquare, href: "https://promovaweb.com/whatsapp", label: "WhatsApp", color: "hover:text-green-500" },
     { icon: Github, href: "https://github.com/promovaweb/setupvibe", label: "GitHub", color: "hover:text-foreground" },
     { icon: MessageCircle, href: "https://promovaweb.com/discord", label: "Discord", color: "hover:text-indigo-500" },
-    { icon: Linkedin, href: "https://linkedin.com/luizeof", label: "LinkedIn", color: "hover:text-blue-500" },
+    { icon: Linkedin, href: "https://linkedin.com/in/luizeof", label: "LinkedIn", color: "hover:text-blue-500" },
   ];
 
   return (
