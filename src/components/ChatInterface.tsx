@@ -135,7 +135,10 @@ export function ChatInterface() {
                   {message.content}
                 </p>
               </div>
-              <span className="text-xs text-muted-foreground mt-1 px-1">
+              <span
+                className="text-xs text-muted-foreground mt-1 px-1"
+                suppressHydrationWarning
+              >
                 {message.timestamp.toLocaleTimeString([], {
                   hour: "2-digit",
                   minute: "2-digit",
