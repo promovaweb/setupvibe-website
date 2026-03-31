@@ -19,7 +19,7 @@ interface Props {
 const { 
   title = "SetupVibe - Vibe Coding Environment in 1-Click",
   description = "SetupVibe prepara sua máquina com um clique para que o Claude, Copilot e Gemini façam a mágica acontecer. Ambiente dev completo, rápido e sem complicações.",
-  image = new URL("/logo.png", Astro.site || Astro.url).toString(),
+  image: customImage,
   canonical
 } = Astro.props;
 
@@ -31,7 +31,8 @@ const canonicalURL = canonical
 // Calculate OG Image URL
 let path = Astro.url.pathname.replace(/^\/|\/$/g, '');
 const ogRoute = path === '' ? 'index.png' : `${path}.png`;
-const ogImage = new URL(`/og/${ogRoute}`, Astro.site || Astro.url).toString();
+const generatedOgImage = new URL(`/og/${ogRoute}`, Astro.url).toString();
+const finalOgImage = customImage ? new URL(customImage, Astro.url).toString() : generatedOgImage;
 ---
 
 <html lang="pt-BR">
@@ -153,7 +154,7 @@ const ogImage = new URL(`/og/${ogRoute}`, Astro.site || Astro.url).toString();
         basic: {
           title: title,
           type: "website",
-          image: ogImage,
+          image: finalOgImage,
           url: canonicalURL.toString(),
         },
         image: {
@@ -165,7 +166,7 @@ const ogImage = new URL(`/og/${ogRoute}`, Astro.site || Astro.url).toString();
         card: "summary_large_image",
         title: title,
         description: description,
-        image: ogImage,
+        image: finalOgImage,
       }}
       extend={{
         meta: [
