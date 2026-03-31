@@ -67,7 +67,7 @@ export function Header() {
         </a>
 
         {/* Desktop Navigation */}
-        <div className="hidden md:flex items-center space-x-6">
+        <div className="hidden lg:flex items-center space-x-6">
           {navItems.map((item) => (
             <a
               key={item.label}
@@ -78,9 +78,9 @@ export function Header() {
             </a>
           ))}
           
-          <div className="h-4 w-[1px] bg-border mx-2" />
+          <div className="h-4 w-[1px] bg-border mx-2 hidden lg:block" />
           
-          <div className="flex items-center space-x-4">
+          <div className="hidden lg:flex items-center space-x-4">
             {socialLinks.map((social) => (
               <a
                 key={social.label}
@@ -100,14 +100,14 @@ export function Header() {
         <div className="flex items-center space-x-4">
           <ThemeToggle />
           <a href={withBase("/instalar")}>
-            <Button className="hidden md:inline-flex">
+            <Button className="hidden lg:inline-flex">
               Instalar
             </Button>
           </a>
 
           {/* Mobile Menu Button */}
           <button
-            className="md:hidden"
+            className="lg:hidden"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
             aria-label="Toggle menu"
           >
@@ -122,7 +122,7 @@ export function Header() {
 
       {/* Mobile Menu */}
       {isMenuOpen && (
-        <div className="md:hidden border-t">
+        <div className="lg:hidden border-t">
           <div className="container py-6 space-y-6">
             <div className="space-y-4">
               {navItems.map((item) => (

@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import { 
   Terminal, Bot, Settings, Layers, Box, Cpu, 
   CheckCircle2, ArrowRight, Code, Shield, 
-  Search, Wrench 
+  Search, Wrench, Command 
 } from "lucide-react";
 import { withBase } from "@/lib/utils";
 import { MagicCard } from "@/components/MagicCard";
@@ -88,6 +88,19 @@ export function HowItWorksContent() {
         { title: "bat ao invés de cat", text: "Destaque de sintaxe de arquivo e diferenciações visuais (git-diff) direto da tela sem abrir editores." },
         { title: "zoxide e ripgrep", text: "Pule entre pastas em nanossegundos com teleporte via IA de histórico (z) e faça buscas profundas no código inteiro numa fração de segundo." }
       ]
+    },
+    {
+      id: "aliases-produtividade",
+      icon: Command,
+      title: "Aliases & Atalhos",
+      subtitle: "Digite menos, produza muito mais.",
+      gradient: "from-emerald-500/20 to-teal-500/20 text-emerald-500",
+      description: "O SetupVibe pré-instala centenas de aliases inteligentes que transformam comandos complexos em poucas letras. É a diferença entre digitar 'git commit -m' e apenas 'gcm'.",
+      features: [
+        { title: "Git & GitHub", text: "Atalhos completos para todo o fluxo de trabalho Git e integração com GitHub CLI (gh)." },
+        { title: "Docker & Compose", text: "Gerencie containers, volumes e redes com comandos simplificados e intuitivos." },
+        { title: "Atalhos de IA", text: "Comandos ultrarrápidos para invocar Claude Code (cc) e Gemini (ge) sem burocracia." }
+      ]
     }
   ];
 
@@ -147,6 +160,13 @@ export function HowItWorksContent() {
       color: "text-green-500",
       description: "Todas as abas do universo operando na mesma janela.",
       items: ["Tmux Core", "TPM (Manager)", "tmux-resurrect", "tmux-yank", "vim-tmux-navigator", "sainnhe/tmux-fzf", "onedark theme"],
+    },
+    {
+      title: "Aliases & Atalhos",
+      icon: Command,
+      color: "text-emerald-500",
+      description: "Centenas de atalhos inteligentes para produtividade instantânea.",
+      items: ["Git Shortcuts", "Docker Aliases", "Tmux Master", "AI ge/cc", "Navegação rápida"],
     },
     {
       title: "Rede & Segurança",
