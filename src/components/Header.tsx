@@ -42,6 +42,7 @@ export function Header() {
   const navItems = [
     { label: "Como Funciona", href: withBase("/como-funciona") },
     { label: "Ferramentas", href: withBase("/ferramentas") },
+    { label: "Atalhos", href: withBase("/atalhos") },
     { label: "Instalar", href: withBase("/instalar") },
     { label: "Changelog", href: withBase("/changelog") },
   ];

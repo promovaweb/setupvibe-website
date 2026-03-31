@@ -71,6 +71,9 @@ export function Footer() {
                 <a href={withBase("/#features")} className="text-muted-foreground hover:text-foreground transition-colors">Funcionalidades</a>
               </li>
               <li>
+                <a href={withBase("/atalhos")} className="text-muted-foreground hover:text-foreground transition-colors">Aliases & Atalhos</a>
+              </li>
+              <li>
                 <a href={withBase("/instalar")} className="text-muted-foreground hover:text-foreground transition-colors">Guia de Instalação</a>
               </li>
               <li>
