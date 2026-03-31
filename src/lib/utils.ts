@@ -30,3 +30,18 @@ export function withBase(path: string): string {
 
   return `${base}${cleanPath}`;
 }
+
+/**
+ * Sorts changelog entries by date (descending) and then by version (descending)
+ * @param entries - The changelog entries from getCollection('changelog')
+ * @returns Sorted array of entries
+ */
+export function sortChangelog(entries: any[]) {
+  return [...entries].sort((a, b) => {
+    const dateDiff = new Date(b.data.date).getTime() - new Date(a.data.date).getTime();
+    if (dateDiff !== 0) return dateDiff;
+    
+    // If dates are equal, sort by version (highest first)
+    return b.data.version.localeCompare(a.data.version, undefined, { numeric: true, sensitivity: 'base' });
+  });
+}

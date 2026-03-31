@@ -3,19 +3,23 @@ import Layout from '@/layouts/main.astro';
 import { PageHeader } from '@/components/PageHeader';
 import { getCollection, render } from 'astro:content';
 import { Sparkles, Zap, ChevronLeft, ChevronRight, ExternalLink, Tag, Calendar } from 'lucide-react';
-import { withBase } from '@/lib/utils';
+import { withBase, sortChangelog } from '@/lib/utils';
 import { PromovawebCTA } from '@/components/PromovawebCTA';
 
 export async function getStaticPaths({ paginate }) {
   const changelogEntries = await getCollection('changelog');
-  // Ordenar por data decrescente
-  const sortedEntries = changelogEntries.sort((a, b) => b.data.date.getTime() - a.data.date.getTime());
+  const sortedEntries = sortChangelog(changelogEntries);
   
   return paginate(sortedEntries, { pageSize: 5 });
 }
 
 const { page } = Astro.props;
 const sourceUrl = "https://github.com/promovaweb/setupvibe/blob/main/CHANGELOG.md";
+
+// Buscar a versão mais recente de todo o conteúdo para o badge do cabeçalho
+const allEntries = await getCollection('changelog');
+const absoluteSortedEntries = sortChangelog(allEntries);
+const latestVersion = absoluteSortedEntries[0]?.data.version;
 
 // Renderizar todos os conteúdos no frontmatter para evitar problemas de async no template
 const renderedEntries = await Promise.all(page.data.map(async (entry) => {
@@ -42,7 +46,7 @@ const formatDate = (date) => {
 		title="Nosso" 
 		gradientTitle="Changelog"
 		subtitle="Novas funcionalidades, melhorias e correções. Evoluindo o seu setup diariamente."
-		badge={{ icon: "🚀", text: "Latest v0.38.0" }}
+		badge={{ icon: "🚀", text: `Latest v${latestVersion || '0.0.0'}` }}
 	>
 		<div class="pt-4">
 			<a 

@@ -3,6 +3,12 @@ import Layout from '../layouts/main.astro';
 import { PageHeader } from '@/components/PageHeader';
 import { SetupContent } from '@/components/SetupContent';
 import { PromovawebCTA } from '@/components/PromovawebCTA';
+import { getCollection } from 'astro:content';
+import { sortChangelog } from '@/lib/utils';
+
+const changelogEntries = await getCollection('changelog');
+const sortedEntries = sortChangelog(changelogEntries);
+const latestVersion = sortedEntries[0]?.data.version || '0.0.0';
 ---
 
 <Layout 
@@ -40,7 +46,7 @@ import { PromovawebCTA } from '@/components/PromovawebCTA';
 		title="Sua máquina pronta para" 
 		gradientTitle="Vibe Coding em minutos"
 		subtitle="Um comando cirúrgico. Zero configuração manual. Tudo o que você precisa para criar com IA, do terminal ao deploy."
-		badge={{ icon: "🚀", text: "Versão 0.38.0 Disponível" }}
+		badge={{ icon: "🚀", text: `Versão ${latestVersion} Disponível` }}
 	/>
 
 	<SetupContent client:load />
