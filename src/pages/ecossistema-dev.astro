@@ -1,0 +1,22 @@
+---
+import Layout from '../layouts/main.astro';
+import { PageHeader } from '@/components/PageHeader';
+import { DevEcosystemContent } from '@/components/DevEcosystemContent';
+import { PromovawebCTA } from '@/components/PromovawebCTA';
+---
+
+<Layout 
+	title="Ecossistema Dev Completo: Linguagens e Runtimes - SetupVibe"
+	description="Descubra as linguagens e runtimes pré-configurados no SetupVibe. Go, Rust, Python, Node.js, PHP e Ruby prontos para produção com instalação nativa."
+>
+	<PageHeader 
+		client:load
+		title="Ecossistema" 
+		gradientTitle="Dev Completo"
+		subtitle="Sua máquina pronta para qualquer desafio. Instalamos e configuramos as linguagens mais modernas do mercado de forma nativa e sem conflitos."
+		badge={{ icon: "🚀", text: "Full-Stack Ready" }}
+	/>
+
+	<DevEcosystemContent client:load />
+    <PromovawebCTA client:load />
+</Layout>

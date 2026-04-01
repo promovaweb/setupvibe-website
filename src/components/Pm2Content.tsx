@@ -2,12 +2,11 @@
 
 import { motion } from "framer-motion";
 import { 
-  Terminal, Cpu, Zap, Activity, Shield, 
-  Settings, Puzzle, Copy, Check, Info, 
-  Search, ExternalLink, Play, Square, 
-  RefreshCw, List, Eye, Save, LineChart,
-  HardDrive, BarChart3, Clock, Bell,
-  ChevronRight, ArrowUpCircle
+  Cpu, Zap, Activity, Shield, 
+  Settings, Copy, Check, 
+  RefreshCw, List, LineChart,
+  HardDrive, BarChart3, Bell,
+  ArrowUpCircle
 } from "lucide-react";
 import { useState } from "react";
 import { cn, withBase } from "@/lib/utils";

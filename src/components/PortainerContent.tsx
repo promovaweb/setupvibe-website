@@ -2,11 +2,9 @@
 
 import { motion } from "framer-motion";
 import { 
-  Terminal, Box, Zap, Layout, Shield, 
-  Settings, Puzzle, Copy, Check, Info, 
-  Search, ExternalLink, Activity, Container,
-  Globe, MousePointer2, RefreshCw, HardDrive,
-  Cpu, BarChart3, Lock, Eye, ArrowRight
+  Terminal, Box, Layout, Shield, 
+  Copy, Check, Activity, Container,
+  Globe, BarChart3, Lock, Eye
 } from "lucide-react";
 import { useState } from "react";
 import { cn, withBase } from "@/lib/utils";

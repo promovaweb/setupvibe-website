@@ -52,7 +52,11 @@ export function HowItWorksContent() {
         { title: "Python Super Rápido", text: "Aproveitamos do `uv` (escrito em Rust) para criar ambientes Python sem dores de cabeça com interpretadores conflitantes." },
         { title: "Linguagens Modernas", text: "Go, Rust, Bun e Node pré-instalados na raiz para compilação super veloz." },
         { title: "Web Backend", text: "Ruby (Bundler) e PHP (Composer) rodando no SO sem a complexidade de antes." }
-      ]
+      ],
+      cta: {
+        text: "Ver linguagens e runtimes",
+        href: "/ecossistema-dev"
+      }
     },
     {
       id: "tmux-master",
@@ -140,6 +144,7 @@ export function HowItWorksContent() {
       color: "text-blue-500",
       description: "Compiladores base e ambientes puros instalados na raiz.",
       items: ["Go (Golang)", "Rust", "Python", "Ruby", "PHP 8.4"],
+      href: "/ecossistema-dev"
     },
     {
       title: "Ecossistema JavaScript",

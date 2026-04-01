@@ -2,7 +2,7 @@
 
 import type { ReactNode } from "react";
 import { motion } from "framer-motion";
-import { cn } from "@/lib/utils";
+import { cn, withBase } from "@/lib/utils";
 
 interface BentoGridProps {
   children: ReactNode;
@@ -68,7 +68,7 @@ export function BentoCard({
         )}
         {cta && (
           <a
-            href={href}
+            href={href?.startsWith('http') ? href : withBase(href || '#')}
             className="inline-flex items-center text-sm font-medium text-primary hover:underline"
           >
             {cta}

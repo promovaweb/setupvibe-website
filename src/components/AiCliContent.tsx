@@ -3,9 +3,9 @@
 import { motion } from "framer-motion";
 import { 
   Bot, Zap, Sparkles, MessageSquare, Code2, 
-  Terminal, Cpu, Search, Brain, Rocket,
-  Check, Copy, Info, ChevronRight, ArrowRight,
-  Shield, Globe, Laptop, Command, ExternalLink
+  Terminal, Search, Brain, Rocket,
+  Check, Copy, Shield, ArrowRight, ExternalLink,
+  Command
 } from "lucide-react";
 import { useState } from "react";
 import { cn, withBase } from "@/lib/utils";

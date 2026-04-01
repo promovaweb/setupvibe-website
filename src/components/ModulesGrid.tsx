@@ -36,7 +36,7 @@ export function ModulesGrid() {
             className="md:col-span-1 lg:col-span-1"
             Icon={Bot}
             description="Integração global de pacotes NPM para desenvolvedores nativos de IAs: Claude Code, Gemini CLI, OpenAI Codex e GitHub Copilot CLI."
-            href="/como-funciona#ai-cli-tools"
+            href="/ai-clis"
             cta="Conheça as Ferramentas"
             background={
               <div className="absolute inset-0 bg-gradient-to-bl from-blue-500/10 to-cyan-500/10 dark:from-blue-500/5 dark:to-cyan-500/5 transition-opacity opacity-50 group-hover:opacity-100" />
@@ -47,7 +47,7 @@ export function ModulesGrid() {
             className="md:col-span-1 lg:col-span-1"
             Icon={Box}
             description="Node, Python (uv), Go, Rust, PHP (Composer) e Ruby em suas versões mais recentes instalados perfeitamente."
-            href="/como-funciona#ecossistema-dev"
+            href="/ecossistema-dev"
             cta="Ver Stack"
           />
           <BentoCard
@@ -55,7 +55,7 @@ export function ModulesGrid() {
             className="md:col-span-2 lg:col-span-2"
             Icon={Layers}
             description="Um ambiente robusto com dezenas de plugins de navegação, mouse, copy/paste cross-OS, UI moderna com onedark e gerenciamento de sessões."
-            href="/como-funciona#tmux-master"
+            href="/tmux"
             cta="Ver Plugins"
             background={
               <div className="absolute inset-0 bg-gradient-to-tr from-green-500/10 to-emerald-500/10 dark:from-green-500/5 dark:to-emerald-500/5 transition-opacity opacity-50 group-hover:opacity-100" />
@@ -66,7 +66,7 @@ export function ModulesGrid() {
             className="md:col-span-2 lg:col-span-2"
             Icon={Cpu}
             description="Docker, Ansible e o incrível gerenciador de processos PM2 com auto-startup configurado como serviço global via systemd/launchd."
-            href="/como-funciona#pm2"
+            href="/pm2"
             cta="Saber mais sobre PM2"
           />
           <BentoCard

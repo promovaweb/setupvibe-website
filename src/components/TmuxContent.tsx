@@ -2,11 +2,11 @@
 
 import { motion } from "framer-motion";
 import { 
-  Terminal, Layout, Zap, Layers, MousePointer2, 
-  Settings, Puzzle, Copy, Check, Info, Monitor,
-  Cpu, Activity, Command, ChevronRight, 
-  Search, ExternalLink, Navigation, Clipboard, 
-  Globe, Menu, Keyboard, Sparkles, Save
+  Terminal, Layout, Layers, MousePointer2, 
+  Settings, Puzzle, Copy, Check, Info, 
+  Activity, Command, ChevronRight, 
+  Search, Navigation, Clipboard, 
+  Globe, Sparkles, Save
 } from "lucide-react";
 import { useState } from "react";
 import { cn, withBase } from "@/lib/utils";
