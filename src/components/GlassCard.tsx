@@ -27,13 +27,14 @@ export function GlassCard({
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       className={cn(
-        "relative overflow-hidden rounded-2xl border border-white/20",
-        "bg-white/10 dark:bg-black/10",
+        "relative overflow-hidden rounded-2xl border",
+        "border-black/5 dark:border-white/10",
+        "bg-white/60 dark:bg-slate-950/40",
         blurAmount,
         "shadow-xl",
         "before:absolute before:inset-0",
-        "before:bg-gradient-to-br before:from-white/20 before:to-transparent",
-        "before:opacity-50",
+        "before:bg-gradient-to-br before:from-white/40 before:to-transparent dark:before:from-white/5",
+        "before:opacity-100 dark:before:opacity-50",
         className
       )}
     >
