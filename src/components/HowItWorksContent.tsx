@@ -78,7 +78,11 @@ export function HowItWorksContent() {
         { title: "Auto-Startup", text: "Registrado no systemd/launchd para ligar aplicações auto magicamente ao plugar na tomada." },
         { title: "Astro, Next, Python", text: "Hospede e gerencie dezenas de diferentes linguagens no mesmo PM2 list viewer." },
         { title: "Logs Centralizados", text: "Toda atividade do seu Vibe Coding fica guardada sem travar o seu console." }
-      ]
+      ],
+      cta: {
+        text: "Ver guia completo do PM2",
+        href: "/pm2"
+      }
     },
     {
       id: "modern-unix",
@@ -129,6 +133,7 @@ export function HowItWorksContent() {
       color: "text-orange-500",
       description: "Infraestrutura local imbatível de daemonização.",
       items: ["PM2 (Global + Startup)", "Docker", "Docker Compose", "Ansible"],
+      href: "/pm2"
     },
     {
       title: "Modern Unix",

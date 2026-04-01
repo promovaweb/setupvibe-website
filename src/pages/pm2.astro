@@ -1,0 +1,22 @@
+---
+import Layout from '../layouts/main.astro';
+import { PageHeader } from '@/components/PageHeader';
+import { Pm2Content } from '@/components/Pm2Content';
+import { PromovawebCTA } from '@/components/PromovawebCTA';
+---
+
+<Layout 
+	title="PM2: Gestão Profissional de Processos - SetupVibe"
+	description="Mantenha suas aplicações rodando 24/7 com PM2. Guia completo com aliases, monitoramento, auto-restart e integração Agentlytics no SetupVibe."
+>
+	<PageHeader 
+		client:load
+		title="Domine o" 
+		gradientTitle="PM2"
+		subtitle="Mantenha seus bots, APIs e scripts de IA rodando silenciosamente com auto-restart e monitoramento em tempo real. Estabilidade total para o seu ecossistema."
+		badge={{ icon: "⚡", text: "Process Manager" }}
+	/>
+
+	<Pm2Content client:load />
+    <PromovawebCTA client:load />
+</Layout>
