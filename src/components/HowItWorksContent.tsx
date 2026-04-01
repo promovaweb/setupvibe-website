@@ -85,6 +85,23 @@ export function HowItWorksContent() {
       }
     },
     {
+      id: "portainer",
+      icon: Box,
+      title: "Docker & Portainer",
+      subtitle: "Gerenciamento visual de containers.",
+      gradient: "from-blue-500/20 to-indigo-500/20 text-blue-500",
+      description: "Docker é essencial, mas gerenciar dezenas de containers via terminal pode ser exaustivo. O SetupVibe entrega o Portainer CE pré-configurado para que você tenha controle total via interface web.",
+      features: [
+        { title: "Dashboard Intuitivo", text: "Visualize CPU, memória e status de cada container em um único painel gráfico." },
+        { title: "Console & Logs Web", text: "Acesse o terminal dos seus containers e veja logs em tempo real direto do navegador." },
+        { title: "Stacks Simplificadas", text: "Gerencie arquivos Docker Compose e suba ambientes complexos com poucos cliques." }
+      ],
+      cta: {
+        text: "Explorar interface do Portainer",
+        href: "/portainer"
+      }
+    },
+    {
       id: "modern-unix",
       icon: Settings,
       title: "Modern Unix",
@@ -128,12 +145,20 @@ export function HowItWorksContent() {
       items: ["Node.js", "Bun", "PNPM"],
     },
     {
-      title: "Processos & DevOps",
+      title: "Processos & PM2",
       icon: Cpu,
       color: "text-orange-500",
-      description: "Infraestrutura local imbatível de daemonização.",
-      items: ["PM2 (Global + Startup)", "Docker", "Docker Compose", "Ansible"],
+      description: "Infraestrutura local imbatível de daemonização para bots e APIs.",
+      items: ["PM2 (Global + Startup)", "Auto-restart", "Log Rotation", "Ecosystem Config"],
       href: "/pm2"
+    },
+    {
+      title: "Docker & Portainer",
+      icon: Box,
+      color: "text-blue-500",
+      description: "Interface visual para gerenciar seus containers sem terminal local.",
+      items: ["Portainer CE", "Docker Engine", "Docker Compose", "Visual Dashboard"],
+      href: "/portainer"
     },
     {
       title: "Modern Unix",
