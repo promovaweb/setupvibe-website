@@ -24,6 +24,7 @@ const pagesData: Record<string, { title: string; description: string }> = {
   'modern-unix': { title: 'setupvibe --modern-unix', description: 'Utilitários Rust ultra rápidos (eza, bat, fd) que substituem comandos clássicos no SetupVibe.' },
   'pm2': { title: 'setupvibe --pm2', description: 'Gestão profissional de processos e bots de IA com monitoramento nativo 24/7 no SetupVibe.' },
   'portainer': { title: 'setupvibe --docker', description: 'Gerencie seus containers Docker com uma interface visual intuitiva integrada ao seu setup.' },
+  'cronboard': { title: 'setupvibe --cron', description: 'Agendamento visual de tarefas e automações recorrentes no Linux com Cronboard.' },
   'tmux': { title: 'setupvibe --tmux', description: 'Multiplexação de terminal e produtividade avançada com configurações otimizadas pelo SetupVibe.' },
   'zsh-starship': { title: 'setupvibe --shell', description: 'O terminal ZSH mais rápido e bonito com prompt Starship e preset Gruvbox Rainbow.' },
 };

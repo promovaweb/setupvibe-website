@@ -1,0 +1,23 @@
+---
+import Layout from '../layouts/main.astro';
+import { CronboardContent } from '@/components/CronboardContent';
+import { PageHeader } from '@/components/PageHeader';
+import { Calendar } from 'lucide-react';
+---
+
+<Layout 
+  title="Cronboard & Crontab: Agendamento Visual de Tarefas | SetupVibe"
+  description="Gerencie seus cronjobs de forma visual com Cronboard. Automatize backups, scripts de IA e tarefas recorrentes no Linux com facilidade."
+>
+  <PageHeader
+    client:load
+    icon={Calendar}
+    title="Cronboard & Crontab"
+    subtitle="Agendamento visual e automação de tarefas recorrentes."
+    gradient="from-rose-500 to-orange-500"
+  />
+
+  <main>
+    <CronboardContent client:load />
+  </main>
+</Layout>

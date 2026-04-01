@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import { 
   Terminal, Bot, Settings, Layers, Box, Cpu, 
   CheckCircle2, ArrowRight, Code, Shield, 
-  Search, Wrench, Command, Type 
+  Search, Wrench, Command, Type, Calendar
 } from "lucide-react";
 import { withBase } from "@/lib/utils";
 import { MagicCard } from "@/components/MagicCard";
@@ -114,6 +114,23 @@ export function HowItWorksContent() {
       }
     },
     {
+      id: "cronboard",
+      icon: Calendar,
+      title: "Cronboard & Crontab",
+      subtitle: "Automação e agendamento visual.",
+      gradient: "from-rose-500/20 to-orange-500/20 text-rose-500",
+      description: "O gerenciamento de tarefas agendadas é vital para automações de IA e manutenção de servidores. O SetupVibe traz o Crontab com a camada visual do Cronboard para controle total sem erros.",
+      features: [
+        { title: "Interface Visual", text: "Gerencie seus cronjobs através de um dashboard intuitivo, eliminando a sintaxe complexa do Linux." },
+        { title: "Monitoramento de Jobs", text: "Acompanhe o sucesso e falhas de cada tarefa agendada com logs detalhados de execução." },
+        { title: "Automação de IA", text: "Agende sincronizações de dados e execuções de agentes de IA de forma 100% autônoma e segura." }
+      ],
+      cta: {
+        text: "Explorar agendamento visual",
+        href: "/cronboard"
+      }
+    },
+    {
       id: "fontes",
       icon: Type,
       title: "Fontes & Tipografia",
@@ -193,6 +210,14 @@ export function HowItWorksContent() {
       description: "Interface visual para gerenciar seus containers sem terminal local.",
       items: ["Portainer CE", "Docker Engine", "Docker Compose", "Visual Dashboard"],
       href: "/portainer"
+    },
+    {
+      title: "Cronboard & Crontab",
+      icon: Calendar,
+      color: "text-rose-500",
+      description: "Agendamento visual de tarefas e automações recorrentes no Linux.",
+      items: ["Cronboard Dashboard", "Crontab Nativo", "Automação de Infra", "Monitoramento de Jobs"],
+      href: "/cronboard"
     },
     {
       title: "Modern Unix",

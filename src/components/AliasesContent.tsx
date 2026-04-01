@@ -7,7 +7,7 @@ import {
   Code2, Cpu, Globe, Search, Command,
   ArrowUpCircle, Hash, Info, Lightbulb,
   Activity, ChevronRight, Monitor, Server,
-  Infinity
+  Infinity, Calendar
 } from "lucide-react";
 import { useEffect, useState, useMemo } from "react";
 import { cn } from "@/lib/utils";
@@ -2033,6 +2033,41 @@ const categoriesData = [
         "command": "export $(cat .env | grep -v '^#' | xargs)",
         "description": "Carrega variáveis do arquivo .env atual.",
         "example": "dotenv"
+      }
+    ]
+  },
+  {
+    "title": "Cronboard & Crontab",
+    "id": "cronboard",
+    "icon": Calendar,
+    "aliases": [
+      {
+        "name": "ce",
+        "availability": "🌐 Ambos",
+        "command": "crontab -e",
+        "description": "Edita o arquivo de crontab do usuário.",
+        "example": "ce"
+      },
+      {
+        "name": "cl",
+        "availability": "🌐 Ambos",
+        "command": "crontab -l",
+        "description": "Lista todas as tarefas agendadas no crontab.",
+        "example": "cl"
+      },
+      {
+        "name": "cr",
+        "availability": "🌐 Ambos",
+        "command": "crontab -r",
+        "description": "Remove todas as tarefas do crontab (CUIDADO!).",
+        "example": "cr"
+      },
+      {
+        "name": "cronboard",
+        "availability": "🌐 Ambos",
+        "command": "cronboard",
+        "description": "Abre o dashboard visual do Cronboard.",
+        "example": "cronboard"
       }
     ]
   }

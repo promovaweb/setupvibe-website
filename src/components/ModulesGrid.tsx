@@ -1,7 +1,7 @@
 "use client";
 
 import { BentoGrid, BentoCard } from "@/components/BentoGrid";
-import { Terminal, Bot, Settings, Layers, Box, Cpu, Type, Command, Container } from "lucide-react";
+import { Terminal, Bot, Settings, Layers, Box, Cpu, Type, Command, Container, Calendar } from "lucide-react";
 
 export function ModulesGrid() {
   return (
@@ -110,8 +110,19 @@ export function ModulesGrid() {
             }
           />
           <BentoCard
+            name="Cronboard & Crontab"
+            className="md:col-span-1 lg:col-span-1"
+            Icon={Calendar}
+            description="Agendamento visual de tarefas e automações recorrentes no Linux."
+            href="/cronboard"
+            cta="Gerenciar Cron"
+            background={
+              <div className="absolute inset-0 bg-gradient-to-br from-rose-500/10 to-orange-500/10 dark:from-rose-500/5 dark:to-orange-500/5 transition-opacity opacity-50 group-hover:opacity-100" />
+            }
+          />
+          <BentoCard
             name="Aliases & Atalhos"
-            className="md:col-span-2 lg:col-span-2"
+            className="md:col-span-1 lg:col-span-1"
             Icon={Command}
             description="Economize milhares de toques no teclado com nossos aliases inteligentes para Git, Docker e IA."
             href="/atalhos"
