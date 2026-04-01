@@ -1,12 +1,9 @@
 "use client";
 
-import { motion } from "framer-motion";
 import { 
   Type, Download, Apple, Terminal, 
-  Check, Copy, Monitor, 
-  ArrowRight, Settings, Zap
+  Check, Monitor, Zap
 } from "lucide-react";
-import { cn, withBase } from "@/lib/utils";
 import { GlassCard } from "./GlassCard";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "./ui/tabs";
 
@@ -89,7 +86,7 @@ export function FontConfigContent() {
           </TabsList>
 
           {/* Windows Content */}
-          <TabsContent value="windows" className="mt-0 focus-visible:outline-none">
+          <TabsContent value="windows" className="mt-0 focus-visible:outline-none outline-none">
             <div className="grid md:grid-cols-3 gap-8">
               <div className="md:col-span-1 space-y-6">
                 <div className="p-6 rounded-2xl border bg-muted/30 space-y-4">
@@ -122,7 +119,7 @@ export function FontConfigContent() {
           </TabsContent>
 
           {/* macOS Content */}
-          <TabsContent value="mac" className="mt-0 focus-visible:outline-none">
+          <TabsContent value="mac" className="mt-0 focus-visible:outline-none outline-none">
             <div className="grid md:grid-cols-3 gap-8">
               <div className="md:col-span-1 space-y-6">
                 <div className="p-6 rounded-2xl border bg-muted/30 space-y-4">
@@ -155,7 +152,7 @@ export function FontConfigContent() {
           </TabsContent>
 
           {/* Linux Content */}
-          <TabsContent value="linux" className="mt-0 focus-visible:outline-none">
+          <TabsContent value="linux" className="mt-0 focus-visible:outline-none outline-none">
             <div className="grid md:grid-cols-3 gap-8">
               <div className="md:col-span-1 space-y-6">
                 <div className="p-6 rounded-2xl border bg-muted/30 space-y-4">
@@ -192,7 +189,7 @@ export function FontConfigContent() {
       {/* Pro Tip Section */}
       <section className="bg-primary/5 rounded-3xl p-8 md:p-12 border border-primary/10 relative overflow-hidden">
         <div className="absolute top-0 right-0 p-8 opacity-5">
-          <Settings className="w-48 h-48" />
+          <Zap className="w-48 h-48" />
         </div>
         <div className="relative z-10 flex flex-col md:flex-row gap-8 items-center">
           <div className="h-16 w-16 rounded-2xl bg-primary/20 flex items-center justify-center shrink-0">
