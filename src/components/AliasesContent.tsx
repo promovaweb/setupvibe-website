@@ -945,6 +945,139 @@ const categoriesData = [
     ]
   },
   {
+    "title": "PM2",
+    "id": "pm2",
+    "icon": Activity,
+    "aliases": [
+      {
+        "name": "p",
+        "availability": "🌐 Ambos",
+        "command": "pm2",
+        "description": "Atalho para o Process Manager 2 (PM2).",
+        "example": "p list"
+      },
+      {
+        "name": "p-start",
+        "availability": "☁️ Servidor",
+        "command": "pm2 start ~/ecosystem.config.js",
+        "description": "Inicia apps via arquivo de configuração ecosystem.",
+        "example": "p-start"
+      },
+      {
+        "name": "p-stop",
+        "availability": "☁️ Servidor",
+        "command": "pm2 stop ~/ecosystem.config.js",
+        "description": "Para todos os apps do ecosystem.",
+        "example": "p-stop"
+      },
+      {
+        "name": "p-restart",
+        "availability": "☁️ Servidor",
+        "command": "pm2 restart ~/ecosystem.config.js",
+        "description": "Reinicia todos os apps do ecosystem.",
+        "example": "p-restart"
+      },
+      {
+        "name": "pl",
+        "availability": "🌐 Ambos",
+        "command": "pm2 list",
+        "description": "Lista todos os processos gerenciados pelo PM2.",
+        "example": "pl"
+      },
+      {
+        "name": "psave",
+        "availability": "🌐 Ambos",
+        "command": "pm2 save",
+        "description": "Salva a lista de processos atual para restaurar no boot.",
+        "example": "psave"
+      },
+      {
+        "name": "pres",
+        "availability": "🌐 Ambos",
+        "command": "pm2 resurrect",
+        "description": "Restaura a lista de processos salva anteriormente.",
+        "example": "pres"
+      },
+      {
+        "name": "pmon",
+        "availability": "🌐 Ambos",
+        "command": "pm2 monit",
+        "description": "Monitora CPU e Memória de processos em tempo real.",
+        "example": "pmon"
+      },
+      {
+        "name": "plog",
+        "availability": "🌐 Ambos",
+        "command": "pm2 logs",
+        "description": "Exibe logs em tempo real de todos os processos.",
+        "example": "plog"
+      },
+      {
+        "name": "pstop",
+        "availability": "🌐 Ambos",
+        "command": "pm2 stop",
+        "description": "Para um processo específico pelo nome ou ID.",
+        "example": "pstop 0"
+      },
+      {
+        "name": "prestart",
+        "availability": "🌐 Ambos",
+        "command": "pm2 restart",
+        "description": "Reinicia um processo específico.",
+        "example": "prestart api"
+      },
+      {
+        "name": "pdel",
+        "availability": "🌐 Ambos",
+        "command": "pm2 delete",
+        "description": "Remove um processo da lista do PM2.",
+        "example": "pdel app-velho"
+      }
+    ]
+  },
+  {
+    "title": "Agentlytics",
+    "id": "agentlytics",
+    "icon": Bot,
+    "aliases": [
+      {
+        "name": "agl-start",
+        "availability": "☁️ Servidor",
+        "command": "pm2 start agentlytics",
+        "description": "Inicia o monitoramento Agentlytics.",
+        "example": "agl-start"
+      },
+      {
+        "name": "agl-stop",
+        "availability": "☁️ Servidor",
+        "command": "pm2 stop agentlytics",
+        "description": "Para o monitoramento Agentlytics.",
+        "example": "agl-stop"
+      },
+      {
+        "name": "agl-restart",
+        "availability": "☁️ Servidor",
+        "command": "pm2 restart agentlytics",
+        "description": "Reinicia o monitoramento Agentlytics.",
+        "example": "agl-restart"
+      },
+      {
+        "name": "agl-logs",
+        "availability": "☁️ Servidor",
+        "command": "pm2 logs agentlytics",
+        "description": "Exibe logs em tempo real do Agentlytics.",
+        "example": "agl-logs"
+      },
+      {
+        "name": "agl-show",
+        "availability": "☁️ Servidor",
+        "command": "pm2 show agentlytics",
+        "description": "Mostra detalhes técnicos do processo Agentlytics.",
+        "example": "agl-show"
+      }
+    ]
+  },
+  {
     "title": "Gerenciadores de Pacotes",
     "id": "gerenciadores-de-pacotes",
     "icon": Package,
