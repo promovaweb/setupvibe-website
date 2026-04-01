@@ -3,23 +3,18 @@
 import { motion } from "framer-motion";
 import { 
   Type, Download, Apple, Terminal, 
-  Check, Copy, Info, Monitor, ExternalLink,
-  ChevronRight, ArrowRight, Settings, MousePointer2, Zap
+  Check, Copy, Monitor, 
+  ArrowRight, Settings, Zap
 } from "lucide-react";
-import { useState } from "react";
 import { cn, withBase } from "@/lib/utils";
 import { GlassCard } from "./GlassCard";
-import { BentoGrid, BentoCard } from "./BentoGrid";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "./ui/tabs";
 
 const fontLinks = {
   nerdFonts: "https://www.nerdfonts.com/font-downloads",
-  firaCodeRepo: "https://github.com/tonsky/FiraCode",
 };
 
 export function FontConfigContent() {
-  const [activeTab, setActiveId] = useState("windows");
-
   return (
     <div className="max-w-7xl mx-auto px-6 py-12 space-y-24">
       {/* Introduction Section */}
@@ -39,6 +34,7 @@ export function FontConfigContent() {
             <a 
               href={fontLinks.nerdFonts} 
               target="_blank" 
+              rel="noopener noreferrer"
               className="inline-flex items-center justify-center px-6 py-3 rounded-full bg-primary text-primary-foreground font-bold hover:scale-105 transition-all shadow-lg shadow-primary/20"
             >
               Baixar FiraCode Nerd Font
