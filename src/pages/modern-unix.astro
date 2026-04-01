@@ -1,0 +1,22 @@
+---
+import Layout from '../layouts/main.astro';
+import { PageHeader } from '@/components/PageHeader';
+import { ModernUnixContent } from '@/components/ModernUnixContent';
+import { PromovawebCTA } from '@/components/PromovawebCTA';
+---
+
+<Layout 
+	title="Modern Unix: Utilitários em Rust para Desenvolvedores - SetupVibe"
+	description="Descubra a nova geração de utilitários UNIX integrados no SetupVibe. eza, bat, ripgrep, fd, zoxide e muito mais, reescritos em Rust para máxima performance."
+>
+	<PageHeader 
+		client:load
+		title="A Nova Era do" 
+		gradientTitle="Modern Unix"
+		subtitle="Substituímos utilitários legados de 1970 por ferramentas modernas, rápidas e visuais. Performance bruta e experiência rica diretamente no seu terminal."
+		badge={{ icon: "🦀", text: "Powered by Rust" }}
+	/>
+
+	<ModernUnixContent client:load />
+    <PromovawebCTA client:load />
+</Layout>

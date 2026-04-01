@@ -74,7 +74,7 @@ export function ModulesGrid() {
             className="md:col-span-1 lg:col-span-1"
             Icon={Settings}
             description="Ferramentas como bat, eza, fd, ripgrep, fzf e zoxide instaladas por padrão. Esqueça os velhos comandos."
-            href="/como-funciona#modern-unix"
+            href="/modern-unix"
             cta="Lista de Utilitários"
             background={
               <div className="absolute inset-0 bg-gradient-to-tl from-yellow-500/10 to-orange-500/10 dark:from-yellow-500/5 dark:to-orange-500/5 transition-opacity opacity-50 group-hover:opacity-100" />

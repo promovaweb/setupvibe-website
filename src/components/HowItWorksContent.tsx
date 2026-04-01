@@ -124,7 +124,11 @@ export function HowItWorksContent() {
         { title: "eza ao invés de ls", text: "Veja seus diretórios como uma árvore linda e colorida com leitura metadata perfeita." },
         { title: "bat ao invés de cat", text: "Destaque de sintaxe de arquivo e diferenciações visuais (git-diff) direto da tela sem abrir editores." },
         { title: "zoxide e ripgrep", text: "Pule entre pastas em nanossegundos com teleporte via IA de histórico (z) e faça buscas profundas no código inteiro numa fração de segundo." }
-      ]
+      ],
+      cta: {
+        text: "Ver lista de utilitários",
+        href: "/modern-unix"
+      }
     },
     {
       id: "aliases-produtividade",
@@ -179,6 +183,7 @@ export function HowItWorksContent() {
       color: "text-rose-500",
       description: "Ferramentas incríveis re-escritas em Rust para produtividade CLI.",
       items: ["eza (ls)", "bat (cat)", "ripgrep (rg)", "fd (find)", "zoxide (z)", "delta (git diff)"],
+      href: "/modern-unix"
     },
     {
       title: "Ferramentas Base",
