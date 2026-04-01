@@ -6,7 +6,7 @@ import {
   Settings, Puzzle, Copy, Check, Info, 
   Activity, Command, ChevronRight, 
   Search, Navigation, Clipboard, 
-  Globe, Sparkles, Save
+  Globe, Sparkles, Save, ExternalLink
 } from "lucide-react";
 import { useState } from "react";
 import { cn, withBase } from "@/lib/utils";
@@ -254,6 +254,16 @@ export function TmuxContent() {
               <span className="text-sm font-medium">{shortcut.action}</span>
             </div>
           ))}
+        </div>
+
+        <div className="flex justify-center pt-4">
+          <a 
+            href={withBase("/atalhos")} 
+            className="inline-flex items-center gap-2 text-primary hover:underline font-bold group"
+          >
+            Ver todos os aliases e atalhos do SetupVibe
+            <ExternalLink className="w-4 h-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+          </a>
         </div>
       </section>
     </div>

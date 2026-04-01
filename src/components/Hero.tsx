@@ -34,7 +34,7 @@ export function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.1 }}
-            className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight max-w-6xl leading-tight"
+            className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight max-w-7xl leading-tight"
           >
             Seu{" "}
             <span className="bg-gradient-to-r from-purple-600 via-pink-600 to-blue-600 dark:from-purple-400 dark:via-pink-400 dark:to-blue-400 bg-clip-text text-transparent animate-gradient">
@@ -50,7 +50,7 @@ export function Hero() {
             transition={{ duration: 0.5, delay: 0.2 }}
             className="text-lg md:text-xl text-muted-foreground max-w-4xl leading-relaxed"
           >
-            O SetupVibe elimina toda a fricção técnica para você entrar em estado de flow instantâneo. Em menos de 5 minutos, configuramos seu <span className="text-foreground font-semibold">Zsh, Starship, TMUX</span> e integramos as melhores <span className="text-foreground font-semibold">CLIs de IA (Claude, Gemini, Copilot)</span> para você focar no que importa: O Vibe Coding.
+            O SetupVibe elimina a barreira técnica entre sua ideia e o código. Entregamos um <span className="text-foreground font-semibold">terminal de elite</span>, pronto para IA, para que você alcance o <span className="text-foreground font-semibold">estado de flow</span> instantâneo sem perder horas com configurações complexas.
           </motion.p>
 
           {/* CTA Buttons */}

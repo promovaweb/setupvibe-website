@@ -11,10 +11,10 @@ import {
   BarChart3, HardDrive,
   Layout, MousePointer2,
   ChevronRight, Hash, Info, Lightbulb,
-  Activity, ArrowUpCircle
+  Activity, ArrowUpCircle, ExternalLink
 } from "lucide-react";
 import { useEffect, useState } from "react";
-import { cn } from "@/lib/utils";
+import { cn, withBase } from "@/lib/utils";
 
 const steps = [
   {
@@ -195,7 +195,18 @@ const steps = [
     details: [
       { label: "Autostart", value: "Configura o PM2 dump e o script de inicialização do sistema (launchd ou systemd)." },
       { label: "Caches", value: "Limpeza profunda em ~/Library/Caches e ~/.cache para liberar gigabytes de espaço." },
-      { label: "Aliasing", value: "Injeta aliases úteis (como 'ge' para gemini e 'art' para php artisan) no seu .zshrc." }
+      { label: "Aliases & Atalhos", value: (
+        <div className="flex flex-col gap-3">
+          <span>Injeta aliases úteis (como 'ge' para gemini e 'art' para php artisan) no seu .zshrc.</span>
+          <a 
+            href={withBase("/atalhos")} 
+            className="inline-flex items-center gap-2 text-primary hover:underline font-bold"
+          >
+            Ver Todos os Atalhos
+            <ExternalLink className="w-3 h-3" />
+          </a>
+        </div>
+      ) }
     ]
   }
 ];

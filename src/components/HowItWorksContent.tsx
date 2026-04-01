@@ -175,7 +175,11 @@ export function HowItWorksContent() {
         { title: "Git & GitHub", text: "Atalhos completos para todo o fluxo de trabalho Git e integração com GitHub CLI (gh)." },
         { title: "Docker & Compose", text: "Gerencie containers, volumes e redes com comandos simplificados e intuitivos." },
         { title: "Atalhos de IA", text: "Comandos ultrarrápidos para invocar Claude Code (cc) e Gemini (ge) sem burocracia." }
-      ]
+      ],
+      cta: {
+        text: "Explorar todos os atalhos",
+        href: "/atalhos"
+      }
     }
   ];
 
@@ -272,6 +276,7 @@ export function HowItWorksContent() {
       color: "text-emerald-500",
       description: "Centenas de atalhos inteligentes para produtividade instantânea.",
       items: ["Git Shortcuts", "Docker Aliases", "Tmux Master", "AI ge/cc", "Navegação rápida"],
+      href: "/atalhos"
     },
     {
       title: "Rede & Segurança",
