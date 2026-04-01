@@ -22,7 +22,11 @@ export function HowItWorksContent() {
         { title: "Prompt Inteligente", text: "Exibe status do Git, tempo de execução, e linguagem detectada." },
         { title: "Aliases Nativos", text: "Atalhos rápidos para evitar digitações repetidas diárias." },
         { title: "PATH Configurado", text: "Todas as suas ferramentas disponíveis em escopo global instantaneamente." }
-      ]
+      ],
+      cta: {
+        text: "Explorar configuração do terminal",
+        href: "/zsh-starship"
+      }
     },
     {
       id: "ai-cli-tools",
@@ -197,6 +201,7 @@ export function HowItWorksContent() {
       color: "text-purple-500",
       description: "Uma interface gráfica limpa construída dentro do terminal shell.",
       items: ["Zsh", "Oh My Zsh", "Starship Prompt (Gruvbox)"],
+      href: "/zsh-starship"
     },
     {
       title: "Multiplexador Tmux",

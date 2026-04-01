@@ -25,7 +25,7 @@ export function ModulesGrid() {
             className="md:col-span-2 lg:col-span-2"
             Icon={Terminal}
             description="Terminal turbinado com Oh My Zsh e prompt Starship preset Gruvbox Rainbow. Aliases e exportações de PATH configurados automaticamente."
-            href="/como-funciona#zsh-starship"
+            href="/zsh-starship"
             cta="Ver Configuração"
             background={
               <div className="absolute inset-0 bg-gradient-to-br from-purple-500/10 to-pink-500/10 dark:from-purple-500/5 dark:to-pink-500/5 transition-opacity opacity-50 group-hover:opacity-100" />

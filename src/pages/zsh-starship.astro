@@ -1,0 +1,22 @@
+---
+import Layout from '../layouts/main.astro';
+import { PageHeader } from '@/components/PageHeader';
+import { ZshStarshipContent } from '@/components/ZshStarshipContent';
+import { PromovawebCTA } from '@/components/PromovawebCTA';
+---
+
+<Layout 
+	title="ZSH & Starship: Terminal Moderno e Produtivo - SetupVibe"
+	description="Descubra a configuração de terminal do SetupVibe. ZSH com Oh My Zsh e prompt Starship no preset Gruvbox Rainbow para máxima produtividade."
+>
+	<PageHeader 
+		client:load
+		title="Experiência de" 
+		gradientTitle="Terminal Moderna"
+		subtitle="Substituímos o prompt cru por uma interface inteligente, rápida e visualmente incrível. ZSH e Starship trabalhando juntos para o seu workflow."
+		badge={{ icon: "", text: "ZSH & Starship" }}
+	/>
+
+	<ZshStarshipContent client:load />
+    <PromovawebCTA client:load />
+</Layout>
