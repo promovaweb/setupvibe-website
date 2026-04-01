@@ -1,0 +1,22 @@
+---
+import Layout from '../layouts/main.astro';
+import { PageHeader } from '@/components/PageHeader';
+import { FontConfigContent } from '@/components/FontConfigContent';
+import { PromovawebCTA } from '@/components/PromovawebCTA';
+---
+
+<Layout 
+	title="Configurar Fira Code Nerd Font: Guia Passo a Passo - SetupVibe"
+	description="Aprenda como instalar e configurar a Fira Code Nerd Font no Windows, macOS e Linux para habilitar ícones e ligaduras no seu terminal."
+>
+	<PageHeader 
+		client:load
+		title="Configuração de" 
+		gradientTitle="Tipografia"
+		subtitle="Habilite ícones, glifos e ligaduras de programação no seu terminal. Siga nosso guia passo a passo para Windows, Mac e Linux."
+		badge={{ icon: "🔡", text: "Nerd Fonts Guide" }}
+	/>
+
+	<FontConfigContent client:load />
+    <PromovawebCTA client:load />
+</Layout>

@@ -5,7 +5,7 @@ import {
   Terminal, Zap, Sparkles, Layout, Shield, 
   Settings, Copy, Check, 
   Search, ArrowRight,
-  Palette, Gauge, Rocket
+  Palette, Gauge, Rocket, Type, ChevronRight
 } from "lucide-react";
 import { useState } from "react";
 import { cn, withBase } from "@/lib/utils";
@@ -104,15 +104,18 @@ export function ZshStarshipContent() {
                 <p className="text-xs text-muted-foreground">Escrito em Rust para performance máxima.</p>
               </div>
             </div>
-            <div className="flex gap-3 p-4 rounded-xl border bg-muted/30">
-              <div className="h-10 w-10 rounded-lg bg-orange-500/10 flex items-center justify-center shrink-0 border border-orange-500/20">
-                <Layout className="w-5 h-5 text-orange-500" />
+            <a href={withBase("/fontes")} className="flex gap-3 p-4 rounded-xl border bg-primary/5 border-primary/20 hover:bg-primary/10 transition-colors group">
+              <div className="h-10 w-10 rounded-lg bg-primary/10 flex items-center justify-center shrink-0 border border-primary/20 group-hover:scale-110 transition-transform">
+                <Type className="w-5 h-5 text-primary" />
               </div>
               <div>
-                <h4 className="font-semibold text-sm">Altamente Visual</h4>
-                <p className="text-xs text-muted-foreground">Contexto claro e cores produtivas.</p>
+                <h4 className="font-semibold text-sm flex items-center gap-1">
+                  Nerd Fonts
+                  <ChevronRight className="w-3 h-3 opacity-50 group-hover:translate-x-0.5 transition-transform" />
+                </h4>
+                <p className="text-xs text-muted-foreground">Guia de configuração de fontes.</p>
               </div>
-            </div>
+            </a>
           </div>
         </div>
         

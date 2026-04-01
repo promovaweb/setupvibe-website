@@ -5,7 +5,7 @@ import {
   Settings, Zap, Search, 
   Check, Copy, 
   Eye, FolderTree, FastForward,
-  List, Monitor, Code2
+  List, Monitor, Code2, Type, ChevronRight
 } from "lucide-react";
 import { useState } from "react";
 import { cn, withBase } from "@/lib/utils";
@@ -104,15 +104,18 @@ export function ModernUnixContent() {
                 <p className="text-xs text-muted-foreground">Execução paralela multi-core.</p>
               </div>
             </div>
-            <div className="flex gap-3 p-4 rounded-xl border bg-muted/30">
-              <div className="h-10 w-10 rounded-lg bg-blue-500/10 flex items-center justify-center shrink-0 border border-blue-500/20">
-                <Code2 className="w-5 h-5 text-blue-500" />
+            <a href={withBase("/fontes")} className="flex gap-3 p-4 rounded-xl border bg-primary/5 border-primary/20 hover:bg-primary/10 transition-colors group">
+              <div className="h-10 w-10 rounded-lg bg-primary/10 flex items-center justify-center shrink-0 border border-primary/20 group-hover:scale-110 transition-transform">
+                <Type className="w-5 h-5 text-primary" />
               </div>
               <div>
-                <h4 className="font-semibold text-sm">Visual Rich</h4>
-                <p className="text-xs text-muted-foreground">Cores e ícones nativos no shell.</p>
+                <h4 className="font-semibold text-sm flex items-center gap-1">
+                  Nerd Fonts
+                  <ChevronRight className="w-3 h-3 opacity-50 group-hover:translate-x-0.5 transition-transform" />
+                </h4>
+                <p className="text-xs text-muted-foreground">Essencial para ícones e glifos.</p>
               </div>
-            </div>
+            </a>
           </div>
         </div>
         

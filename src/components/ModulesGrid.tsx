@@ -1,7 +1,7 @@
 "use client";
 
 import { BentoGrid, BentoCard } from "@/components/BentoGrid";
-import { Terminal, Bot, Settings, Layers, Box, Cpu } from "lucide-react";
+import { Terminal, Bot, Settings, Layers, Box, Cpu, Type } from "lucide-react";
 
 export function ModulesGrid() {
   return (
@@ -51,6 +51,28 @@ export function ModulesGrid() {
             cta="Ver Stack"
           />
           <BentoCard
+            name="Tipografia Nerd Fonts"
+            className="md:col-span-1 lg:col-span-1"
+            Icon={Type}
+            description="Fira Code e JetBrains Mono instaladas com suporte a ícones, glifos e ligaduras de programação para todas as ferramentas."
+            href="/fontes"
+            cta="Guia de Fontes"
+            background={
+              <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/10 to-blue-500/10 dark:from-cyan-500/5 dark:to-blue-500/5 transition-opacity opacity-50 group-hover:opacity-100" />
+            }
+          />
+          <BentoCard
+            name="Modern Unix"
+            className="md:col-span-1 lg:col-span-1"
+            Icon={Settings}
+            description="Ferramentas como bat, eza, fd, ripgrep, fzf e zoxide instaladas por padrão. Esqueça os velhos comandos."
+            href="/modern-unix"
+            cta="Lista de Utilitários"
+            background={
+              <div className="absolute inset-0 bg-gradient-to-tl from-yellow-500/10 to-orange-500/10 dark:from-yellow-500/5 dark:to-orange-500/5 transition-opacity opacity-50 group-hover:opacity-100" />
+            }
+          />
+          <BentoCard
             name="Tmux Master"
             className="md:col-span-2 lg:col-span-2"
             Icon={Layers}
@@ -68,17 +90,6 @@ export function ModulesGrid() {
             description="Docker, Ansible e o incrível gerenciador de processos PM2 com auto-startup configurado como serviço global via systemd/launchd."
             href="/pm2"
             cta="Saber mais sobre PM2"
-          />
-          <BentoCard
-            name="Modern Unix"
-            className="md:col-span-1 lg:col-span-1"
-            Icon={Settings}
-            description="Ferramentas como bat, eza, fd, ripgrep, fzf e zoxide instaladas por padrão. Esqueça os velhos comandos."
-            href="/modern-unix"
-            cta="Lista de Utilitários"
-            background={
-              <div className="absolute inset-0 bg-gradient-to-tl from-yellow-500/10 to-orange-500/10 dark:from-yellow-500/5 dark:to-orange-500/5 transition-opacity opacity-50 group-hover:opacity-100" />
-            }
           />
         </BentoGrid>
       </div>

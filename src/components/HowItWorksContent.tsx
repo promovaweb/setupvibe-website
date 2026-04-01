@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import { 
   Terminal, Bot, Settings, Layers, Box, Cpu, 
   CheckCircle2, ArrowRight, Code, Shield, 
-  Search, Wrench, Command 
+  Search, Wrench, Command, Type 
 } from "lucide-react";
 import { withBase } from "@/lib/utils";
 import { MagicCard } from "@/components/MagicCard";
@@ -114,6 +114,23 @@ export function HowItWorksContent() {
       }
     },
     {
+      id: "fontes",
+      icon: Type,
+      title: "Fontes & Tipografia",
+      subtitle: "Nerd Fonts para ícones e glifos perfeitos.",
+      gradient: "from-cyan-500/20 to-blue-500/20 text-cyan-500",
+      description: "Um terminal moderno exige fontes modernas. Configuramos o suporte a Nerd Fonts (como Fira Code e JetBrains Mono) para garantir que todos os ícones e ligaduras de programação apareçam corretamente.",
+      features: [
+        { title: "Ícones de Programação", text: "Visualize logos de linguagens, pastas e status do Git diretamente no prompt." },
+        { title: "Ligaduras Elegantes", text: "Transforme sequências como '=>' ou '!=' em símbolos visuais fluidos e legíveis." },
+        { title: "Alta Resolução", text: "Fontes otimizadas para telas Retina e 4K, garantindo clareza absoluta em qualquer zoom." }
+      ],
+      cta: {
+        text: "Ver guia de configuração de fontes",
+        href: "/fontes"
+      }
+    },
+    {
       id: "modern-unix",
       icon: Settings,
       title: "Modern Unix",
@@ -184,6 +201,14 @@ export function HowItWorksContent() {
       description: "Ferramentas incríveis re-escritas em Rust para produtividade CLI.",
       items: ["eza (ls)", "bat (cat)", "ripgrep (rg)", "fd (find)", "zoxide (z)", "delta (git diff)"],
       href: "/modern-unix"
+    },
+    {
+      title: "Tipografia & Ícones",
+      icon: Type,
+      color: "text-blue-400",
+      description: "Nerd Fonts configuradas para suportar todos os glifos e ligaduras.",
+      items: ["FiraCode Nerd Font", "JetBrains Mono NF", "Programming Ligatures"],
+      href: "/fontes"
     },
     {
       title: "Ferramentas Base",
