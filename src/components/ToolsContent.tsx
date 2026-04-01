@@ -8,8 +8,8 @@ import {
   Settings, Trash2, Hammer,
   Workflow, Database, Cloud, TerminalSquare,
   Wrench, Command, Search, FileCode,
-  Smartphone, BarChart3, Radio, HardDrive,
-  UserCheck, Palette, Layout, MousePointer2,
+  BarChart3, HardDrive,
+  Layout, MousePointer2,
   ChevronRight, Hash, Info, Lightbulb,
   Activity, ArrowUpCircle
 } from "lucide-react";
