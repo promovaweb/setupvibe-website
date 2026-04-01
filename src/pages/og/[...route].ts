@@ -18,6 +18,14 @@ const pagesData: Record<string, { title: string; description: string }> = {
   'componentes-avancados': { title: 'setupvibe --advanced', description: 'Componentes complexos e otimizados para produção.' },
   'privacidade': { title: 'setupvibe --privacidade', description: 'Transparência e segurança dos seus dados.' },
   'termos': { title: 'setupvibe --termos', description: 'Diretrizes de uso e licenciamento da ferramenta.' },
+  'ai-clis': { title: 'setupvibe --ai', description: 'O futuro do terminal com IA. Claude Code, Gemini CLI e mais.' },
+  'ecossistema-dev': { title: 'setupvibe --ecosystem', description: 'Go, Rust, Python, Node.js e mais. Tudo pronto pra você.' },
+  'fontes': { title: 'setupvibe --fontes', description: 'Configure sua Nerd Font e habilite ligaduras e ícones.' },
+  'modern-unix': { title: 'setupvibe --modern-unix', description: 'Utilitários Rust (eza, bat, fd) que substituem comandos clássicos.' },
+  'pm2': { title: 'setupvibe --pm2', description: 'Mantenha seus serviços rodando 24/7 com monitoramento nativo.' },
+  'portainer': { title: 'setupvibe --docker', description: 'Interface visual para gerenciar seus containers Docker.' },
+  'tmux': { title: 'setupvibe --tmux', description: 'Multiplexação de terminal para produtividade avançada.' },
+  'zsh-starship': { title: 'setupvibe --shell', description: 'O terminal ZSH mais rápido e bonito que você já viu.' },
 };
 
 changelogEntries.forEach((entry) => {
