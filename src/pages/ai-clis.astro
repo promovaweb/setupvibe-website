@@ -1,0 +1,22 @@
+---
+import Layout from '../layouts/main.astro';
+import { PageHeader } from '@/components/PageHeader';
+import { AiCliContent } from '@/components/AiCliContent';
+import { PromovawebCTA } from '@/components/PromovawebCTA';
+---
+
+<Layout 
+	title="AI CLI Tools: O Futuro do Vibe Coding - SetupVibe"
+	description="Explore as ferramentas de IA para terminal integradas no SetupVibe. Claude Code, Gemini CLI, Skills Framework e muito mais para aumentar sua produtividade."
+>
+	<PageHeader 
+		client:load
+		title="Terminal de" 
+		gradientTitle="Inteligência Artificial"
+		subtitle="O SetupVibe prepara seu ambiente para a nova era do desenvolvimento. Ferramentas de IA com acesso nativo ao seu contexto, arquivos e comandos de terminal."
+		badge={{ icon: "🤖", text: "AI-Native CLI" }}
+	/>
+
+	<AiCliContent client:load />
+    <PromovawebCTA client:load />
+</Layout>

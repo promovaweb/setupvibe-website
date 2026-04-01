@@ -35,7 +35,11 @@ export function HowItWorksContent() {
         { title: "claude-code", text: "Invoque o modelo Claude dentro do próprio projeto para ler/alterar arquivos nativamente." },
         { title: "gemini-cli", text: "Assistente de terminal gratuito e altamente conectado do Google." },
         { title: "Codex & Copilot", text: "Acesso total à suíte de CLI do ecossistema GitHub e OpenAI." }
-      ]
+      ],
+      cta: {
+        text: "Explorar Ferramentas de IA",
+        href: "/ai-clis"
+      }
     },
     {
       id: "ecossistema-dev",
@@ -180,6 +184,7 @@ export function HowItWorksContent() {
       color: "text-cyan-500",
       description: "Comandos nativos para Vibe Coding.",
       items: ["claude-code", "gemini-cli", "codex", "copilot-cli"],
+      href: "/ai-clis"
     },
     {
       title: "O Terminal",
