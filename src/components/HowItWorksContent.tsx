@@ -61,7 +61,11 @@ export function HowItWorksContent() {
         { title: "Suporte Total a Mouse", text: "Role o conteúdo e clique em painéis livremente como um editor normal." },
         { title: "Sessões Imortais", text: "Se fechar o terminal e voltar amanhã, todas as abas ainda estarão rodando intactas." },
         { title: "Navegação Estilo Vim", text: "Transite sem usar atalhos chatos entre o código e os comandos do prompt." }
-      ]
+      ],
+      cta: {
+        text: "Ver guia completo do tmux",
+        href: "/tmux"
+      }
     },
     {
       id: "pm2",
@@ -160,6 +164,7 @@ export function HowItWorksContent() {
       color: "text-green-500",
       description: "Todas as abas do universo operando na mesma janela.",
       items: ["Tmux Core", "TPM (Manager)", "tmux-resurrect", "tmux-yank", "vim-tmux-navigator", "sainnhe/tmux-fzf", "onedark theme"],
+      href: "/tmux"
     },
     {
       title: "Aliases & Atalhos",
@@ -232,6 +237,18 @@ export function HowItWorksContent() {
                         </div>
                       ))}
                     </div>
+
+                    {section.cta && (
+                      <div className="mt-10 pt-8 border-t border-border/50">
+                        <a
+                          href={withBase(section.cta.href)}
+                          className="inline-flex items-center text-primary font-bold hover:underline group"
+                        >
+                          {section.cta.text}
+                          <ArrowRight className="ml-2 w-4 h-4 transition-transform group-hover:translate-x-1" />
+                        </a>
+                      </div>
+                    )}
                   </div>
                 </motion.div>
 
@@ -254,24 +271,34 @@ export function HowItWorksContent() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
             {categories.map((category, index) => {
               const Icon = category.icon;
-              return (
-                <MagicCard key={index} className="p-8 group h-full flex flex-col" gradientSize={300}>
-                  <div className="flex flex-col h-full">
-                    <div className={`inline-flex p-4 rounded-xl bg-muted/50 ${category.color} mb-6 self-start shadow-sm group-hover:scale-110 transition-transform`}>
-                      <Icon className="w-8 h-8" />
-                    </div>
-                    <h3 className="text-2xl font-bold mb-3">{category.title}</h3>
-                    <p className="text-muted-foreground mb-6 leading-relaxed">
-                      {category.description}
-                    </p>
-                    <div className="flex flex-wrap gap-2 mt-auto pt-4">
-                      {category.items.map((item, itemIdx) => (
-                        <span key={itemIdx} className="inline-flex items-center px-3 py-1 rounded-md text-sm font-medium bg-muted text-foreground border border-border/50 shadow-sm transition-colors hover:bg-primary hover:text-primary-foreground cursor-default">
-                          {item}
-                        </span>
-                      ))}
-                    </div>
+              const CardContent = (
+                <div className="flex flex-col h-full">
+                  <div className={`inline-flex p-4 rounded-xl bg-muted/50 ${category.color} mb-6 self-start shadow-sm group-hover:scale-110 transition-transform`}>
+                    <Icon className="w-8 h-8" />
                   </div>
+                  <h3 className="text-2xl font-bold mb-3">{category.title}</h3>
+                  <p className="text-muted-foreground mb-6 leading-relaxed">
+                    {category.description}
+                  </p>
+                  <div className="flex flex-wrap gap-2 mt-auto pt-4">
+                    {category.items.map((item, itemIdx) => (
+                      <span key={itemIdx} className="inline-flex items-center px-3 py-1 rounded-md text-sm font-medium bg-muted text-foreground border border-border/50 shadow-sm transition-colors hover:bg-primary hover:text-primary-foreground cursor-default">
+                        {item}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              );
+
+              return category.href ? (
+                <a key={index} href={withBase(category.href)} className="block h-full">
+                  <MagicCard className="p-8 group h-full flex flex-col hover:border-primary/50 transition-colors" gradientSize={300}>
+                    {CardContent}
+                  </MagicCard>
+                </a>
+              ) : (
+                <MagicCard key={index} className="p-8 group h-full flex flex-col" gradientSize={300}>
+                  {CardContent}
                 </MagicCard>
               );
             })}

@@ -1,0 +1,22 @@
+---
+import Layout from '../layouts/main.astro';
+import { PageHeader } from '@/components/PageHeader';
+import { TmuxContent } from '@/components/TmuxContent';
+import { PromovawebCTA } from '@/components/PromovawebCTA';
+---
+
+<Layout 
+	title="tmux: Multiplexação e Produtividade - SetupVibe"
+	description="Aprenda a dominar o tmux com o SetupVibe. Guia completo com aliases, atalhos, plugins recomendados e configuração otimizada para desenvolvedores."
+>
+	<PageHeader 
+		client:load
+		title="Domine o" 
+		gradientTitle="tmux"
+		subtitle="Gerencie múltiplas sessões, janelas e painéis como um pro. O SetupVibe entrega uma experiência tmux turbinada para produtividade máxima no terminal."
+		badge={{ icon: "🪟", text: "Terminal Multiplexer" }}
+	/>
+
+	<TmuxContent client:load />
+    <PromovawebCTA client:load />
+</Layout>
