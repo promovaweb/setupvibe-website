@@ -34,13 +34,13 @@ export function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.1 }}
-            className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight max-w-4xl leading-tight"
+            className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight max-w-6xl leading-tight"
           >
             Seu{" "}
             <span className="bg-gradient-to-r from-purple-600 via-pink-600 to-blue-600 dark:from-purple-400 dark:via-pink-400 dark:to-blue-400 bg-clip-text text-transparent animate-gradient">
               Ambiente para Vibe Coding
             </span>{" "}
-            pronto em 5 minutos
+            configurado em 5 minutos
           </motion.h1>
 
           {/* Subheading */}
@@ -48,9 +48,9 @@ export function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}
-            className="text-lg md:text-xl text-muted-foreground max-w-3xl leading-relaxed"
+            className="text-lg md:text-xl text-muted-foreground max-w-4xl leading-relaxed"
           >
-            O SetupVibe é o automatizador definitivo. Em menos de 5 minutos, configuramos seu <span className="text-foreground font-semibold">Zsh, Starship, TMUX</span> e integramos as melhores <span className="text-foreground font-semibold">CLIs de IA (Claude, Gemini, Copilot)</span> para você focar no que importa: O Vibe Coding.
+            O SetupVibe elimina toda a fricção técnica para você entrar em estado de flow instantâneo. Em menos de 5 minutos, configuramos seu <span className="text-foreground font-semibold">Zsh, Starship, TMUX</span> e integramos as melhores <span className="text-foreground font-semibold">CLIs de IA (Claude, Gemini, Copilot)</span> para você focar no que importa: O Vibe Coding.
           </motion.p>
 
           {/* CTA Buttons */}
@@ -82,7 +82,7 @@ export function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.4 }}
-            className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8 w-full max-w-5xl pt-8"
+            className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8 w-full max-w-6xl pt-8"
           >
             {[
               { icon: Terminal, title: "Zsh & Starship", desc: "Terminal moderno e produtivo" },
@@ -105,7 +105,7 @@ export function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.5 }}
-            className="grid grid-cols-1 md:grid-cols-3 gap-6 pt-8 w-full max-w-4xl"
+            className="grid grid-cols-1 md:grid-cols-3 gap-6 pt-8 w-full max-w-6xl"
           >
             <div className="flex items-center gap-4 p-4 rounded-xl bg-muted/50 border border-border/50">
               <div className="flex -space-x-2">
@@ -141,7 +141,7 @@ export function Hero() {
             initial={{ opacity: 0, y: 100 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.6 }}
-            className="relative mt-20 w-full max-w-5xl mx-auto -mb-48 md:-mb-64"
+            className="relative mt-20 w-full max-w-6xl mx-auto -mb-48 md:-mb-64"
           >
             <div className="relative group">
               {/* Glow effect */}

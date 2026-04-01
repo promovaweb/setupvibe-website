@@ -1,6 +1,6 @@
 ---
 import Layout from '../layouts/main.astro';
-import { DynamicHero } from '@/components/DynamicHero';
+import { Hero } from '@/components/Hero';
 import { Features } from '@/components/Features';
 import { CrossPlatformCTA } from '@/components/CrossPlatformCTA';
 import { ModulesGrid } from '@/components/ModulesGrid';
@@ -30,7 +30,7 @@ import { FAQ } from '@/components/FAQ';
     }
   </script>
 
-	<DynamicHero client:load />
+	<Hero client:load />
 	<Features client:load />
 	<CrossPlatformCTA client:load />
 	<ModulesGrid client:load />
