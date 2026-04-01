@@ -4,8 +4,8 @@ import { motion } from "framer-motion";
 import { 
   Code2, Box, Cpu, Zap, Terminal, 
   Check, Copy, Info, ChevronRight, 
-  Globe, Laptop, Command, Binary,
-  Coffee, Gem, FileCode, Workflow,
+  Globe, Command, Binary,
+  Gem, FileCode, Workflow,
   Rocket, Layers, Shield, Search
 } from "lucide-react";
 import { useState } from "react";
