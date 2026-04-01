@@ -2086,6 +2086,10 @@ export function AliasesContent() {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
             setActiveId(entry.target.id);
+            // Update URL hash without jumping
+            if (window.location.hash !== `#${entry.target.id}`) {
+              history.pushState(null, "", `#${entry.target.id}`);
+            }
           }
         });
       },
@@ -2096,6 +2100,14 @@ export function AliasesContent() {
       const element = document.getElementById(cat.id);
       if (element) observer.observe(element);
     });
+
+    // Handle initial hash scroll
+    const hash = window.location.hash.replace("#", "");
+    if (hash) {
+      setTimeout(() => {
+        scrollTo(hash);
+      }, 500);
+    }
 
     return () => observer.disconnect();
   }, []);
@@ -2120,6 +2132,10 @@ export function AliasesContent() {
   const scrollTo = (id: string) => {
     const element = document.getElementById(id);
     if (element) {
+      // Update URL hash without jumping
+      history.pushState(null, "", `#${id}`);
+      setActiveId(id);
+
       const offset = 100;
       const elementPosition = element.getBoundingClientRect().top;
       const offsetPosition = elementPosition + window.pageYOffset - offset;
@@ -2232,6 +2248,10 @@ export function AliasesContent() {
                       {category.title}
                     </h2>
                     <div className="h-px flex-1 bg-border/40 ml-4" />
+                    <Hash 
+                      className="w-4 h-4 text-muted-foreground/20 opacity-0 group-hover:opacity-100 transition-opacity cursor-pointer hover:text-primary" 
+                      onClick={() => scrollTo(category.id)} 
+                    />
                   </div>
 
                   <div className="grid gap-6">

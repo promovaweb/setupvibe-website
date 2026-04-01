@@ -220,6 +220,10 @@ export function ToolsContent() {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
             setActiveId(entry.target.id);
+            // Update URL hash without jumping
+            if (window.location.hash !== `#${entry.target.id}`) {
+              history.pushState(null, "", `#${entry.target.id}`);
+            }
           }
         });
       },
@@ -231,12 +235,24 @@ export function ToolsContent() {
       if (element) observer.observe(element);
     });
 
+    // Handle initial hash scroll
+    const hash = window.location.hash.replace("#", "");
+    if (hash) {
+      setTimeout(() => {
+        scrollTo(hash);
+      }, 500);
+    }
+
     return () => observer.disconnect();
   }, []);
 
   const scrollTo = (id: string) => {
     const element = document.getElementById(id);
     if (element) {
+      // Update URL hash without jumping
+      history.pushState(null, "", `#${id}`);
+      setActiveId(id);
+
       const offset = 100;
       const elementPosition = element.getBoundingClientRect().top;
       const offsetPosition = elementPosition + window.pageYOffset - offset;
