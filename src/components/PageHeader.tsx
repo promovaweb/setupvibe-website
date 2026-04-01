@@ -53,7 +53,7 @@ export function PageHeader({
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.1 }}
-            className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight max-w-4xl leading-tight"
+            className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight max-w-6xl leading-tight"
           >
             {title}{" "}
             {gradientTitle && (
@@ -69,7 +69,7 @@ export function PageHeader({
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.2 }}
-              className="text-lg md:text-xl text-muted-foreground max-w-2xl leading-relaxed"
+              className="text-lg md:text-xl text-muted-foreground max-w-4xl leading-relaxed"
             >
               {subtitle}
             </motion.p>

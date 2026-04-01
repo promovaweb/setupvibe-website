@@ -7,13 +7,23 @@ import { PromovawebCTA } from '@/components/PromovawebCTA';
 	title="Termos de Uso do SetupVibe: Diretrizes e Licenciamento"
 	description="Conheça os termos de serviço, licenciamento open-source e responsabilidades ao utilizar o script do SetupVibe. Informações claras para usuários e devs. Confira!"
 >
-	<section class="py-20 md:py-32">
-		<div class="container mx-auto px-4">
-			<div class="max-w-4xl mx-auto">
-				<h1 class="text-4xl md:text-5xl font-bold mb-4">Termos de Uso</h1>
-				<p class="text-muted-foreground mb-8">Última atualização: 29 de Março de 2026</p>
+	<section class="py-20 md:py-32 overflow-hidden relative">
+		{/* Background gradients */}
+		<div class="absolute inset-0 -z-10">
+			<div class="absolute top-0 -left-4 w-72 h-72 bg-purple-300 dark:bg-purple-900 rounded-full mix-blend-multiply dark:mix-blend-soft-light filter blur-xl opacity-70 animate-blob" />
+			<div class="absolute top-0 -right-4 w-72 h-72 bg-pink-300 dark:bg-pink-900 rounded-full mix-blend-multiply dark:mix-blend-soft-light filter blur-xl opacity-70 animate-blob animation-delay-2000" />
+			<div class="absolute -bottom-8 left-20 w-72 h-72 bg-blue-300 dark:bg-blue-900 rounded-full mix-blend-multiply dark:mix-blend-soft-light filter blur-xl opacity-70 animate-blob animation-delay-4000" />
+		</div>
 
-				<div class="prose prose-lg dark:prose-invert max-w-none">
+		<div class="container mx-auto px-4 flex flex-col items-center text-center">
+			<div class="max-w-6xl">
+				<h1 class="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight mb-8 leading-tight">Termos de <span class="bg-gradient-to-r from-purple-600 via-pink-600 to-blue-600 dark:from-purple-400 dark:via-pink-400 dark:to-blue-400 bg-clip-text text-transparent animate-gradient">Uso</span></h1>
+			</div>
+			
+			<div class="max-w-4xl">
+				<p class="text-lg md:text-xl text-muted-foreground mb-12 leading-relaxed">Última atualização: 29 de Março de 2026</p>
+
+				<div class="prose prose-lg dark:prose-invert max-w-none text-left">
 					<p class="lead text-xl">
 						Bem-vindo ao SetupVibe. Ao utilizar nosso script de instalação ou acessar nosso site, você concorda em cumprir estes Termos de Uso. Leia-os com atenção, pois eles definem as bases da nossa relação.
 					</p>
