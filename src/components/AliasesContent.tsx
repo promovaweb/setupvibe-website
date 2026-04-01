@@ -14,6 +14,20 @@ import { cn } from "@/lib/utils";
 
 const categoriesData = [
   {
+    "title": "SetupVibe",
+    "id": "setupvibe",
+    "icon": Terminal,
+    "aliases": [
+      {
+        "name": "setupvibe",
+        "availability": "🖥️ Desktop",
+        "command": "curl -sSL desktop.setupvibe.dev | bash",
+        "description": "Reinstala ou atualiza o SetupVibe Desktop.",
+        "example": "setupvibe"
+      }
+    ]
+  },
+  {
     "title": "AI CLIs",
     "id": "ai-clis",
     "icon": Bot,
@@ -892,6 +906,41 @@ const categoriesData = [
         "command": "docker compose exec",
         "description": "Executa comando em serviço.",
         "example": "dcexec app bash"
+      }
+    ]
+  },
+  {
+    "title": "Portainer",
+    "id": "portainer",
+    "icon": Layout,
+    "aliases": [
+      {
+        "name": "portainer-restart",
+        "availability": "🖥️ Desktop",
+        "command": "docker compose -f ~/.setupvibe/portainer-compose.yml restart",
+        "description": "Reinicia o painel do Portainer.",
+        "example": "portainer-restart"
+      },
+      {
+        "name": "portainer-update",
+        "availability": "🖥️ Desktop",
+        "command": "docker compose -f ~/.setupvibe/portainer-compose.yml pull && docker compose -f ~/.setupvibe/portainer-compose.yml up -d",
+        "description": "Atualiza e reinicia o Portainer.",
+        "example": "portainer-update"
+      },
+      {
+        "name": "portainer-start",
+        "availability": "🖥️ Desktop",
+        "command": "docker compose -f ~/.setupvibe/portainer-compose.yml up -d",
+        "description": "Inicia o Portainer em background.",
+        "example": "portainer-start"
+      },
+      {
+        "name": "portainer-stop",
+        "availability": "🖥️ Desktop",
+        "command": "docker compose -f ~/.setupvibe/portainer-compose.yml stop",
+        "description": "Para o painel do Portainer.",
+        "example": "portainer-stop"
       }
     ]
   },
