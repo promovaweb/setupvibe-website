@@ -1,7 +1,7 @@
 "use client";
 
 import { BentoGrid, BentoCard } from "@/components/BentoGrid";
-import { Terminal, Bot, Settings, Layers, Box, Cpu, Type } from "lucide-react";
+import { Terminal, Bot, Settings, Layers, Box, Cpu, Type, Command, Container } from "lucide-react";
 
 export function ModulesGrid() {
   return (
@@ -20,6 +20,7 @@ export function ModulesGrid() {
         </div>
 
         <BentoGrid className="lg:grid-cols-3 md:grid-cols-2 max-w-6xl mx-auto">
+          {/* Row 1 */}
           <BentoCard
             name="ZSH & Starship"
             className="md:col-span-2 lg:col-span-2"
@@ -35,39 +36,22 @@ export function ModulesGrid() {
             name="AI CLI Tools"
             className="md:col-span-1 lg:col-span-1"
             Icon={Bot}
-            description="Integração global de pacotes NPM para desenvolvedores nativos de IAs: Claude Code, Gemini CLI, OpenAI Codex e GitHub Copilot CLI."
+            description="Integração de Claude Code, Gemini CLI e Copilot CLI para desenvolvedores nativos de IA."
             href="/ai-clis"
-            cta="Conheça as Ferramentas"
+            cta="Ferramentas de IA"
             background={
               <div className="absolute inset-0 bg-gradient-to-bl from-blue-500/10 to-cyan-500/10 dark:from-blue-500/5 dark:to-cyan-500/5 transition-opacity opacity-50 group-hover:opacity-100" />
             }
           />
-          <BentoCard
-            name="Ecossistema Dev"
-            className="md:col-span-1 lg:col-span-1"
-            Icon={Box}
-            description="Node, Python (uv), Go, Rust, PHP (Composer) e Ruby em suas versões mais recentes instalados perfeitamente."
-            href="/ecossistema-dev"
-            cta="Ver Stack"
-          />
-          <BentoCard
-            name="Tipografia Nerd Fonts"
-            className="md:col-span-1 lg:col-span-1"
-            Icon={Type}
-            description="Fira Code e JetBrains Mono instaladas com suporte a ícones, glifos e ligaduras de programação para todas as ferramentas."
-            href="/fontes"
-            cta="Guia de Fontes"
-            background={
-              <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/10 to-blue-500/10 dark:from-cyan-500/5 dark:to-blue-500/5 transition-opacity opacity-50 group-hover:opacity-100" />
-            }
-          />
+
+          {/* Row 2 */}
           <BentoCard
             name="Modern Unix"
             className="md:col-span-1 lg:col-span-1"
             Icon={Settings}
-            description="Ferramentas como bat, eza, fd, ripgrep, fzf e zoxide instaladas por padrão. Esqueça os velhos comandos."
+            description="Substitutos modernos em Rust: bat, eza, fd, ripgrep e zoxide prontos para uso."
             href="/modern-unix"
-            cta="Lista de Utilitários"
+            cta="Ver Utilitários"
             background={
               <div className="absolute inset-0 bg-gradient-to-tl from-yellow-500/10 to-orange-500/10 dark:from-yellow-500/5 dark:to-orange-500/5 transition-opacity opacity-50 group-hover:opacity-100" />
             }
@@ -76,20 +60,65 @@ export function ModulesGrid() {
             name="Tmux Master"
             className="md:col-span-2 lg:col-span-2"
             Icon={Layers}
-            description="Um ambiente robusto com dezenas de plugins de navegação, mouse, copy/paste cross-OS, UI moderna com onedark e gerenciamento de sessões."
+            description="Multitela robusta com plugins de navegação, mouse e UI onedark. Suas sessões nunca morrem."
             href="/tmux"
             cta="Ver Plugins"
             background={
               <div className="absolute inset-0 bg-gradient-to-tr from-green-500/10 to-emerald-500/10 dark:from-green-500/5 dark:to-emerald-500/5 transition-opacity opacity-50 group-hover:opacity-100" />
             }
           />
+
+          {/* Row 3 */}
           <BentoCard
-            name="PM2 & DevOps"
-            className="md:col-span-2 lg:col-span-2"
+            name="Ecossistema Dev"
+            className="md:col-span-1 lg:col-span-1"
+            Icon={Box}
+            description="Node, Python (uv), Go, Rust e PHP em versões estáveis."
+            href="/ecossistema-dev"
+            cta="Ver Linguagens"
+          />
+          <BentoCard
+            name="Tipografia"
+            className="md:col-span-1 lg:col-span-1"
+            Icon={Type}
+            description="Fira Code Nerd Font com suporte a ícones e ligaduras."
+            href="/fontes"
+            cta="Configurar Fonte"
+            background={
+              <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/10 to-blue-500/10 dark:from-cyan-500/5 dark:to-blue-500/5 transition-opacity opacity-50 group-hover:opacity-100" />
+            }
+          />
+          <BentoCard
+            name="PM2 Manager"
+            className="md:col-span-1 lg:col-span-1"
             Icon={Cpu}
-            description="Docker, Ansible e o incrível gerenciador de processos PM2 com auto-startup configurado como serviço global via systemd/launchd."
+            description="Gestão de processos 24/7 com auto-startup global."
             href="/pm2"
-            cta="Saber mais sobre PM2"
+            cta="Saber mais"
+          />
+
+          {/* Row 4 */}
+          <BentoCard
+            name="Portainer CE"
+            className="md:col-span-1 lg:col-span-1"
+            Icon={Container}
+            description="Dashboard visual para gerenciar seus containers Docker com facilidade."
+            href="/portainer"
+            cta="Ver Dashboard"
+            background={
+              <div className="absolute inset-0 bg-gradient-to-br from-blue-500/10 to-indigo-500/10 dark:from-blue-500/5 dark:to-indigo-500/5 transition-opacity opacity-50 group-hover:opacity-100" />
+            }
+          />
+          <BentoCard
+            name="Aliases & Atalhos"
+            className="md:col-span-2 lg:col-span-2"
+            Icon={Command}
+            description="Economize milhares de toques no teclado com nossos aliases inteligentes para Git, Docker e IA."
+            href="/atalhos"
+            cta="Ver Todos os Atalhos"
+            background={
+              <div className="absolute inset-0 bg-gradient-to-tr from-emerald-500/10 to-teal-500/10 dark:from-emerald-500/5 dark:to-teal-500/5 transition-opacity opacity-50 group-hover:opacity-100" />
+            }
           />
         </BentoGrid>
       </div>
