@@ -26,7 +26,7 @@ const steps = [
     icon: Rocket,
     title: "Passo 3: Vibe Coding On",
     description:
-      "Em média de 20 minutos, a sua máquina se transformará na verdadeira arma de produtividade. Abra o Cursor, invoque a IA localmente, confie nos binários velozes e produza código na velocidade do pensamento.",
+      "Em menos de 5 minutos, a sua máquina se transformará na verdadeira arma de produtividade. Abra o Cursor, invoque a IA localmente, confie nos binários velozes e produza código na velocidade do pensamento.",
     gradient: "from-green-500 to-emerald-500",
   },
 ];

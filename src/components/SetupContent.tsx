@@ -44,7 +44,7 @@ export function SetupContent() {
     },
     {
       q: "Quanto tempo demora?",
-      a: "Em uma conexão de 100MB, leva cerca de 5 a 10 minutos. A maior parte do tempo é baixando os binários e compilando o tema do Starship."
+      a: "Em uma conexão de 100MB, leva cerca de 5 minutos. A maior parte do tempo é baixando os binários e configurando as ferramentas de IA."
     }
   ];
 
